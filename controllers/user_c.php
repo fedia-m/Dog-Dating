@@ -26,6 +26,15 @@ class User{
         include("views/footer.php");
     }
 
+    public function pageProfil(){
+        include("views/header.php");
+        include("views/menu.php");
+        $data=$this->instanceModelUser->lireUnUser($_POST[idUser]);
+        include ("views/page_profil.php");
+        include("views/footer.php");
+
+    }
+
     public function creerUser(){
         include("views/header.php");
         include('views/menu.php');
