@@ -1,7 +1,7 @@
 <?php
 define("hostname","localhost"); // ou serveurmysql
-define("database","cesi");
-define("username","tiona_cesi");
+define("database","tafcesi");
+define("username","cesi");
 define("password","cesi");
 
 
