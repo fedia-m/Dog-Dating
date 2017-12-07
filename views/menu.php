@@ -15,5 +15,5 @@
         </nav>
     </div>
 </div>
-<div class="background">
+<div class="background" class="img-responsive">
 
