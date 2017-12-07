@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="background">
+    <div>
         <nav class="navbar navbar-light">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -15,4 +15,5 @@
         </nav>
     </div>
 </div>
+<div class="background">
 
