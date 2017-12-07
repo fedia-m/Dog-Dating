@@ -10,6 +10,7 @@
     <link href="<?php echo BASE_URL?>images/chien_logo.png" rel="shortcut icon" type="image/x-icon"/>
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL?>assets/css/menu.css">
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL?>assets/css/header.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL?>assets/css/footer.css">
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 </head>
 <body>

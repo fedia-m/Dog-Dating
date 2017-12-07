@@ -1,3 +1,4 @@
+
 <div class="container">
     <div>
         <nav class="navbar navbar-light">
@@ -15,5 +16,9 @@
         </nav>
     </div>
 </div>
+<<<<<<< HEAD
 <div class="background" class="img-responsive">
+=======
+<div class="container">
+>>>>>>> fdea0a653db111d99738de6801a6b97c3518c14f
 
