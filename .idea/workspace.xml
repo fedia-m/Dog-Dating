@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6d6e9fb-3a45-4b00-8bf2-6d9190b6ff14" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/region.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sql/races.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sql/villes.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/adherent.php" afterPath="$PROJECT_DIR$/classes/adherent.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sql/adherents.sql" afterPath="$PROJECT_DIR$/sql/adherents.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sql/departements.sql" afterPath="$PROJECT_DIR$/sql/departements.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sql/races.sql" afterPath="$PROJECT_DIR$/sql/races.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sql/tables.sql" afterPath="$PROJECT_DIR$/sql/tables.sql" />
     </list>
     <ignored path="PageConnexion.iws" />
@@ -89,21 +88,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="races.sql" pinned="false" current-in-tab="true">
+      <file leaf-file-name="races.sql" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sql/races.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="12" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
+            <state relative-caret-position="-1148">
+              <caret line="0" column="33" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tables.sql" pinned="false" current-in-tab="false">
+      <file leaf-file-name="tables.sql" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sql/tables.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="82" column="66" selection-start-line="82" selection-start-column="66" selection-end-line="82" selection-end-column="66" />
+            <state relative-caret-position="232">
+              <caret line="94" column="53" selection-start-line="94" selection-start-column="53" selection-end-line="94" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="villes.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sql/villes.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -163,13 +172,14 @@
         <option value="$PROJECT_DIR$/controllers/accueil_c.php" />
         <option value="$PROJECT_DIR$/assets/css/header.css" />
         <option value="$PROJECT_DIR$/views/menu.php" />
-        <option value="$PROJECT_DIR$/sql/departements.sql" />
         <option value="$PROJECT_DIR$/sql/regions.sql" />
         <option value="$PROJECT_DIR$/sql/adherents.sql" />
         <option value="$PROJECT_DIR$/classes/adherent.php" />
         <option value="$PROJECT_DIR$/classes/region.php" />
-        <option value="$PROJECT_DIR$/sql/tables.sql" />
         <option value="$PROJECT_DIR$/sql/races.sql" />
+        <option value="$PROJECT_DIR$/sql/departements.sql" />
+        <option value="$PROJECT_DIR$/sql/villes.sql" />
+        <option value="$PROJECT_DIR$/sql/tables.sql" />
       </list>
     </option>
   </component>
@@ -343,12 +353,12 @@
       <workItem from="1512631514307" duration="10822000" />
       <workItem from="1512643430678" duration="225000" />
       <workItem from="1512643675329" duration="16434000" />
-      <workItem from="1512718585552" duration="16686000" />
+      <workItem from="1512718585552" duration="22688000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83804000" />
+    <option name="totallyTimeSpent" value="89806000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="26" width="1368" height="742" extended-state="6" />
@@ -389,13 +399,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/views/connexion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="60" selection-start-line="0" selection-start-column="60" selection-end-line="0" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/connexion_bdd.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -649,22 +652,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sql/departements.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1104">
-          <caret line="202" column="30" selection-start-line="202" selection-start-column="30" selection-end-line="202" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sql/regions.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sql/sample.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -700,18 +687,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sql/tables.sql">
+    <entry file="file://$PROJECT_DIR$/sql/departements.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="82" column="66" selection-start-line="82" selection-start-column="66" selection-end-line="82" selection-end-column="66" />
+        <state relative-caret-position="225">
+          <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql/regions.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql/villes.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sql/races.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="12" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
+        <state relative-caret-position="-1148">
+          <caret line="0" column="33" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql/tables.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="94" column="53" selection-start-line="94" selection-start-column="53" selection-end-line="94" selection-end-column="53" />
           <folding />
         </state>
       </provider>
