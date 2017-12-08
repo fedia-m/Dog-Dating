@@ -50,7 +50,7 @@ CREATE TABLE adherents(
   nomAdherent      VARCHAR (255) NOT NULL ,
   prenomAdherent   VARCHAR (255) NOT NULL ,
   pseudoAdherent   VARCHAR (50) NOT NULL ,
-  passwordAdherent VARCHAR (255) NOT NULL ,
+  mdpAdherent VARCHAR (255) NOT NULL ,
   mailAdherent     VARCHAR (255) NOT NULL ,
   adresseAdherent  LONGTEXT ,
   cpAdherent       CHAR (5) ,
@@ -72,15 +72,24 @@ CREATE TABLE chiens(
   idChien            INT(10) AUTO_INCREMENT NOT NULL ,
   nomChien           VARCHAR (32) NOT NULL ,
   sexeChien          CHAR (1) NOT NULL ,
-  raceChien          VARCHAR (32) NOT NULL ,
   dateNaissanceChien DATE NOT NULL ,
   loofChien          VARCHAR (25) ,
   lofChien           VARCHAR (25) ,
   numeroPuce         VARCHAR (25) ,
   photoChien         VARCHAR (255),
   id_Adherent INT(10),
+  id_Race INT(10),
   PRIMARY KEY (idChien),
+  FOREIGN KEY (id_Race) REFERENCES races(idRace) ON DELETE CASCADE,
   FOREIGN KEY (id_Adherent) REFERENCES adherents(idAdherent) ON DELETE CASCADE
+)ENGINE=InnoDB;
+
+#------------------------------------------------------------
+# Table: races
+#------------------------------------------------------------
+CREATE TABLE races(
+  idRace INT(10) AUTO_INCREMENT NOT NULL ,
+  nomRace VARCHAR(50) NOT NULL
 )ENGINE=InnoDB;
 
 #------------------------------------------------------------
