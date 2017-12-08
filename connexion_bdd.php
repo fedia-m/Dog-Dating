@@ -5,9 +5,13 @@ class Connexion{
         $dsn = 'mysql:host='.hostname.';dbname='.database.';charset=utf8';
         $user = username;
         $password = password;
-        $ma_connexion_mysql = new PDO($dsn, $user, $password);
-        $ma_connexion_mysql->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $ma_connexion_mysql->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_ASSOC);
-        return $ma_connexion_mysql;
+        try{
+            $bdd = new PDO($dsn, $user, $password);
+            $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $bdd->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_ASSOC);
+            return $bdd;
+        } catch (Exception $e){
+            die('Erreur: '.$e->getMessage());
+        }
     }
 }

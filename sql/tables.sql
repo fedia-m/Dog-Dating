@@ -1,6 +1,64 @@
 #------------------------------------------------------------
 #        Script MySQL.
+
+DROP TABLE IF EXISTS Annonces;
+DROP TABLE IF EXISTS Chiens;
+DROP TABLE IF EXISTS Adherents;
+DROP TABLE IF EXISTS Villes;
+DROP TABLE IF EXISTS Departements;
+DROP TABLE IF EXISTS Regions;
+
 #------------------------------------------------------------
+# Table: Regions
+#------------------------------------------------------------
+
+CREATE TABLE Regions(
+  idRegion  INT(10) AUTO_INCREMENT PRIMARY KEY NOT NULL ,
+  nomRegion VARCHAR (255) NOT NULL
+)ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
+
+#------------------------------------------------------------
+# Table: DÃ©partements
+#------------------------------------------------------------
+
+CREATE TABLE Departements(
+  idDepartement  INT(10) AUTO_INCREMENT PRIMARY KEY NOT NULL ,
+  nomDepartement VARCHAR (255) NOT NULL ,
+  id_Region  INT(10) ,
+  FOREIGN KEY (id_Region) REFERENCES Regions(idRegion) ON DELETE CASCADE
+)ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
+
+#------------------------------------------------------------
+# Table: Villes
+#------------------------------------------------------------
+
+CREATE TABLE Villes(
+  idVille    INT(10)  AUTO_INCREMENT PRIMARY KEY NOT NULL ,
+  nomVille   VARCHAR (255) NOT NULL ,
+  id_Departement INT(10) ,
+  FOREIGN KEY (id_Departement) REFERENCES Departements(idDepartement) ON DELETE CASCADE
+)ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
+
+
+#------------------------------------------------------------
+# Table: Adherents
+#------------------------------------------------------------
+CREATE TABLE Adherents(
+  idAdherent       INT(10) AUTO_INCREMENT  NOT NULL ,
+  nomAdherent      VARCHAR (255) NOT NULL ,
+  prenomAdherent   VARCHAR (255) NOT NULL ,
+  pseudoAdherent   VARCHAR (50) NOT NULL ,
+  passwordAdherent VARCHAR (255) NOT NULL ,
+  mailAdherent     VARCHAR (255) NOT NULL ,
+  adresseAdherent  LONGTEXT ,
+  cpAdherent       CHAR (5) ,
+  sexeAdherent enum('H','F','A') DEFAULT NULL,
+  avatar  VARCHAR(255),
+  id_Ville INT(10),
+  PRIMARY KEY (idAdherent),
+  FOREIGN KEY (id_Ville) REFERENCES Villes(idVille) ON DELETE CASCADE 
+)ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
+
 
 
 #------------------------------------------------------------
@@ -8,94 +66,31 @@
 #------------------------------------------------------------
 
 CREATE TABLE Chiens(
-        idChien            int (11) Auto_increment  NOT NULL ,
-        nomChien           Varchar (32) NOT NULL ,
-        sexeChien          Char (1) NOT NULL ,
-        raceChien          Varchar (32) NOT NULL ,
-        dateNaissanceChien Date NOT NULL ,
-        loofChien          Varchar (25) ,
-        lofChien           Int ,
-        numeroPuce         Int ,
-        photoChien         Varchar (25) ,
-        idAdherent         Int NOT NULL ,
-        idAnnonce          Int ,
-        PRIMARY KEY (idChien )
+  idChien            INT(10) AUTO_INCREMENT NOT NULL ,
+  nomChien           VARCHAR (32) NOT NULL ,
+  sexeChien          CHAR (1) NOT NULL ,
+  raceChien          VARCHAR (32) NOT NULL ,
+  dateNaissanceChien DATE NOT NULL ,
+  loofChien          VARCHAR (25) ,
+  lofChien           INT(10) ,
+  numeroPuce         INT(10) ,
+  photoChien         VARCHAR (255),
+  id_Adherent INT(10),
+  PRIMARY KEY (idChien),
+  FOREIGN KEY (id_Adherent) REFERENCES Adherents(idAdherent) ON DELETE CASCADE
 )ENGINE=InnoDB;
-
-
-#------------------------------------------------------------
-# Table: Adherents
-#------------------------------------------------------------
-
-CREATE TABLE Adherents(
-        idAdherent       int (11) Auto_increment  NOT NULL ,
-        nomAdherent      Varchar (25) NOT NULL ,
-        prenomAdherent   Varchar (25) NOT NULL ,
-        pseudoAdherent   Varchar (25) ,
-        passwordAdherent Varchar (25) NOT NULL ,
-        mailAdherent     Varchar (25) NOT NULL ,
-        adresseAdherent  Varchar (32) ,
-        cpAdherent       Char (5) ,
-        sexeAdherent     Char (1) ,
-        idVille          Int ,
-        PRIMARY KEY (idAdherent )
-)ENGINE=InnoDB;
-
-
-#------------------------------------------------------------
-# Table: Villes
-#------------------------------------------------------------
-
-CREATE TABLE Villes(
-        idVille    int (11) Auto_increment  NOT NULL ,
-        nomVille   Varchar (32) NOT NULL ,
-        idAdherent Int NOT NULL ,
-        idDepart   Int ,
-        PRIMARY KEY (idVille )
-)ENGINE=InnoDB;
-
-
-#------------------------------------------------------------
-# Table: Départements
-#------------------------------------------------------------
-
-CREATE TABLE Departements(
-        idDepart  int (11) Auto_increment  NOT NULL ,
-        nomDepart Varchar (32) ,
-        idRegion  Int ,
-        PRIMARY KEY (idDepart )
-)ENGINE=InnoDB;
-
-
-#------------------------------------------------------------
-# Table: Regions
-#------------------------------------------------------------
-
-CREATE TABLE Regions(
-        idRegion  int (11) Auto_increment  NOT NULL ,
-        nomRegion Varchar (32) ,
-        PRIMARY KEY (idRegion )
-)ENGINE=InnoDB;
-
 
 #------------------------------------------------------------
 # Table: Annonces
 #------------------------------------------------------------
 
 CREATE TABLE Annonces(
-        idAnnonce          int (11) Auto_increment  NOT NULL ,
-        titreAnnonce       Varchar (32) ,
-        descriptionAnnonce Longtext ,
-        idAdherent         Int NOT NULL ,
-        idChien            Int NOT NULL ,
-        PRIMARY KEY (idAnnonce )
-)ENGINE=InnoDB;
-
-ALTER TABLE Chiens ADD CONSTRAINT FK_Chiens_idAdherent FOREIGN KEY (idAdherent) REFERENCES Adherents(idAdherent);
-ALTER TABLE Chiens ADD CONSTRAINT FK_Chiens_idAnnonce FOREIGN KEY (idAnnonce) REFERENCES Annonces(idAnnonce);
-ALTER TABLE Adherents ADD CONSTRAINT FK_Adherents_idVille FOREIGN KEY (idVille) REFERENCES Villes(idVille);
-ALTER TABLE Villes ADD CONSTRAINT FK_Villes_idAdherent FOREIGN KEY (idAdherent) REFERENCES Adherents(idAdherent);
-ALTER TABLE Villes ADD CONSTRAINT FK_Villes_idDepart FOREIGN KEY (idDepart) REFERENCES Departements(idDepart);
-ALTER TABLE Departements ADD CONSTRAINT FK_Departements_idRegion FOREIGN KEY (idRegion) REFERENCES Regions(idRegion);
-ALTER TABLE Annonces ADD CONSTRAINT FK_Annonces_idAdherent FOREIGN KEY (idAdherent) REFERENCES Adherents(idAdherent);
-ALTER TABLE Annonces ADD CONSTRAINT FK_Annonces_idChien FOREIGN KEY (idChien) REFERENCES Chiens(idChien);
+  idAnnonce          INT(10) AUTO_INCREMENT NOT NULL ,
+  titreAnnonce       VARCHAR (32) ,
+  descriptionAnnonce LONGTEXT,
+  id_Chien INT(10),
+  id_Adherent INT(10),
+  PRIMARY KEY (idAnnonce, id_Chien,id_Adherent),
+  FOREIGN KEY (id_Adherent) REFERENCES Adherents(idAdherent) ON DELETE CASCADE,
+  FOREIGN KEY (id_Chien) REFERENCES Chiens(idChien) ON DELETE CASCADE
+)ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
