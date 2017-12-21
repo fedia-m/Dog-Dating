@@ -1,4 +1,5 @@
 <?php 
+require_once 'accesbdd.php';
 
 
 class Race
@@ -16,7 +17,7 @@ class Race
 		return $this->nom;
 	}
 
-	public function objetSetId($sid,$snom);
+	public function objetSetId($sid,$snom)
     {
         $this->id = $sid;
         $this->nom = $snom;
@@ -41,7 +42,7 @@ class Races
         while($res=$sql->fetch(PDO::FETCH_ASSOC))
         {
 
-            $oRace = new Chien();
+            $oRace = new Race();
             $oRace->objetSetId($res['idRace'],$res['nomRace']);
             $this->oCollRace[] = $oRace;
         }

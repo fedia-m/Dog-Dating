@@ -1,4 +1,5 @@
 <?php 
+require_once 'accesbdd.php';
 
 
 class Chien
