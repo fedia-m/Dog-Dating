@@ -1,6 +1,5 @@
 <?php 
-require_once 'accesbdd.php';
-
+require_once '../connexion_bdd.php';
 
 class Chien
 {

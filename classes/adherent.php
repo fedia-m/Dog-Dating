@@ -1,10 +1,4 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: mahatehotia
- * Date: 07/12/17
- * Time: 16:02
- */
+<?php 
 require_once '../connexion_bdd.php';
 
 class Adherent{
