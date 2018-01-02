@@ -1,11 +1,3 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: mahatehotia
- * Date: 05/12/17
- * Time: 13:53
- */
-?>
 <div class="col-md-6 col-md-offset-3">
     <div class="well well-sm">
         <form class="form-horizontal" action="<?php echo BASE_URL; ?>index.php/User/validFormCreerUser" method="post">

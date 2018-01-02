@@ -1,7 +1,4 @@
 <?php
-require_once 'config.php';
-class Connexion{
-    public function connect(){
         $dsn = 'mysql:host='.hostname.';dbname='.database.';charset=utf8';
         $user = username;
         $password = password;
@@ -13,5 +10,3 @@ class Connexion{
         } catch (Exception $e){
             die('Erreur: '.$e->getMessage());
         }
-    }
-}
