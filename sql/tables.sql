@@ -14,33 +14,33 @@ DROP TABLE IF EXISTS regions;
 #------------------------------------------------------------
 
 CREATE TABLE regions(
-  idRegion  INT(10) AUTO_INCREMENT PRIMARY KEY NOT NULL ,
+  idRegion  INT(10) PRIMARY KEY NOT NULL ,
   codeRegion VARCHAR(6) NOT NULL ,
   nomRegion VARCHAR (255) NOT NULL
-)ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 #------------------------------------------------------------
 # Table: Départements
 #------------------------------------------------------------
 
 CREATE TABLE departements(
-  idDepartement  INT(10) AUTO_INCREMENT PRIMARY KEY NOT NULL ,
-  codeDepartement VARCHAR(3),
+  idDepartement  VARCHAR(10) PRIMARY KEY NOT NULL ,
   nomDepartement VARCHAR (255) NOT NULL ,
   id_Region  INT(10) ,
   FOREIGN KEY (id_Region) REFERENCES regions(idRegion) ON DELETE CASCADE
-)ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 #------------------------------------------------------------
 # Table: villes
 #------------------------------------------------------------
 
 CREATE TABLE villes(
-  idVille    INT(10)  AUTO_INCREMENT PRIMARY KEY NOT NULL ,
+  idVille    INT(10) PRIMARY KEY NOT NULL ,
+  id_Departement VARCHAR(10) ,
   nomVille   VARCHAR (255) NOT NULL ,
-  id_Departement INT(10) ,
+  cpVille VARCHAR(10),
   FOREIGN KEY (id_Departement) REFERENCES departements(idDepartement) ON DELETE CASCADE
-)ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 #------------------------------------------------------------
