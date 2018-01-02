@@ -5,7 +5,7 @@
  * Date: 07/12/17
  * Time: 16:02
  */
-require '../connexion_bdd.php';
+require_once '../connexion_bdd.php';
 
 class Adherent{
     private $id;

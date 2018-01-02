@@ -17,4 +17,5 @@ INSERT INTO regions(idRegion,codeRegion,nomRegion) VALUES
   (15,'FR-GF', 'Guyane'),
   (16,'FR-MQ', 'Martinique'),
   (17,'FR-RE', 'La Réunion'),
-  (18,'FR-YT', 'Mayotte');
+  (18,'FR-YT', 'Mayotte'),
+  (19,'FR-PM','Saint-Pierre-et-Miquelon');

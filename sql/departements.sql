@@ -18,8 +18,8 @@ INSERT INTO departements(idDepartement,nomDepartement,id_Region) VALUES
   ('17', 'Charente-Maritime',10),
   ('18', 'Cher', 4),
   ('19', 'Corrèze', 10),
-  ('2A', 'Corse-du-sud', 5),
-  ('2B', 'Haute-corse', 5),
+  ('200', 'Corse-du-sud', 5),
+  ('201', 'Haute-corse', 5),
   ('21', 'Côte-d''or',6),
   ('22', 'Côtes-d''armor', 3),
   ('23', 'Creuse', 10),
@@ -99,4 +99,5 @@ INSERT INTO departements(idDepartement,nomDepartement,id_Region) VALUES
   ('971', 'Guadeloupe', 14 ),
   ('973', 'Guyane', 15 ),
   ('972', 'Martinique', 16 ),
-  ('974', 'Réunion', 17);
+  ('974', 'Réunion', 17),
+  ('975','Saint-Pierre-et-Miquelon',19);

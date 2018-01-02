@@ -1,5 +1,6 @@
 <?php 
 
+require_once '../connexion_bdd.php';
 
 class Annonce
 {
@@ -35,8 +36,7 @@ class Annonce
 	}
 
 
-	public function objetSetId($sid,$stitre,$sdescription,$sidchien,$sidadherent);
-    {
+	public function objetSetId($sid,$stitre,$sdescription,$sidchien,$sidadherent){
         $this->id = $sid;
         $this->titre = $stitre;
         $this->description = $sdescription;
