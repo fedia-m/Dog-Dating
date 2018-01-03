@@ -1,10 +1,11 @@
 <?php
-require_once 'config.php';
+require 'config.php';
 include("views/header.php");
 include("views/menu.php");
 include("views/accueil.php");
 include("views/footer.php");
 require_once 'classes/adherent.php';
+
 
 $mdpayhann='ayhanncesi';
 $mdptiona='tionacesi';
