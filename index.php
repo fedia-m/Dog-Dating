@@ -1,9 +1,9 @@
 <?php
-require_once 'config.php';
-include("views/header.php");
-include("views/menu.php");
-include("views/accueil.php");
-include("views/footer.php");
+require 'config.php';
+require("views/header.php");
+require("views/menu.php");
+require("views/accueil.php");
+require("views/footer.php");
 require_once 'classes/adherent.php';
 
 $mdpayhann='ayhanncesi';

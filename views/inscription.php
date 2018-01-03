@@ -1,7 +1,7 @@
 <?php
-include '../config.php';
-include("header.php");
-include("menu.php");
+require '../config.php';
+require("header.php");
+require("menu.php");
 ?>
     <div class="well well-sm">
         <form class="form-horizontal" action="<?php echo BASE_URL; ?>index.php/User/validFormCreerUser" method="post">
