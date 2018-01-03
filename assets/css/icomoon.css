@@ -816,7 +816,7 @@
 .icon-reply:before {
   content: "\ea07";
 }
-.icon-resize-100%:before {
+.icon-resize-100:before {
   content: "\ea08";
 }
 .icon-resize-full-screen:before {
@@ -1083,7 +1083,7 @@
 .icon-google-play:before {
   content: "\ea60";
 }
-.icon-google+-with-circle:before {
+.icon-google-with-circle:before {
   content: "\ea61";
 }
 .icon-google+:before {

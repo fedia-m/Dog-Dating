@@ -1,14 +1,15 @@
-    </div><!--background-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="<?php echo BASE_URL?>assets/js/bootstrap.min.js"></script>
-    <div class="container">
-        <hr>
-        <div class="text-center center-block">
-            <a href="https://www.facebook.com/bootsnipp"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
-            <a href="https://twitter.com/bootsnipp"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
-            <a href="https://plus.google.com/+Bootsnipp-page"><i id="social-gp" class="fa fa-google-plus-square fa-3x social"></i></a>
-            <a href="mailto:bootsnipp@gmail.com"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
-            <p class="txt-railway"> &copy;  Copyright TAF CESI <?php echo date('Y')?></p>
-        </div>
-        <hr>
+
+    </main>
     </div>
+    <script src="<?php echo BASE_URL?>assets/js/jquery-3.2.1.slim.min.js"></script>
+    <script src="<?php echo BASE_URL?>assets/js/popper.min.js"></script>
+    <script src="<?php echo BASE_URL?>assets/js/bootstrap.min.js"></script>
+    <script src="<?php echo BASE_URL?>assets/js/owl.carousel.min.js"></script>
+    <script src="<?php echo BASE_URL?>assets/js/jquery.waypoints.min.js"></script>
+    <script src="<?php echo BASE_URL?>assets/js/imagesloaded.pkgd.min.js"></script>
+
+    <script src="<?php echo BASE_URL?>assets/js/main.js"></script>
+
+
+    </body>
+</html>

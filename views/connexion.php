@@ -3,7 +3,6 @@ require_once '../config.php';
 include("header.php");
 include("menu.php");
 ?>
-<div class="col-md-6 col-md-offset-3">
     <div class="well well-sm">
         <form class="form-horizontal" method="post" action="/function/connexion.php">
             <fieldset>
@@ -37,4 +36,6 @@ include("menu.php");
             </fieldset>
         </form>
     </div>
-</div>
+<?php
+include 'footer.php';
+?>

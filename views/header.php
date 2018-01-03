@@ -1,16 +1,25 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="utf-8" />
-    <title>Dog-Dating</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL?>assets/css/font-awesome.min.css" />
-    <link href="<?php echo BASE_URL?>images/chien_logo.png" rel="shortcut icon" type="image/x-icon"/>
-    <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL?>assets/css/menu.css">
-    <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL?>assets/css/header.css">
-    <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL?>assets/css/footer.css">
-    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <title>Dog-Dating site de rencontre pour chien</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Site de rencontre pour chien by TAF CESI" />
+    <meta name="keywords" content="free bootstrap 4, free bootstrap 4 template, free website templates, free html5, free template, free website template, html5, css3, mobile first, responsive" />
+    <meta name="author" content="TAF CESI" />
+
+
+    <link rel="stylesheet" href="<?php echo BASE_URL?>assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL?>assets/css/open-iconic-bootstrap.min.css">
+
+    <link rel="stylesheet" href="<?php echo BASE_URL?>assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL?>assets/css/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="<?php echo BASE_URL?>assets/css/icomoon.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL?>assets/css/animate.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL?>assets/css/style.css">
+
+    <link rel="stylesheet" href="<?php echo BASE_URL?>assets/css/header.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL?>assets/css/footer.css">
+
 </head>
-<body>
