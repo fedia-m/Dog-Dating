@@ -54,7 +54,6 @@ CREATE TABLE adherents(
   mdpAdherent VARCHAR (255) NOT NULL ,
   mailAdherent     VARCHAR (255) NOT NULL ,
   adresseAdherent  LONGTEXT ,
-  cpAdherent       CHAR (5) ,
   sexeAdherent enum('H','F','A') DEFAULT NULL,
   avatarAdherent  VARCHAR(255),
   roleAdherent ENUM ('0','1') NOT NULL ,
