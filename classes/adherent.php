@@ -9,7 +9,6 @@ class Adherent{
     private $mdp;
     private $mail;
     private $adresse;
-    private $codepostal;
     private $sexe;
     private $avatar;
     private $role;
@@ -73,14 +72,6 @@ class Adherent{
     /**
      * @return mixed
      */
-    public function getCodepostal()
-    {
-        return $this->codepostal;
-    }
-
-    /**
-     * @return mixed
-     */
     public function getSexe()
     {
         return $this->sexe;
@@ -109,7 +100,7 @@ class Adherent{
         return $this->idVille;
     }
 
-    public function objetSetId($sid,$snom,$sprenom,$spseudo,$smdp,$smail,$sadresse,$scp,$ssexe,$savatar,$srole,$sidVille)
+    public function objetSetId($sid,$snom,$sprenom,$spseudo,$smdp,$smail,$sadresse,$ssexe,$savatar,$srole,$sidVille)
     {
         $this->id = $sid;
         $this->nom = $snom;
@@ -118,7 +109,6 @@ class Adherent{
         $this->mdp = $smdp;
         $this->mail = $smail;
         $this->adresse = $sadresse;
-        $this->codepostal = $scp;
         $this->sexe = $ssexe;
         $this->avatar = $savatar;
         $this->role = $srole;
@@ -140,7 +130,7 @@ class Adherents{
         {
 
             $oAdherent = new Adherent();
-            $oAdherent->objetSetId($res['idAdherent'],$res['nomAdherent'],$res['prenomAdherent'],$res['pseudoAdherent'],$res['mdpAdherent'],$res['mailAdherent'],$res['adresseAdherent'],$res['cpAdherent'],$res['sexeAdherent'],$res['avatar'],$res['roleAdherent'],$res['id_Ville']);
+            $oAdherent->objetSetId($res['idAdherent'],$res['nomAdherent'],$res['prenomAdherent'],$res['pseudoAdherent'],$res['mdpAdherent'],$res['mailAdherent'],$res['adresseAdherent'],$res['sexeAdherent'],$res['avatarAdherent'],$res['roleAdherent'],$res['id_Ville']);
             $this->oCollAdherent[] = $oAdherent;
         }
 

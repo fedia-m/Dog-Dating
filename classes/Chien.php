@@ -7,7 +7,6 @@ class Chien
 	private $nom;
 	private $sexe;
 	private $naissance;
-	private $loof;
 	private $lof;
 	private $numeroPuce;
 	private $photo;
@@ -32,11 +31,6 @@ class Chien
 	public function getNaissance()
 	{
 		return $this->naissance;
-	}
-
-	public function getLoof()
-	{
-		return $this->loof;
 	}
 
 	public function getLof()
@@ -66,14 +60,12 @@ class Chien
 
 
 
-	public function objetSetId($sid,$snom,$ssexe,$snaissance,$sloof,$slof,$snumeroPuce,$sphoto,$sidAdherent,$sidRace);
+	public function objetSetId($sid,$snom,$ssexe,$snaissance,$slof,$snumeroPuce,$sphoto,$sidAdherent,$sidRace);
     {
         $this->id = $sid;
         $this->nom = $snom;
         $this->naissance = $naissance;
-        $this->loof = $loof;
         $this->lof= $lof;
-        $this->loof = $sloof;
         $this->numeroPuce = $snumeroPuce;
         $this->photo = $sphoto;
         $this->idAdherent = $sidAdherent;
@@ -100,7 +92,7 @@ class Chiens
         {
 
             $oChien = new Chien();
-            $oChien->objetSetId($res['idChien'],$res['nomChien'],$res['sexeChien'],$res['dateNaissanceChien'],$res['loofChien'],$res['lofChien'],$res['numeroPuce'],$res['photoChien'],$res['id_Adherent'],$res['id_Race']);
+            $oChien->objetSetId($res['idChien'],$res['nomChien'],$res['sexeChien'],$res['dateNaissanceChien'],$res['lofChien'],$res['numeroPuce'],$res['photoChien'],$res['id_Adherent'],$res['id_Race']);
             $this->oCollChien[] = $oChien;
         }
 
