@@ -2,7 +2,6 @@
 include 'menu.php';
 ?>
 
-
 <main role="main" class="probootstrap-main js-probootstrap-main">
       <div class="probootstrap-bar">
         <a href="#" class="probootstrap-toggle js-probootstrap-toggle"><span class="oi oi-menu"></span></a>

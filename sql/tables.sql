@@ -56,7 +56,7 @@ CREATE TABLE adherents(
   adresseAdherent  LONGTEXT ,
   cpAdherent       CHAR (5) ,
   sexeAdherent enum('H','F','A') DEFAULT NULL,
-  avatar  VARCHAR(255),
+  avatarAdherent  VARCHAR(255),
   roleAdherent ENUM ('0','1') NOT NULL ,
   id_Ville INT(10),
   PRIMARY KEY (idAdherent),
