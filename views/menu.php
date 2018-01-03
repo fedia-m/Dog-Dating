@@ -19,6 +19,7 @@ include 'header.php';
                 <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="<?php echo BASE_URL?>views/services.php">Services</a></li>
                 <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="<?php echo BASE_URL?>views/portfolio.php">Recherche</a></li>
                 <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="<?php echo BASE_URL?>views/contact.php">Contact</a></li>
+                <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="<?php echo BASE_URL?>views/add_dog.php">Ajouter un chien</a></li>
             </ul>
         </nav>
         <footer class="probootstrap-aside-footer probootstrap-animate" data-animate-effect="fadeInLeft">
@@ -32,7 +33,7 @@ include 'header.php';
                 <li><a href="#" class="p-2"><span class="icon-facebook"></span></a></li>
                 <li><a href="#" class="p-2"><span class="icon-google-play"></span></a></li>
             </ul>
-            <p> &copy;  Copyright <?php echo date('Y')?><a href="#" target="_blank">TAF CESI</a>.</p>
+            <p> &copy;  Copyright <?php echo date('Y')?><a href="#" target="_blank"> TAF CESI</a>.</p>
         </footer>
     </div>
 </aside>

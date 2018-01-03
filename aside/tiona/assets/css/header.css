@@ -1,0 +1,37 @@
+/* Full height image header */
+
+.parallax {
+    /* The image used */
+    background-image: url("../../images/background.jpg");
+
+    /* Set a specific height */
+    height: 500px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.logo{
+    width: 50%;
+    height: 50%;
+    text-align: center;
+}
+.navbar{
+    background-color: white;
+}
+
+textarea{
+    resize: none;
+}
+
+a.button{
+    text-decoration: none;
+    color: white;
+}
+
+body
+{
+    font-family: Roboto;
+}
