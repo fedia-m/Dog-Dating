@@ -16,10 +16,7 @@ $oCollRace = $oRace->getCollection();
 <?php require_once '../includes/menu.php'; ?>
 </html>
 <main role="main" class="probootstrap-main js-probootstrap-main">
-<div class="probootstrap-bar">
-        <a href="#" class="probootstrap-toggle js-probootstrap-toggle"><span class="oi oi-menu"></span></a>
-        <div class="probootstrap-main-site-logo"><a href="index.html">Aside</a></a></div>
-      </div>
+
       <div class="card-columns"> 
 <form class="form-horizontal" action="#" method="post">
 <fieldset>

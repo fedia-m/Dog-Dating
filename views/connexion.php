@@ -3,6 +3,10 @@ require_once '../config.php';
 include("header.php");
 include("menu.php");
 ?>
+    <div class="probootstrap-bar">
+        <a href="#" class="probootstrap-toggle js-probootstrap-toggle"><span class="oi oi-menu"></span></a>
+        </a>
+    </div>
     <div class="well well-sm">
         <form class="form-horizontal" method="post" action="/function/connexion.php">
             <fieldset>
@@ -10,20 +14,22 @@ include("menu.php");
                 <!-- Text input-->
                 <div class="form-group">
                     <label class="col-sm-4 col-md-4 col-sm-4 control-label" for="login">Login</label>
+                    <div class="col-md-4"></div>
                     <div class="col-md-4">
                         <input id="login" name="login" type="text" class="form-control input-md" required="">
-
                     </div>
+                    <div class="col-md-4"></div>
                 </div>
 
 
                 <!-- Password input-->
                 <div class="form-group">
                     <label class="col-sm-4 col-md-4 col-sm-4 control-label" for="mdp">Mot de passe</label>
+                    <div class="col-md-4"></div>
                     <div class="col-md-4">
                         <input id="mdp" name="mdp" type="password" class="form-control input-md" required="">
-
                     </div>
+                    <div class="col-md-4"></div>
                 </div>
 
                 <!-- Button -->

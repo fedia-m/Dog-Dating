@@ -5,7 +5,7 @@ include 'header.php';
 <body>
 
 <aside class="probootstrap-aside js-probootstrap-aside">
-    <a href="#" class="probootstrap-close-menu js-probootstrap-close-menu d-md-none"><span class="oi oi-arrow-left"></span> Close</a>
+    <a href="#" class="probootstrap-close-menu js-probootstrap-close-menu d-md-none"><span class="oi oi-arrow-left"></span> Fermer</a>
     <div class="probootstrap-site-logo probootstrap-animate" data-animate-effect="fadeInLeft">
 
         <a href="<?php echo BASE_URL?>" class="mb-2 d-block probootstrap-logo">Dog Dating</a>

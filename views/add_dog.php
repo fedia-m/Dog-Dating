@@ -7,14 +7,16 @@ require_once '../classes/race.php';
 $oRace = Races::getInstance($bdd);
 $oCollRace = $oRace->getCollection();
 ?>
-
-
+  <div class="probootstrap-bar">
+    <a href="#" class="probootstrap-toggle js-probootstrap-toggle"><span class="oi oi-menu"></span></a>
+    </a>
+  </div>
 
 <form class="form-horizontal" action="#" method="post">
 <fieldset>
 
 <!-- Form Name -->
-<legend>Ajouter votre chien</legend>
+<legend>Inscription de l'animal</legend>
 
 <!-- Text input-->
 <div class="form-group">
