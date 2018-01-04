@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6d6e9fb-3a45-4b00-8bf2-6d9190b6ff14" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/functions/users.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aside/tiona/aside/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/aside/tiona/aside/js/bootstrap.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aside/tiona/aside/js/imagesloaded.pkgd.min.js" afterPath="$PROJECT_DIR$/aside/tiona/aside/js/imagesloaded.pkgd.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aside/tiona/aside/js/jquery-3.2.1.slim.min.js" afterPath="$PROJECT_DIR$/aside/tiona/aside/js/jquery-3.2.1.slim.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aside/tiona/aside/js/jquery.waypoints.min.js" afterPath="$PROJECT_DIR$/aside/tiona/aside/js/jquery.waypoints.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aside/tiona/aside/js/owl.carousel.min.js" afterPath="$PROJECT_DIR$/aside/tiona/aside/js/owl.carousel.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aside/tiona/aside/js/popper.min.js" afterPath="$PROJECT_DIR$/aside/tiona/aside/js/popper.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aside/tiona/assets/js/bootstrap.bundle.js" afterPath="$PROJECT_DIR$/aside/tiona/assets/js/bootstrap.bundle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aside/tiona/assets/js/bootstrap.bundle.min.js" afterPath="$PROJECT_DIR$/aside/tiona/assets/js/bootstrap.bundle.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aside/tiona/assets/js/bootstrap.js" afterPath="$PROJECT_DIR$/aside/tiona/assets/js/bootstrap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aside/tiona/assets/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/aside/tiona/assets/js/bootstrap.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aside/tiona/views/connexion.php" afterPath="$PROJECT_DIR$/aside/tiona/views/connexion.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/bootstrap-select.js" afterPath="$PROJECT_DIR$/assets/js/bootstrap-select.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/bootstrap.bundle.js" afterPath="$PROJECT_DIR$/assets/js/bootstrap.bundle.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/bootstrap.bundle.min.js" afterPath="$PROJECT_DIR$/assets/js/bootstrap.bundle.min.js" />
@@ -23,6 +11,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/imagesloaded.pkgd.min.js" afterPath="$PROJECT_DIR$/assets/js/imagesloaded.pkgd.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/jquery-3.2.1.slim.min.js" afterPath="$PROJECT_DIR$/assets/js/jquery-3.2.1.slim.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/jquery.waypoints.min.js" afterPath="$PROJECT_DIR$/assets/js/jquery.waypoints.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/main.js" afterPath="$PROJECT_DIR$/assets/js/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/owl.carousel.min.js" afterPath="$PROJECT_DIR$/assets/js/owl.carousel.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/popper.min.js" afterPath="$PROJECT_DIR$/assets/js/popper.min.js" />
     </list>
@@ -56,12 +45,9 @@
       <file leaf-file-name="contact.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/contact.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
+            <state relative-caret-position="570">
               <caret line="38" column="24" selection-start-line="38" selection-start-column="24" selection-end-line="40" selection-end-column="30" />
-              <folding>
-                <marker date="1515075286244" expanded="true" signature="293:2304" ph="..." />
-                <marker date="1515075286244" expanded="true" signature="472:2293" ph="..." />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -69,7 +55,7 @@
       <file leaf-file-name="inscription.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/inscription.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
+            <state relative-caret-position="1200">
               <caret line="80" column="57" selection-start-line="80" selection-start-column="48" selection-end-line="80" selection-end-column="57" />
               <folding />
             </state>
@@ -79,7 +65,7 @@
       <file leaf-file-name="connexion.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/connexion.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
+            <state relative-caret-position="495">
               <caret line="33" column="64" selection-start-line="33" selection-start-column="52" selection-end-line="33" selection-end-column="64" />
               <folding />
             </state>
@@ -89,7 +75,7 @@
       <file leaf-file-name="adherent.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/adherent.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1651">
+            <state relative-caret-position="15">
               <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
               <folding>
                 <marker date="1514993587068" expanded="true" signature="2143:2166" ph="SELECT * FRO... adherents" />
@@ -123,7 +109,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/controllers/user_c.php" />
         <option value="$PROJECT_DIR$/assets/css/footer.css" />
         <option value="$PROJECT_DIR$/controllers/accueil_c.php" />
         <option value="$PROJECT_DIR$/assets/css/header.css" />
@@ -174,6 +159,7 @@
         <option value="$PROJECT_DIR$/views/contact.php" />
         <option value="$PROJECT_DIR$/views/add_dog.php" />
         <option value="$PROJECT_DIR$/functions/users.php" />
+        <option value="$PROJECT_DIR$/assets/js/bootstrap.min.js" />
       </list>
     </option>
   </component>
@@ -271,7 +257,25 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="classes" />
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Dog-Dating" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Dog-Dating" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -404,21 +408,21 @@
       <workItem from="1514984222825" duration="6471000" />
       <workItem from="1515051015607" duration="2097000" />
       <workItem from="1515058607241" duration="11788000" />
+      <workItem from="1515080295470" duration="1356000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="136387000" />
+    <option name="totallyTimeSpent" value="137796000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="26" width="1368" height="742" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25075758" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25454545" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -429,6 +433,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3993559" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -456,7 +461,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/controllers/accueil_c.php" />
     <entry file="file://$PROJECT_DIR$/controllers/user_c.php" />
     <entry file="file://$PROJECT_DIR$/assets/css/header.css">
       <provider selected="true" editor-type-id="text-editor">
@@ -647,15 +651,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/icomoon.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="2" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -684,7 +679,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="29">
           <caret line="49" column="16" selection-start-line="49" selection-start-column="16" selection-end-line="49" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -700,7 +694,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -716,7 +709,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -724,18 +716,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="164">
           <caret line="336" column="29" selection-start-line="336" selection-start-column="29" selection-end-line="336" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/contact.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
+        <state relative-caret-position="570">
           <caret line="38" column="24" selection-start-line="38" selection-start-column="24" selection-end-line="40" selection-end-column="30" />
-          <folding>
-            <marker date="1515075286244" expanded="true" signature="293:2304" ph="..." />
-            <marker date="1515075286244" expanded="true" signature="472:2293" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -749,7 +737,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/inscription.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
+        <state relative-caret-position="1200">
           <caret line="80" column="57" selection-start-line="80" selection-start-column="48" selection-end-line="80" selection-end-column="57" />
           <folding />
         </state>
@@ -757,7 +745,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/connexion.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
+        <state relative-caret-position="495">
           <caret line="33" column="64" selection-start-line="33" selection-start-column="52" selection-end-line="33" selection-end-column="64" />
           <folding />
         </state>
@@ -765,11 +753,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/adherent.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1651">
+        <state relative-caret-position="15">
           <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
           <folding>
             <marker date="1514993587068" expanded="true" signature="2143:2166" ph="SELECT * FRO... adherents" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/icomoon.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="818" column="17" selection-start-line="818" selection-start-column="16" selection-end-line="818" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/bootstrap.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
