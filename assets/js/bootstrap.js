@@ -1456,7 +1456,7 @@ var Dropdown = function () {
     flip: true
   };
   var DefaultType = {
-    offset: '(number|string|function)',
+    offset: '(number|string|functions)',
     flip: 'boolean'
     /**
      * ------------------------------------------------------------------------
@@ -1608,7 +1608,7 @@ var Dropdown = function () {
 
       var offsetConf = {};
 
-      if (typeof this._config.offset === 'function') {
+      if (typeof this._config.offset === 'functions') {
         offsetConf.fn = function (data) {
           data.offsets = $.extend({}, data.offsets, _this2._config.offset(data.offsets) || {});
           return data;
@@ -2428,12 +2428,12 @@ var Tooltip = function () {
   var DefaultType = {
     animation: 'boolean',
     template: 'string',
-    title: '(string|element|function)',
+    title: '(string|element|functions)',
     trigger: 'string',
     delay: '(number|object)',
     html: 'boolean',
     selector: '(string|boolean)',
-    placement: '(string|function)',
+    placement: '(string|functions)',
     offset: '(number|string)',
     container: '(string|element|boolean)',
     fallbackPlacement: '(string|array)'
@@ -2614,7 +2614,7 @@ var Tooltip = function () {
           $(tip).addClass(ClassName.FADE);
         }
 
-        var placement = typeof this.config.placement === 'function' ? this.config.placement.call(this, tip, this.element) : this.config.placement;
+        var placement = typeof this.config.placement === 'functions' ? this.config.placement.call(this, tip, this.element) : this.config.placement;
 
         var attachment = this._getAttachment(placement);
 
@@ -2779,7 +2779,7 @@ var Tooltip = function () {
       var title = this.element.getAttribute('data-original-title');
 
       if (!title) {
-        title = typeof this.config.title === 'function' ? this.config.title.call(this.element) : this.config.title;
+        title = typeof this.config.title === 'functions' ? this.config.title.call(this.element) : this.config.title;
       }
 
       return title;
@@ -3083,7 +3083,7 @@ var Popover = function () {
     template: '<div class="popover" role="tooltip">' + '<div class="arrow"></div>' + '<h3 class="popover-header"></h3>' + '<div class="popover-body"></div></div>'
   });
   var DefaultType = $.extend({}, Tooltip.DefaultType, {
-    content: '(string|element|function)'
+    content: '(string|element|functions)'
   });
   var ClassName = {
     FADE: 'fade',
@@ -3147,7 +3147,7 @@ var Popover = function () {
 
 
     _proto._getContent = function _getContent() {
-      return this.element.getAttribute('data-content') || (typeof this.config.content === 'function' ? this.config.content.call(this.element) : this.config.content);
+      return this.element.getAttribute('data-content') || (typeof this.config.content === 'functions' ? this.config.content.call(this.element) : this.config.content);
     };
 
     _proto._cleanTipClass = function _cleanTipClass() {

@@ -5,7 +5,7 @@ include("menu.php");
 ?>
 <div class="col-md-6 col-md-offset-3">
     <div class="well well-sm">
-        <form class="form-horizontal" method="post" action="/function/connexion.php">
+        <form class="form-horizontal" method="post" action="/functions/connexion.php">
             <fieldset>
                 <legend class="text-center">Connexion</legend>
                 <!-- Text input-->

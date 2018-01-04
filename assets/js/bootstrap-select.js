@@ -6,7 +6,7 @@
  */
 
 (function (root, factory) {
-  if (typeof define === 'function' && define.amd) {
+  if (typeof define === 'functions' && define.amd) {
     // AMD. Register as an anonymous module unless amdModuleId is set
     define(["jquery"], function (a0) {
       return (factory(a0));
@@ -297,7 +297,7 @@
   var htmlUnescape = createEscaper(unescapeMap);
 
   var Selectpicker = function (element, options) {
-    // bootstrap-select has been initialized - revert valHooks.select.set back to its original function
+    // bootstrap-select has been initialized - revert valHooks.select.set back to its original functions
     if (!valHooks.useDefault) {
       $.valHooks.select.set = valHooks._set;
       valHooks.useDefault = true;
@@ -804,7 +804,7 @@
         if ((max.length > 1 && selectedItems.length > max[1]) || (max.length == 1 && selectedItems.length >= 2)) {
           notDisabled = this.options.hideDisabled ? ', [disabled]' : '';
           var totalCount = $selectOptions.not('[data-divider="true"], [data-hidden="true"]' + notDisabled).length,
-              tr8nText = (typeof this.options.countSelectedText === 'function') ? this.options.countSelectedText(selectedItems.length, totalCount) : this.options.countSelectedText;
+              tr8nText = (typeof this.options.countSelectedText === 'functions') ? this.options.countSelectedText(selectedItems.length, totalCount) : this.options.countSelectedText;
           title = tr8nText.replace('{0}', selectedItems.length.toString()).replace('{1}', totalCount.toString());
         }
       }
@@ -898,7 +898,7 @@
           doneButtonHeight = doneButton ? doneButton.offsetHeight : 0,
           dividerHeight = $(divider).outerHeight(true),
           // fall back to jQuery if getComputedStyle is not supported
-          menuStyle = typeof getComputedStyle === 'function' ? getComputedStyle(menu) : false,
+          menuStyle = typeof getComputedStyle === 'functions' ? getComputedStyle(menu) : false,
           $menu = menuStyle ? null : $(menu),
           menuPadding = {
             vert: parseInt(menuStyle ? menuStyle.paddingTop : $menu.css('paddingTop')) +
@@ -1322,7 +1322,7 @@
                   that.setSelected(clickedIndex, true);
                 } else {
                   var maxOptionsText = typeof that.options.maxOptionsText === 'string' ? [that.options.maxOptionsText, that.options.maxOptionsText] : that.options.maxOptionsText,
-                      maxOptionsArr = typeof maxOptionsText === 'function' ? maxOptionsText(maxOptions, maxOptionsGrp) : maxOptionsText,
+                      maxOptionsArr = typeof maxOptionsText === 'functions' ? maxOptionsText(maxOptions, maxOptionsGrp) : maxOptionsText,
                       maxTxt = maxOptionsArr[0].replace('{n}', maxOptions),
                       maxTxtGrp = maxOptionsArr[1].replace('{n}', maxOptionsGrp),
                       $notify = $('<div class="notify"></div>');
@@ -1795,9 +1795,9 @@
   // SELECTPICKER PLUGIN DEFINITION
   // ==============================
   function Plugin(option) {
-    // get the args of the outer function..
+    // get the args of the outer functions..
     var args = arguments;
-    // The arguments of the function are explicitly re-defined from the argument list, because the shift causes them
+    // The arguments of the functions are explicitly re-defined from the argument list, because the shift causes them
     // to get lost/corrupted in android 2.3 and IE9 #715 #775
     var _option = option;
 

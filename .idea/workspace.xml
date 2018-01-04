@@ -2,12 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6d6e9fb-3a45-4b00-8bf2-6d9190b6ff14" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/contact.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/functions/users.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/style.css" afterPath="$PROJECT_DIR$/assets/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/add_dog.php" afterPath="$PROJECT_DIR$/views/add_dog.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/connexion.php" afterPath="$PROJECT_DIR$/views/connexion.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/inscription.php" afterPath="$PROJECT_DIR$/views/inscription.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aside/tiona/aside/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/aside/tiona/aside/js/bootstrap.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aside/tiona/aside/js/imagesloaded.pkgd.min.js" afterPath="$PROJECT_DIR$/aside/tiona/aside/js/imagesloaded.pkgd.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aside/tiona/aside/js/jquery-3.2.1.slim.min.js" afterPath="$PROJECT_DIR$/aside/tiona/aside/js/jquery-3.2.1.slim.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aside/tiona/aside/js/jquery.waypoints.min.js" afterPath="$PROJECT_DIR$/aside/tiona/aside/js/jquery.waypoints.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aside/tiona/aside/js/owl.carousel.min.js" afterPath="$PROJECT_DIR$/aside/tiona/aside/js/owl.carousel.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aside/tiona/aside/js/popper.min.js" afterPath="$PROJECT_DIR$/aside/tiona/aside/js/popper.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aside/tiona/assets/js/bootstrap.bundle.js" afterPath="$PROJECT_DIR$/aside/tiona/assets/js/bootstrap.bundle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aside/tiona/assets/js/bootstrap.bundle.min.js" afterPath="$PROJECT_DIR$/aside/tiona/assets/js/bootstrap.bundle.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aside/tiona/assets/js/bootstrap.js" afterPath="$PROJECT_DIR$/aside/tiona/assets/js/bootstrap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aside/tiona/assets/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/aside/tiona/assets/js/bootstrap.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aside/tiona/views/connexion.php" afterPath="$PROJECT_DIR$/aside/tiona/views/connexion.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/bootstrap-select.js" afterPath="$PROJECT_DIR$/assets/js/bootstrap-select.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/bootstrap.bundle.js" afterPath="$PROJECT_DIR$/assets/js/bootstrap.bundle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/bootstrap.bundle.min.js" afterPath="$PROJECT_DIR$/assets/js/bootstrap.bundle.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/bootstrap.js" afterPath="$PROJECT_DIR$/assets/js/bootstrap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/assets/js/bootstrap.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/imagesloaded.pkgd.min.js" afterPath="$PROJECT_DIR$/assets/js/imagesloaded.pkgd.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/jquery-3.2.1.slim.min.js" afterPath="$PROJECT_DIR$/assets/js/jquery-3.2.1.slim.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/jquery.waypoints.min.js" afterPath="$PROJECT_DIR$/assets/js/jquery.waypoints.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/owl.carousel.min.js" afterPath="$PROJECT_DIR$/assets/js/owl.carousel.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/popper.min.js" afterPath="$PROJECT_DIR$/assets/js/popper.min.js" />
     </list>
     <ignored path="PageConnexion.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,7 +58,10 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
               <caret line="38" column="24" selection-start-line="38" selection-start-column="24" selection-end-line="40" selection-end-column="30" />
-              <folding />
+              <folding>
+                <marker date="1515075286244" expanded="true" signature="293:2304" ph="..." />
+                <marker date="1515075286244" expanded="true" signature="472:2293" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -49,18 +69,40 @@
       <file leaf-file-name="inscription.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/inscription.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="74">
-              <caret line="54" column="12" selection-start-line="54" selection-start-column="12" selection-end-line="76" selection-end-column="18" />
+            <state relative-caret-position="239">
+              <caret line="80" column="57" selection-start-line="80" selection-start-column="48" selection-end-line="80" selection-end-column="57" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="add_dog.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/views/add_dog.php">
+      <file leaf-file-name="connexion.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/connexion.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+            <state relative-caret-position="313">
+              <caret line="33" column="64" selection-start-line="33" selection-start-column="52" selection-end-line="33" selection-end-column="64" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="adherent.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/classes/adherent.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1651">
+              <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
+              <folding>
+                <marker date="1514993587068" expanded="true" signature="2143:2166" ph="SELECT * FRO... adherents" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="users.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/functions/users.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -81,7 +123,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/sql/sample.sql" />
         <option value="$PROJECT_DIR$/controllers/user_c.php" />
         <option value="$PROJECT_DIR$/assets/css/footer.css" />
         <option value="$PROJECT_DIR$/controllers/accueil_c.php" />
@@ -132,6 +173,7 @@
         <option value="$PROJECT_DIR$/assets/css/style.css" />
         <option value="$PROJECT_DIR$/views/contact.php" />
         <option value="$PROJECT_DIR$/views/add_dog.php" />
+        <option value="$PROJECT_DIR$/functions/users.php" />
       </list>
     </option>
   </component>
@@ -215,7 +257,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
+              <option name="myItemId" value="functions" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -229,25 +271,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Dog-Dating" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Dog-Dating" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aside" />
+              <option name="myItemId" value="classes" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -379,12 +403,12 @@
       <workItem from="1514975712221" duration="5072000" />
       <workItem from="1514984222825" duration="6471000" />
       <workItem from="1515051015607" duration="2097000" />
-      <workItem from="1515058607241" duration="10757000" />
+      <workItem from="1515058607241" duration="11788000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135356000" />
+    <option name="totallyTimeSpent" value="136387000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="26" width="1368" height="742" extended-state="6" />
@@ -394,6 +418,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -404,7 +429,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3993559" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -432,13 +456,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b8d825e3-ccae-4321-bc26-d0be3b38ddcc/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/accueil_c.php" />
     <entry file="file://$PROJECT_DIR$/controllers/user_c.php" />
     <entry file="file://$PROJECT_DIR$/assets/css/header.css">
@@ -512,13 +529,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="502">
           <caret line="102" column="38" selection-start-line="102" selection-start-column="38" selection-end-line="102" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/classes/adherent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -718,27 +728,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/connexion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/inscription.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="54" column="12" selection-start-line="54" selection-start-column="12" selection-end-line="76" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/contact.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="38" column="24" selection-start-line="38" selection-start-column="24" selection-end-line="40" selection-end-column="30" />
-          <folding />
+          <folding>
+            <marker date="1515075286244" expanded="true" signature="293:2304" ph="..." />
+            <marker date="1515075286244" expanded="true" signature="472:2293" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -746,6 +743,40 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="239">
           <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/inscription.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="80" column="57" selection-start-line="80" selection-start-column="48" selection-end-line="80" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/connexion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="33" column="64" selection-start-line="33" selection-start-column="52" selection-end-line="33" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/adherent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1651">
+          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
+          <folding>
+            <marker date="1514993587068" expanded="true" signature="2143:2166" ph="SELECT * FRO... adherents" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions/users.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
           <folding />
         </state>
       </provider>
