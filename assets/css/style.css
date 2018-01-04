@@ -331,12 +331,10 @@ h1, h2, h3, h4, h5,
 
 .form-control {
   border: 2px solid rgba(0, 0, 0, 0.2);
-  height: 55px;
-  background: none !important;
   color: #000 !important;
   font-size: 18px; }
   .form-control:focus, .form-control:active {
-    border: 2px solid #000; }
+    border: 2px solid #1FAD9F; }
 
 textarea {
   height: inherit !important; }

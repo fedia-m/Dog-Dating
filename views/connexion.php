@@ -3,35 +3,30 @@ require_once '../config.php';
 include("header.php");
 include("menu.php");
 ?>
-    <div class="probootstrap-bar">
-        <a href="#" class="probootstrap-toggle js-probootstrap-toggle"><span class="oi oi-menu"></span></a>
-        </a>
-    </div>
-    <div class="well well-sm">
-        <form class="form-horizontal" method="post" action="/function/connexion.php">
-            <fieldset>
-                <legend class="text-center">Connexion</legend>
-                <!-- Text input-->
-                <div class="form-group">
-                    <label class="col-sm-4 col-md-4 col-sm-4 control-label" for="login">Login</label>
-                    <div class="col-md-4"></div>
-                    <div class="col-md-4">
-                        <input id="login" name="login" type="text" class="form-control input-md" required="">
+<div class="probootstrap-bar">
+    <a href="#" class="probootstrap-toggle js-probootstrap-toggle"><span class="oi oi-menu"></span></a></a>
+</div>
+<div class="container-fluid">
+    <div class="col-xl-6 col-lg-10 mx-auto">
+        <div class="card card-body bg-light">
+            <form action="#" method="post" class="probootstrap-form mb-5">
+                <legend class="text-center"><h1>Connexion</h1></legend>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="login">Login</label>
+                            <input type="text" class="form-control" id="login" name="login">
+                        </div>
                     </div>
-                    <div class="col-md-4"></div>
                 </div>
-
-
-                <!-- Password input-->
-                <div class="form-group">
-                    <label class="col-sm-4 col-md-4 col-sm-4 control-label" for="mdp">Mot de passe</label>
-                    <div class="col-md-4"></div>
-                    <div class="col-md-4">
-                        <input id="mdp" name="mdp" type="password" class="form-control input-md" required="">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="motDePasse">Mot de passe</label>
+                            <input type="password" class="form-control" id="motDePasse" name="motDePasse">
+                        </div>
                     </div>
-                    <div class="col-md-4"></div>
                 </div>
-
                 <!-- Button -->
                 <!-- Form actions -->
                 <div class="form-group">
@@ -39,9 +34,12 @@ include("menu.php");
                         <button type="submit" name='btnConnexion' class="btn btn-primary btn-lg">Connexion</button>
                     </div>
                 </div>
-            </fieldset>
-        </form>
+            </form>
+        </div>
     </div>
+</div>
+
+    <!-- END row -->
 <?php
 include 'footer.php';
 ?>

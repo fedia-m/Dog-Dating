@@ -7,99 +7,99 @@ require_once '../classes/race.php';
 $oRace = Races::getInstance($bdd);
 $oCollRace = $oRace->getCollection();
 ?>
-  <div class="probootstrap-bar">
+<div class="probootstrap-bar">
     <a href="#" class="probootstrap-toggle js-probootstrap-toggle"><span class="oi oi-menu"></span></a>
-    </a>
-  </div>
-
-<form class="form-horizontal" action="#" method="post">
-<fieldset>
-
-<!-- Form Name -->
-<legend>Inscription de l'animal</legend>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="nomchien">Nom (*)</label>  
-  <div class="col-md-4">
-  <input id="nomchien" name="nomchien" type="text" placeholder="" class="form-control input-md" required="">
-    
-  </div>
 </div>
+    <div class="col-xl-8 col-lg-12 mx-auto">
+        <div class="card card-body bg-light">
+            <form class="form-horizontal" action="#" method="post">
+            <!-- Form Name -->
+                <legend class="text-center"><h1>Inscription de l'animal</h1></legend>
+                <div class="row">
+                    <!-- Text input Nom-->
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="nomchien">Nom (*)</label>
+                            <input id="nomchien" name="nomchien" type="text" placeholder="" class="form-control input-md" required="">
+                        </div>
+                    </div>
+                    <!-- Select Race-->
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="raceChien">Race (*)</label>
+                            <select id="raceChien" name="raceChien" class="form-control">
+                                <?php
 
-<!-- Select Basic -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="race">Race (*) </label>
-  <div class="col-md-5">
-    <select id="race" name="racechien" class="form-control">
-      <?php 
+                                for ($i=0; $i < count($oCollRace) ; $i++) {
+                                    echo '<option value = ' . $oCollRace[$i]->getId() . '>' . $oCollRace[$i]->getNom() . '</option>';
+                                }
 
-      for ($i=0; $i < count($oCollRace) ; $i++) { 
-        echo '<option value = ' . $oCollRace[$i]->getId() . '>' . $oCollRace[$i]->getNom() . '</option>'; 
-      }
+                                ?>
+                            </select>
+                        </div>
+                    </div>
+                </div>
 
-       ?>
-    </select>
-  </div>
-</div>
+                <!-- sexe input-->
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="sexeChien">Sexe (*)</label>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label class="radio-inline"><input type="radio" id="sexeChien" name="sexeChien" value="M" checked required> Mâle</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="radio-inline"><input type="radio" id="sexeChien" name="sexeChien"  value="F"> Femelle</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Text input-->
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="dateNaissance">Date de naissance (*)</label>
+                            <input id="dateNaissance" name="dateNaissance" type="date" placeholder="" class="form-control input-md" required="">
+                        </div>
+                    </div>
+                </div>
 
-<!-- Select Basic -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="sexeChien">Sexe (*)</label>
-  <div class="col-md-4">
-    <select id="sexeChien" name="sexeChien" class="form-control">
-      <option value="F">Femelle</option>
-      <option value="M">Mâle</option>
-    </select>
-  </div>
-</div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="lofChien">Lof</label>
+                            <input type="text" class="form-control" id="lofChien" name="lofChien">
+                            <span class="help-block">ex : 2015049585-2016-1</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="numChien">Numéro puce / tatouage</label>
+                            <input type="text" class="form-control" id="numChien" name="numChien">
+                            <span class="help-block">ex : 250 26 10 55101789</span>
 
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="dateNaissance">Date de naissance (*)</label>  
-  <div class="col-md-4">
-  <input id="dateNaissance" name="dateNaissance" type="date" placeholder="" class="form-control input-md" required="">
-    
-  </div>
-</div>
+                        </div>
+                    </div>
+                </div>
 
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="lofChien">Lof</label>  
-  <div class="col-md-4">
-  <input id="lofChien" name="lofChien" type="text" placeholder="" class="form-control input-md">
-  <span class="help-block">ex : 2015049585-2016-1</span>  
-  </div>
-</div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="photoChien">Photo (*)</label>
+                            <input type="file" class="input-file" id="photoChien" name="photoChien">
+                        </div>
+                    </div>
+                </div>
 
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="numChien">Numéro puce / tatouage</label>  
-  <div class="col-md-4">
-  <input id="numChien" name="numChien" type="text" placeholder="" class="form-control input-md">
-  <span class="help-block">ex : 250 26 10 55101789</span>  
-  </div>
-</div>
+                <div class="form-group text-center">
+                    <input type="submit" class="btn btn-primary" id="submit" name="submit" value="Ajouter">
+                </div>
 
-<!-- File Button --> 
-<div class="form-group">
-  <label class="col-md-4 control-label" for="photoChien">Photo (*)</label>
-  <div class="col-md-4">
-    <input id="photoChien" name="photoChien" class="input-file" type="file">
-  </div>
-</div>
-<i><p>(*) : Champs obligatoires.</p></i>
+                <i><p>(*) : Champs obligatoires.</p></i>
 
-<!-- Button -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="btnAjouter"></label>
-  <div class="col-md-4">
-    <button id="btnAjouter" name="btnAjouter" class="btn btn-success">Ajouter</button>
-  </div>
-</div>
-</fieldset>
-</form>
-
+            </form>
+        </div>
+    </div>
 <?php
 include "footer.php";
 ?>
