@@ -1,7 +1,6 @@
 #------------------------------------------------------------
 #        Script MySQL.
 
-DROP TABLE IF EXISTS annonces;
 DROP TABLE IF EXISTS races;
 DROP TABLE IF EXISTS chiens;
 DROP TABLE IF EXISTS adherents;
@@ -85,26 +84,12 @@ CREATE TABLE chiens(
   lofChien           VARCHAR (25) ,
   numeroPuce         VARCHAR (25) ,
   photoChien         VARCHAR (255),
+  descriptionChien   LONGTEXT,
   id_Adherent INT(10) NOT NULL,
   id_Race INT(10) NOT NULL,
   PRIMARY KEY (idChien),
   FOREIGN KEY (id_Race) REFERENCES races(idRace) ON DELETE CASCADE,
   FOREIGN KEY (id_Adherent) REFERENCES adherents(idAdherent) ON DELETE CASCADE
-)ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
-
-#------------------------------------------------------------
-# Table: annonces
-#------------------------------------------------------------
-
-CREATE TABLE annonces(
-  idAnnonce          INT(10) AUTO_INCREMENT NOT NULL ,
-  titreAnnonce       VARCHAR (32) ,
-  descriptionAnnonce LONGTEXT,
-  id_Chien INT(10),
-  id_Adherent INT(10),
-  PRIMARY KEY (idAnnonce, id_Chien,id_Adherent),
-  FOREIGN KEY (id_Adherent) REFERENCES adherents(idAdherent) ON DELETE CASCADE,
-  FOREIGN KEY (id_Chien) REFERENCES chiens(idChien) ON DELETE CASCADE
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
 
 
