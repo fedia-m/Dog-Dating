@@ -1,8 +1,8 @@
 #------------------------------------------------------------
 #        Script MySQL.
 
-DROP TABLE IF EXISTS races;
 DROP TABLE IF EXISTS chiens;
+DROP TABLE IF EXISTS races;
 DROP TABLE IF EXISTS adherents;
 DROP TABLE IF EXISTS villes;
 DROP TABLE IF EXISTS departements;
