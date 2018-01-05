@@ -29,10 +29,10 @@ include 'header.php';
                     <li><a href="<?php echo BASE_URL?>views/connexion.php" class="p-0"><span class="icon-login"> Connexion</a></span></li>
                 </ul>
             <ul class="list-unstyled d-flex probootstrap-aside-social">
-                <li><a href="http://www.twitter.com" class="p-2"><span class="icon-twitter"></span></a></li>
+                <li><a href="http://www.twitter.com" class="p-2"><span id="social-tw" class="icon-twitter"></span></a></li>
                 <li><a href="http://www.instagram.com" class="p-2"><span class="icon-instagram"></span></a></li>
-                <li><a href="http://www.facebook.com" class="p-2"><span class="icon-facebook"></span></a></li>
-                <li><a href="http://www.google.com" class="p-2"><span class="icon-google-play"></span></a></li>
+                <li><a href="http://www.facebook.com" class="p-2"><span id="social-fb" class="icon-facebook"></span></a></li>
+                <li><a href="http://www.google.com" class="p-2"><span id="social-gp" class="icon-google-play"></span></a></li>
             </ul>
             <p> &copy;  Copyright <?php echo date('Y')?><a href="#" target="_blank"> TAF CESI</a>.</p>
         </footer>
