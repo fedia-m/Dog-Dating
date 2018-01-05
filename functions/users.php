@@ -15,16 +15,16 @@ var_dump($login);
 var_dump($password);
 
 
-$sql = $bdd->query("SELECT * FROM adherents WHERE pseudoAdherent =\"".$login."\" and mdpAdherent =\"".$password."\"");
+$sql = $bdd->prepare('SELECT * FROM adherents WHERE pseudoAdherent = :pseudo and mdpAdherent = :mdp');
 
-//$sql->execute(array('pseudo' => $login, 'mdp' => $password));
+$sql->execute(array('pseudo' => $login, 'mdp' => $password));
 
 //L'utilisateur est reconnu
-if ($row = $sql->fetch()) {
+foreach ($sql as $row) {
     $_SESSION['utilisateur'] = new Adherent();
     $_SESSION['utilisateur']->objetSetId($row['idAdherent'],$row['nomAdherent'],$row['prenomAdherent'],$row['pseudoAdherent'],$row['mdpAdherent'],$row['mailAdherent'],$row['adresseAdherent'],$row['sexeAdherent'],$row['avatarAdherent'],$row['roleAdherent'],$row['id_Ville']);
-  	header('Location: ../index.php');
-  	//var_dump($_SESSION['utilisateur']);
+  	//header('Location: ../index.php');
+  	var_dump($_SESSION['utilisateur']);
   	exit();
   	break;
 }
