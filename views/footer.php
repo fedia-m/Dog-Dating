@@ -9,7 +9,19 @@
     <script src="<?php echo BASE_URL?>assets/js/imagesloaded.pkgd.min.js"></script>
 
     <script src="<?php echo BASE_URL?>assets/js/main.js"></script>
-
-
+    <script>
+        function modifierMdp() {
+            if (document.getElementById("mdp").hidden == true){
+                document.getElementById("mdp").hidden = false;
+            } else {
+                document.getElementById("mdp").hidden = true;
+            }
+        }
+    </script>
+    <script>
+        function reorientation() {
+            document.location.replace('<?php echo BASE_URL?>views/connexion.php');
+        }
+    </script>
     </body>
 </html>

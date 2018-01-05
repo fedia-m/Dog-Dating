@@ -16,6 +16,7 @@ include 'header.php';
             <ul>
                 <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="<?php echo BASE_URL?>">Accueil</a></li>
                 <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="<?php echo BASE_URL?>views/about.php">About</a></li>
+                <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="<?php echo BASE_URL?>views/page_profil.php">Mon profil</a></li>
                 <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="<?php echo BASE_URL?>views/services.php">Services</a></li>
                 <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="<?php echo BASE_URL?>views/portfolio.php">Recherche</a></li>
                 <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="<?php echo BASE_URL?>views/contact.php">Contact</a></li>
