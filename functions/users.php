@@ -64,7 +64,6 @@ foreach ($sql as $row) {
 
 //On commence l'ajout dans la base si le pseudo n'existe pas, donc le boolean a false
 if ($pseudoexistant == false) {
-	echo ' on va commencer linscription';
 $sql = $bdd->prepare("INSERT INTO adherents (nomAdherent,prenomAdherent,pseudoAdherent,mdpAdherent,mailAdherent,sexeAdherent,roleAdherent) VALUES (:nom, :prenom, :pseudo, :mdp, :mail, :sexe, :role)");
 $sql->bindParam(':nom', $nom);
 $sql->bindParam(':prenom', $prenom);
@@ -74,6 +73,7 @@ $sql->bindParam(':mail', $mail);
 $sql->bindParam(':sexe', $sexe);
 $sql->bindParam(':role', $role);
 $sql->execute();
+header('location:../views/connexion.php');
 } //fin du if (pseudo n'existe pas)
 } //fin du else (meme mot de passe)
 //fin du déclenchement bouton inscription user
