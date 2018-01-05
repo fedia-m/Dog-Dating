@@ -8,19 +8,19 @@ require("menu.php");
 </div>
 <div class="col-xl-8 col-lg-12 mx-auto">
     <div class="card card-body bg-light">
-        <form action="#" method="post" class="probootstrap-form mb-5">
+        <form action="../functions/users.php" method="post" class="probootstrap-form mb-5">
             <legend class="text-center"><h1>Inscription</h1></legend>
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="prenomUser">Prénom</label>
-                        <input type="text" class="form-control" id="prenomUser" name="prenomUser">
+                        <input type="text" class="form-control" id="prenomUser" name="prenomUser" required="">
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="nomUser">Nom</label>
-                        <input type="text" class="form-control" id="nomUser" name="nomUser">
+                        <input type="text" class="form-control" id="nomUser" name="nomUser" required="">
                     </div>
                 </div>
             </div>
@@ -28,13 +28,13 @@ require("menu.php");
                 <div class="col-md-4">
                     <div class="form-group">
                         <label for="pseudo">Pseudo</label>
-                        <input type="text" class="form-control" id="pseudo" name="pseudo">
+                        <input type="text" class="form-control" id="pseudo" name="pseudo" required="">
                     </div>
                 </div>
                 <div class="col-md-8">
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" name="email">
+                        <input type="email" class="form-control" id="email" name="email" required="">
                     </div>
                 </div>
             </div>
@@ -42,13 +42,13 @@ require("menu.php");
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="motDePasse">Mot de passe</label>
-                        <input type="password" class="form-control" id="motDePasse" name="motDePasse">
+                        <input type="password" class="form-control" id="motDePasse" name="motDePasse" required="">
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="motDePasse2">Confirmation</label>
-                        <input type="password" class="form-control" id="motDePasse2" name="motDePasse2">
+                        <input type="password" class="form-control" id="motDePasse2" name="motDePasse2" required="">
                     </div>
                 </div>
             </div>
