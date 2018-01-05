@@ -61,17 +61,17 @@ require("menu.php");
             <div class="row">
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label class="radio-inline"><input type="radio" id="homme" name="sexe" value="homme" checked required> Homme</label>
+                        <label class="radio-inline"><input type="radio" id="homme" name="sexe" value="H" checked required> Homme</label>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label class="radio-inline"><input type="radio" id="femme" name="sexe"  value="femme"> Femme</label>
+                        <label class="radio-inline"><input type="radio" id="femme" name="sexe"  value="F"> Femme</label>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label class="radio-inline"><input type="radio" id="autre" name="sexe"  value="autre"> Autre</label>
+                        <label class="radio-inline"><input type="radio" id="autre" name="sexe"  value="A"> Autre</label>
                     </div>
                 </div>
             </div>
