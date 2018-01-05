@@ -1,5 +1,7 @@
 <?php
 require '../config.php';
+require '../classes/adherent.php';
+session_start();
 require("header.php");
 require("menu.php");
 ?>
@@ -17,7 +19,7 @@ require("menu.php");
                 </div>
                 <div class="col-lg-9 col-md-8 col-sm-8">
                     <div class="banner-content">
-                        <h1> Prénom NOM</h1>
+                        <h1><?= $_SESSION['utilisateur']->getNom() . ' ' . $_SESSION['utilisateur']->getPrenom(); ?></h1>
                         <p>
                             <h2>Mon adresse:</h2>
                         <p> 56 rue Mirabeau<br> 69000 LYON</p>

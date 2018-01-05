@@ -1,10 +1,3 @@
-<?php 
-
-session_start();
-var_dump($_SESSION['utilisateur']);
-
- ?>
-
 <div class="probootstrap-bar">
     <a href="#" class="probootstrap-toggle js-probootstrap-toggle"><span class="oi oi-menu"></span></a>
     </a>
