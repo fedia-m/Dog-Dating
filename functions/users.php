@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once '../config.php';
 require_once '../connexion_bdd.php';
 require_once '../classes/adherent.php';
@@ -22,7 +23,8 @@ $sql->execute(array('pseudo' => $login, 'mdp' => $password));
 foreach ($sql as $row) {
     $_SESSION['utilisateur'] = new Adherent();
     $_SESSION['utilisateur']->objetSetId($row['idAdherent'],$row['nomAdherent'],$row['prenomAdherent'],$row['pseudoAdherent'],$row['mdpAdherent'],$row['mailAdherent'],$row['adresseAdherent'],$row['sexeAdherent'],$row['avatarAdherent'],$row['roleAdherent'],$row['id_Ville']);
-  	header('Location: ../index.php');
+  	//header('Location: ../index.php');
+  	var_dump($_SESSION['utilisateur']);
   	exit();
   	break;
 }

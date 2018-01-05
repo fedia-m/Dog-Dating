@@ -2,7 +2,7 @@
 require '../config.php';
 require("header.php");
 require("menu.php");
-require BASE_URL.'functions/users.php';
+require '../functions/users.php';
 
 
 echo $_POST[$userInscrit];
