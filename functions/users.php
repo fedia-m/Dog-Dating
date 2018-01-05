@@ -74,7 +74,7 @@ $sql->bindParam(':sexe', $sexe);
 $sql->bindParam(':role', $role);
 $sql->execute();
 $userInscrit = true;
-header('location:'.BASE_URL.'views/popup.php');
+header('location:'.BASE_URL.'views/bienvenue.php');
 } //fin du if (pseudo n'existe pas)
 } //fin du else (meme mot de passe)
 //fin du déclenchement bouton inscription user
