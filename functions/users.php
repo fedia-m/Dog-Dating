@@ -20,13 +20,25 @@ $sql = $bdd->prepare('SELECT * FROM adherents WHERE pseudoAdherent = :pseudo and
 $sql->execute(array('pseudo' => $login, 'mdp' => $password));
 
 //L'utilisateur est reconnu
+
 foreach ($sql as $row) {
+	$tabObject = array('id' => $row['idAdherent'], 
+	'nom' => $row['nomAdherent'],
+	'prenom' => $row['prenomAdherent'],
+	'pseudo' => $row['pseudoAdherent'],
+	'mdp' => $row['mdpAdherent'],
+	'mail' => $row['mailAdherent'],
+	'adresse' => $row['adresseAdherent'],
+	'sexe' => $row['sexeAdherent'],
+	'avatar' => $row['avatarAdherent'],
+	'role' => $row['roleAdherent'],
+	'idVille' => $row['id_Ville'],
+	);
     $_SESSION['utilisateur'] = new Adherent();
-    $_SESSION['utilisateur']->objetSetId($row['idAdherent'],$row['nomAdherent'],$row['prenomAdherent'],$row['pseudoAdherent'],$row['mdpAdherent'],$row['mailAdherent'],$row['adresseAdherent'],$row['sexeAdherent'],$row['avatarAdherent'],$row['roleAdherent'],$row['id_Ville']);
+    $_SESSION['utilisateur']->objetSet($tabObject);
   	header('Location: ../index.php');
   	//var_dump($_SESSION['utilisateur']);
-  	exit();
-  	break;
+
 }
 
 //fin du déclenchement bouton connexion user

@@ -1,7 +1,8 @@
 <?php
 require '../config.php';
+session_start();
 require("header.php");
-include("menu.php");
+require("menu.php");
 ?>
 <div class="probootstrap-bar">
     <a href="#" class="probootstrap-toggle js-probootstrap-toggle"><span class="oi oi-menu"></span></a></a>

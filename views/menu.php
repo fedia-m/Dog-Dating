@@ -25,8 +25,20 @@ include 'header.php';
         </nav>
         <footer class="probootstrap-aside-footer probootstrap-animate" data-animate-effect="fadeInLeft">
                 <ul class="list-unstyled">
-                    <li><a href="<?php echo BASE_URL?>views/inscription.php" class="p-0"><span class="icon-add-user"> Inscription </a></span></li>
-                    <li><a href="<?php echo BASE_URL?>views/connexion.php" class="p-0"><span class="icon-login"> Connexion</a></span></li>
+                    <?php
+                    if(!isset($_SESSION['utilisateur']))
+                    {
+                        ?>
+                        <li><a href="<?php echo BASE_URL?>views/connexion.php" class="p-0"><span class="icon-login"> Connexion</a></span></li>
+                        <li><a href="<?php echo BASE_URL?>views/inscription.php" class="p-0"><span class="icon-add-user"> Inscription </a></span></li>
+                        <?php
+                    }
+                    else{
+                        ?>
+                        <li><a href="<?php echo BASE_URL?>views/page_profil.php" class="p-0"><span class="icon-user">Mon profil</a></span></li>
+                        <li><a href="<?php echo BASE_URL?>views/deconnexion.php" class="p-0"><span class="icon-user">Deconnexion</a></span></li>
+                        <?php
+                    } ?>
                 </ul>
             <ul class="list-unstyled d-flex probootstrap-aside-social">
                 <li><a href="http://www.twitter.com" class="p-2"><span id="social-tw" class="icon-twitter"></span></a></li>

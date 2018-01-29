@@ -8,33 +8,81 @@ class Ville
     private $nom;    
 	private $cp;
 
-	public function getId()
-	{
-		return $this->id;
-	}
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
 
-	public function getIdDepartement()
+    /**
+     * @param mixed $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getIdDepartement()
     {
         return $this->idDepartement;
     }
 
+    /**
+     * @param mixed $idDepartement
+     */
+    public function setIdDepartement($idDepartement)
+    {
+        $this->idDepartement = $idDepartement;
+    }
+
+    /**
+     * @return mixed
+     */
     public function getNom()
     {
         return $this->nom;
     }
 
+    /**
+     * @param mixed $nom
+     */
+    public function setNom($nom)
+    {
+        $this->nom = $nom;
+    }
+
+    /**
+     * @return mixed
+     */
     public function getCp()
     {
         return $this->cp;
     }
 
-	public function objetSetId($sid,$siddepartement,$snom,$scp)
+    /**
+     * @param mixed $cp
+     */
+    public function setCp($cp)
     {
-        $this->id = $sid;
-        $this->idDepartement = $siddepartement;
-        $this->nom = $snom;
-        $this->cp = $scp;
+        $this->cp = $cp;
+    }
 
+    /**
+    Fonction permettant de setter
+     *@tabObject Array Tableau
+     */
+    public function objetSet($tabObject)
+    {
+        foreach($tabObject as $key => $val)
+        {
+            $set = "set".ucfirst($key);
+            $this->$set($val);
+        }
     }
 
 }
