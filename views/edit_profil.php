@@ -2,11 +2,11 @@
 require '../config.php';
 require '../classes/adherent.php';
 require '../classes/ville.php';
-//require '../functions/villes.php';
-session_start();
+require '../functions/villes.php';
+//session_start();
 require("header.php");
 require("menu.php");
-var_dump($_SESSION['villeUser']->getId());
+var_dump($maville);
 ?>
 <div class="probootstrap-bar">
     <a href="#" class="probootstrap-toggle js-probootstrap-toggle"><span class="oi oi-menu"></span></a>
