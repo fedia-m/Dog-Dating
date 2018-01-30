@@ -13,12 +13,21 @@ class Adherent{
     private $avatar;
     private $role;
     private $idVille;
-     /**
+
+    /**
      * @return mixed
      */
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * @param mixed $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
     }
 
     /**
@@ -30,11 +39,27 @@ class Adherent{
     }
 
     /**
+     * @param mixed $nom
+     */
+    public function setNom($nom)
+    {
+        $this->nom = $nom;
+    }
+
+    /**
      * @return mixed
      */
     public function getPrenom()
     {
         return $this->prenom;
+    }
+
+    /**
+     * @param mixed $prenom
+     */
+    public function setPrenom($prenom)
+    {
+        $this->prenom = $prenom;
     }
 
     /**
@@ -46,11 +71,27 @@ class Adherent{
     }
 
     /**
+     * @param mixed $pseudo
+     */
+    public function setPseudo($pseudo)
+    {
+        $this->pseudo = $pseudo;
+    }
+
+    /**
      * @return mixed
      */
     public function getMdp()
     {
         return $this->mdp;
+    }
+
+    /**
+     * @param mixed $mdp
+     */
+    public function setMdp($mdp)
+    {
+        $this->mdp = $mdp;
     }
 
     /**
@@ -62,11 +103,27 @@ class Adherent{
     }
 
     /**
+     * @param mixed $mail
+     */
+    public function setMail($mail)
+    {
+        $this->mail = $mail;
+    }
+
+    /**
      * @return mixed
      */
     public function getAdresse()
     {
         return $this->adresse;
+    }
+
+    /**
+     * @param mixed $adresse
+     */
+    public function setAdresse($adresse)
+    {
+        $this->adresse = $adresse;
     }
 
     /**
@@ -78,11 +135,27 @@ class Adherent{
     }
 
     /**
+     * @param mixed $sexe
+     */
+    public function setSexe($sexe)
+    {
+        $this->sexe = $sexe;
+    }
+
+    /**
      * @return mixed
      */
     public function getAvatar()
     {
         return $this->avatar;
+    }
+
+    /**
+     * @param mixed $avatar
+     */
+    public function setAvatar($avatar)
+    {
+        $this->avatar = $avatar;
     }
 
     /**
@@ -92,6 +165,15 @@ class Adherent{
     {
         return $this->role;
     }
+
+    /**
+     * @param mixed $role
+     */
+    public function setRole($role)
+    {
+        $this->role = $role;
+    }
+
     /**
      * @return mixed
      */
@@ -100,19 +182,27 @@ class Adherent{
         return $this->idVille;
     }
 
-    public function objetSetId($sid,$snom,$sprenom,$spseudo,$smdp,$smail,$sadresse,$ssexe,$savatar,$srole,$sidVille)
+    /**
+     * @param mixed $idVille
+     */
+    public function setIdVille($idVille)
     {
-        $this->id = $sid;
-        $this->nom = $snom;
-        $this->prenom = $sprenom;
-        $this->login = $spseudo;
-        $this->mdp = $smdp;
-        $this->mail = $smail;
-        $this->adresse = $sadresse;
-        $this->sexe = $ssexe;
-        $this->avatar = $savatar;
-        $this->role = $srole;
-        $this->idVille = $sidVille;
+        $this->idVille = $idVille;
+    }
+
+    
+
+    /**
+    Fonction permettant de setter
+    *@tabObject Array Tableau 
+    */
+    public function objetSet($tabObject)
+    {
+        foreach($tabObject as $key => $val)
+        {
+            $set = "set".ucfirst($key);
+            $this->$set($val);
+        }
     }
 }
 

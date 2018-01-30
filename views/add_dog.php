@@ -1,8 +1,9 @@
 <?php
-require_once '../config.php';
-require_once 'header.php';
-require_once 'menu.php';
-require_once '../classes/race.php';
+require '../config.php';
+require '../classes/race.php';
+session_start();
+require("header.php");
+require("menu.php");
 
 $oRace = Races::getInstance($bdd);
 $oCollRace = $oRace->getCollection();

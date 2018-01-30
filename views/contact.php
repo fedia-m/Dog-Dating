@@ -1,5 +1,6 @@
 <?php
 require '../config.php';
+session_start();
 require("header.php");
 require("menu.php");
 ?>
