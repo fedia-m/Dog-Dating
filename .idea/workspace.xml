@@ -36,7 +36,7 @@
             <state relative-caret-position="267">
               <caret line="41" column="21" lean-forward="false" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
               <folding>
-                <marker date="1517237746116" expanded="true" signature="2901:3283" ph="..." />
+                <marker date="1517300013888" expanded="true" signature="2901:3283" ph="..." />
               </folding>
             </state>
           </provider>
@@ -78,9 +78,9 @@
             <state relative-caret-position="17">
               <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
               <folding>
-                <marker date="1517237745960" expanded="true" signature="370:447" ph="SELECT * FRO... adherents" />
-                <marker date="1517237745960" expanded="true" signature="1869:1923" ph="SELECT * FRO... adherents" />
-                <marker date="1517237745960" expanded="true" signature="2229:2404" ph="INSERT INTO adherents... " />
+                <marker date="1517300013716" expanded="true" signature="370:447" ph="SELECT * FRO... adherents" />
+                <marker date="1517300013716" expanded="true" signature="1869:1923" ph="SELECT * FRO... adherents" />
+                <marker date="1517300013716" expanded="true" signature="2229:2404" ph="INSERT INTO adherents... " />
               </folding>
             </state>
           </provider>
@@ -373,7 +373,7 @@
       <workItem from="1515141615787" duration="17954000" />
       <workItem from="1517216581236" duration="1483000" />
       <workItem from="1517220059868" duration="9634000" />
-      <workItem from="1517298408427" duration="158000" />
+      <workItem from="1517298408427" duration="654000" />
     </task>
     <task id="LOCAL-00001" summary="Menu dynamique : si connecte affiche mon profil deconnexion sinon affiche connexion inscription">
       <created>1517237926401</created>
@@ -386,7 +386,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="167437000" />
+    <option name="totallyTimeSpent" value="167933000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -760,9 +760,9 @@
         <state relative-caret-position="17">
           <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
           <folding>
-            <marker date="1517237745960" expanded="true" signature="370:447" ph="SELECT * FRO... adherents" />
-            <marker date="1517237745960" expanded="true" signature="1869:1923" ph="SELECT * FRO... adherents" />
-            <marker date="1517237745960" expanded="true" signature="2229:2404" ph="INSERT INTO adherents... " />
+            <marker date="1517300013716" expanded="true" signature="370:447" ph="SELECT * FRO... adherents" />
+            <marker date="1517300013716" expanded="true" signature="1869:1923" ph="SELECT * FRO... adherents" />
+            <marker date="1517300013716" expanded="true" signature="2229:2404" ph="INSERT INTO adherents... " />
           </folding>
         </state>
       </provider>
@@ -796,7 +796,7 @@
         <state relative-caret-position="267">
           <caret line="41" column="21" lean-forward="false" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
           <folding>
-            <marker date="1517237746116" expanded="true" signature="2901:3283" ph="..." />
+            <marker date="1517300013888" expanded="true" signature="2901:3283" ph="..." />
           </folding>
         </state>
       </provider>
