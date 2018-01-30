@@ -29,7 +29,7 @@ require("menu.php");
                         <h1><?= $_SESSION['utilisateur']->getNom() . ' ' . $_SESSION['utilisateur']->getPrenom(); ?></h1>
                         <p>
                             <h2>Mon adresse:</h2>
-                        <p> 56 rue Mirabeau<br> 69000 LYON</p>
+                        <p> <?= $_SESSION['utilisateur']->getAdresse()?><br> 69000 LYON</p>
                         <a href="<?php echo BASE_URL?>views/edit_profil.php" ><span class="icon-plus">Modifier profil</span><span class="lnr lnr-arrow-right"></span></a>
                     </div>
                 </div>

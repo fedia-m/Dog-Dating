@@ -14,13 +14,26 @@ include 'header.php';
     <div class="probootstrap-overflow">
         <nav class="probootstrap-nav">
             <ul>
-                <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="<?php echo BASE_URL?>">Accueil</a></li>
-                <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="<?php echo BASE_URL?>views/about.php">About</a></li>
-                <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="<?php echo BASE_URL?>views/page_profil.php">Mon profil</a></li>
-                <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="<?php echo BASE_URL?>views/services.php">Services</a></li>
-                <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="<?php echo BASE_URL?>views/portfolio.php">Recherche</a></li>
-                <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="<?php echo BASE_URL?>views/contact.php">Contact</a></li>
-                <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="<?php echo BASE_URL?>views/add_dog.php">Ajouter un chien</a></li>
+                <?php
+                if(!isset($_SESSION['utilisateur']))
+                {
+                    ?>
+                    <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="<?php echo BASE_URL?>"><i class="fa fa-home" aria-hidden="true"> Accueil</i></a></li>
+                    <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="<?php echo BASE_URL?>views/about.php"><i class="fa fa-question-circle-o" aria-hidden="true"> About</i></a></li>
+                    <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="<?php echo BASE_URL?>views/contact.php"><i class="fa fa-address-book-o" aria-hidden="true"> Contact</i></a></li>
+                    <?php
+                }
+                else{
+                    ?>
+                    <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="<?php echo BASE_URL?>"><i class="fa fa-home" aria-hidden="true"> Accueil</i></a></li>
+                    <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="<?php echo BASE_URL?>views/about.php"><i class="fa fa-question-circle-o" aria-hidden="true"> About</i></a></li>
+                    <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="<?php echo BASE_URL?>views/page_profil.php"><i class="fa fa-user" aria-hidden="true"> Mon profil</i></a></li>
+                    <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="<?php echo BASE_URL?>views/portfolio.php"><i class="fa fa-search" aria-hidden="true"> Recherche</i></a></li>
+                    <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="<?php echo BASE_URL?>views/contact.php"><i class="fa fa-address-book-o" aria-hidden="true"> Contact</i></a></li>
+                    <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="<?php echo BASE_URL?>views/add_dog.php"><i class="fa fa-plus" aria-hidden="true"> Ajouter un chien</i></a></li>
+                    <?php
+                } ?>
+
             </ul>
         </nav>
         <footer class="probootstrap-aside-footer probootstrap-animate" data-animate-effect="fadeInLeft">
@@ -29,22 +42,22 @@ include 'header.php';
                     if(!isset($_SESSION['utilisateur']))
                     {
                         ?>
-                        <li><a href="<?php echo BASE_URL?>views/connexion.php" class="p-0"><span class="icon-login"> Connexion</a></span></li>
-                        <li><a href="<?php echo BASE_URL?>views/inscription.php" class="p-0"><span class="icon-add-user"> Inscription </a></span></li>
+                        <li><a href="<?php echo BASE_URL?>views/connexion.php" class="p-0"><i class="fa fa-sign-in" aria-hidden="true"> Connexion</a></i></li>
+                        <li><a href="<?php echo BASE_URL?>views/inscription.php" class="p-0"><i class="fa fa-user-plus" aria-hidden="true"> Inscription </a></i></li>
                         <?php
                     }
                     else{
                         ?>
-                        <li><a href="<?php echo BASE_URL?>views/page_profil.php" class="p-0"><span class="icon-user">Mon profil</a></span></li>
-                        <li><a href="<?php echo BASE_URL?>views/deconnexion.php" class="p-0"><span class="icon-user">Deconnexion</a></span></li>
+                        <li><a href="<?php echo BASE_URL?>views/page_profil.php" class="p-0"><i class="fa fa-user" aria-hidden="true"> Mon profil</i></a></li>
+                        <li><a href="<?php echo BASE_URL?>views/deconnexion.php" class="p-0"><i class="fa fa-sign-out" aria-hidden="true">Deconnexion</i></a></li>
                         <?php
                     } ?>
                 </ul>
             <ul class="list-unstyled d-flex probootstrap-aside-social">
-                <li><a href="http://www.twitter.com" class="p-2"><span id="social-tw" class="icon-twitter"></span></a></li>
-                <li><a href="http://www.instagram.com" class="p-2"><span class="icon-instagram"></span></a></li>
-                <li><a href="http://www.facebook.com" class="p-2"><span id="social-fb" class="icon-facebook"></span></a></li>
-                <li><a href="http://www.google.com" class="p-2"><span id="social-gp" class="icon-google-play"></span></a></li>
+                <li><a href="http://www.twitter.com" class="p-2"><i id="social-tw" class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="http://www.instagram.com" class="p-2"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                <li><a href="http://www.facebook.com" class="p-2"><i class="fa fa-facebook-official" id="social-fb" aria-hidden="true"></i></a></li>
+                <li><a href="http://www.google.com" class="p-2"><i id="social-gp" class="fa fa-google-plus" aria-hidden="true"></i></a></li>
             </ul>
             <p> &copy;  Copyright <?php echo date('Y')?><a href="#" target="_blank"> TAF CESI</a>.</p>
         </footer>

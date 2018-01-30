@@ -15,7 +15,9 @@
     <link rel="stylesheet" href="<?php echo BASE_URL?>assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="<?php echo BASE_URL?>assets/css/owl.theme.default.min.css">
 
-    <link rel="stylesheet" href="<?php echo BASE_URL?>assets/css/icomoon.css">
+
+    <!--<link rel="stylesheet" href="<?php echo BASE_URL?>assets/css/icomoon.css">-->
+    <link rel="stylesheet" href="<?php echo BASE_URL?>assets/css/font-awesome.css">
     <link rel="stylesheet" href="<?php echo BASE_URL?>assets/css/animate.css">
     <link rel="stylesheet" href="<?php echo BASE_URL?>assets/css/style.css">
 

@@ -1,10 +1,12 @@
 <?php
 require '../config.php';
 require '../classes/adherent.php';
+require '../classes/ville.php';
+//require '../functions/villes.php';
 session_start();
 require("header.php");
 require("menu.php");
-var_dump($_SESSION['utilisateur']->getSexe());
+var_dump($_SESSION['villeUser']->getId());
 ?>
 <div class="probootstrap-bar">
     <a href="#" class="probootstrap-toggle js-probootstrap-toggle"><span class="oi oi-menu"></span></a>
@@ -94,6 +96,46 @@ var_dump($_SESSION['utilisateur']->getSexe());
                 <div class="col-md-4">
                     <div class="form-group">
                         <label class="radio-inline"><input type="radio" id="autre" name="sexe"  value="autre" <?php if ($_SESSION['utilisateur']->getSexe()=='A') echo "checked" ; ?>> Autre</label>
+                    </div>
+                </div>
+            </div>
+            <!--Adresse adherent -->
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="sexe">Votre adresse</label>
+                    </div>
+                </div>
+             </div>
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="adresse" name="adresse" placeholder="<?php echo $_SESSION['utilisateur']->getAdresse(); ?>">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="cp" name="cp" placeholder="<?php echo $_SESSION['utilisateur']->getAdresse(); ?>">
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="ville" name="ville" placeholder="<?php echo $_SESSION['utilisateur']->getAdresse(); ?>">
+                    </div>
+                </div>
+            </div>
+            <!--Avatar adherent -->
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="sexe">Votre photo</label>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="form-group">
+                        <input type="file">
                     </div>
                 </div>
             </div>
