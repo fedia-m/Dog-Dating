@@ -4,6 +4,7 @@ require '../classes/adherent.php';
 session_start();
 require("header.php");
 require("menu.php");
+var_dump($_SESSION['utilisateur']->getSexe());
 ?>
 <div class="probootstrap-bar">
     <a href="#" class="probootstrap-toggle js-probootstrap-toggle"><span class="oi oi-menu"></span></a></a>
@@ -16,13 +17,13 @@ require("menu.php");
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="prenomUser">Prénom</label>
-                        <input type="text" class="form-control" id="prenomUser" name="prenomUser" placeholder="<?php $_SESSION['utilisateur']->getPrenom(); ?>">
+                        <input type="text" class="form-control" id="prenomUser" name="prenomUser" placeholder="<?php echo $_SESSION['utilisateur']->getPrenom(); ?>">
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="nomUser">Nom</label>
-                        <input type="text" class="form-control" id="nomUser" name="nomUser">
+                        <input type="text" class="form-control" id="nomUser" name="nomUser" placeholder="<?php echo $_SESSION['utilisateur']->getNom(); ?>">
                     </div>
                 </div>
             </div>
@@ -30,13 +31,13 @@ require("menu.php");
                 <div class="col-md-4">
                     <div class="form-group">
                         <label for="pseudo">Pseudo</label>
-                        <input type="text" class="form-control" id="pseudo" name="pseudo">
+                        <input type="text" class="form-control" id="pseudo" name="pseudo" placeholder="<?php echo $_SESSION['utilisateur']->getPseudo(); ?>">
                     </div>
                 </div>
                 <div class="col-md-8">
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" name="email">
+                        <input type="email" class="form-control" id="email" name="email" placeholder="<?php echo $_SESSION['utilisateur']->getMail(); ?>">
                     </div>
                 </div>
             </div>
@@ -82,17 +83,17 @@ require("menu.php");
             <div class="row">
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label class="radio-inline"><input type="radio" id="homme" name="sexe" value="homme" checked required> Homme</label>
+                        <label class="radio-inline"><input type="radio" id="homme" name="sexe" value="homme" <?php if ($_SESSION['utilisateur']->getSexe()=='H') echo "checked" ; ?> > Homme</label>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label class="radio-inline"><input type="radio" id="femme" name="sexe"  value="femme"> Femme</label>
+                        <label class="radio-inline"><input type="radio" id="femme" name="sexe"  value="femme" <?php if ($_SESSION['utilisateur']->getSexe()=='F') echo "checked" ; ?>> Femme</label>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label class="radio-inline"><input type="radio" id="autre" name="sexe"  value="autre"> Autre</label>
+                        <label class="radio-inline"><input type="radio" id="autre" name="sexe"  value="autre" <?php if ($_SESSION['utilisateur']->getSexe()=='A') echo "checked" ; ?>> Autre</label>
                     </div>
                 </div>
             </div>
