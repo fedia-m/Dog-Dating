@@ -1,7 +1,8 @@
 <?php
 require '../config.php';
 require '../classes/adherent.php';
-session_start();
+require '../functions/villes.php';
+//session_start();
 require("header.php");
 require("menu.php");
 
@@ -29,7 +30,7 @@ require("menu.php");
                         <h1><?= $_SESSION['utilisateur']->getNom() . ' ' . $_SESSION['utilisateur']->getPrenom(); ?></h1>
                         <p>
                             <h2>Mon adresse:</h2>
-                        <p> <?= $_SESSION['utilisateur']->getAdresse()?><br> 69000 LYON</p>
+                        <p> <?= $_SESSION['utilisateur']->getAdresse()?><br> <?php echo $maville->getCp().' '.$maville->getNom()?></p>
                         <a href="<?php echo BASE_URL?>views/edit_profil.php" ><span class="icon-plus">Modifier profil</span><span class="lnr lnr-arrow-right"></span></a>
                     </div>
                 </div>

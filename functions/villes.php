@@ -6,7 +6,7 @@ require_once '../classes/adherent.php';
 require_once '../classes/ville.php';
 
 // déclaration variables
-$idVille = 376;
+$idVille = $_SESSION['utilisateur']->getIdVille();
 
 $sql = $bdd->prepare('SELECT * FROM villes WHERE idVille = :idVille');
 $sql->execute(array('idVille' => $idVille));

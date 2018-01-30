@@ -6,7 +6,6 @@ require '../functions/villes.php';
 //session_start();
 require("header.php");
 require("menu.php");
-var_dump($maville);
 ?>
 <div class="probootstrap-bar">
     <a href="#" class="probootstrap-toggle js-probootstrap-toggle"><span class="oi oi-menu"></span></a>
@@ -117,12 +116,12 @@ var_dump($maville);
             <div class="row">
                 <div class="col-md-5">
                     <div class="form-group">
-                        <input type="text" class="form-control" id="cp" name="cp" placeholder="<?php echo $_SESSION['utilisateur']->getAdresse(); ?>">
+                        <input type="text" class="form-control" id="cp" name="cp" placeholder="<?php echo $maville->getCp(); ?>">
                     </div>
                 </div>
                 <div class="col-md-7">
                     <div class="form-group">
-                        <input type="text" class="form-control" id="ville" name="ville" placeholder="<?php echo $_SESSION['utilisateur']->getAdresse(); ?>">
+                        <input type="text" class="form-control" id="ville" name="ville" placeholder="<?php echo $maville->getNom(); ?>">
                     </div>
                 </div>
             </div>
