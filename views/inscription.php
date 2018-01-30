@@ -8,7 +8,7 @@ require("menu.php");
 </div>
 <div class="col-xl-8 col-lg-12 mx-auto">
     <div class="card card-body bg-light">
-        <form action="../functions/users.php" method="post" class="probootstrap-form mb-5">
+        <form action="<?php echo BASE_URL?>/functions/users.php" method="post" class="probootstrap-form mb-5">
             <legend class="text-center"><h1>Inscription</h1></legend>
             <div class="row">
                 <div class="col-md-6">

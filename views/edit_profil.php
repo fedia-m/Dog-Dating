@@ -10,13 +10,13 @@ require("menu.php");
 </div>
 <div class="col-xl-8 col-lg-12 mx-auto">
     <div class="card card-body bg-light">
-        <form action="#" method="post" class="probootstrap-form mb-5">
+        <form action="<?php echo BASE_URL?>/functions/users.php" method="post" class="probootstrap-form mb-5">
             <legend class="text-center"><h1>Edition profil</h1></legend>
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="prenomUser">Prénom</label>
-                        <input type="text" class="form-control" id="prenomUser" name="prenomUser" value="<?php $_SESSION['utilisateur']->getPrenom(); ?>">
+                        <input type="text" class="form-control" id="prenomUser" name="prenomUser" placeholder="<?php $_SESSION['utilisateur']->getPrenom(); ?>">
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -99,7 +99,7 @@ require("menu.php");
             <!-- Form actions -->
             <div class="form-group">
                 <div class="col-md-12 text-center">
-                    <button type="submit" name='creerUser' class="btn btn-primary btn-lg">Modifier</button>
+                    <button type="submit" name='editUser' class="btn btn-primary btn-lg">Modifier</button>
                     <button type="reset" name='annulerCreerUser' class="btn btn-danger btn-lg">Annuler</button>
                 </div>
             </div>
