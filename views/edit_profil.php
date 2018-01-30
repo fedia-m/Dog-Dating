@@ -7,7 +7,7 @@ require("menu.php");
 var_dump($_SESSION['utilisateur']->getSexe());
 ?>
 <div class="probootstrap-bar">
-    <a href="#" class="probootstrap-toggle js-probootstrap-toggle"><span class="oi oi-menu"></span></a></a>
+    <a href="#" class="probootstrap-toggle js-probootstrap-toggle"><span class="oi oi-menu"></span></a>
 </div>
 <div class="col-xl-8 col-lg-12 mx-auto">
     <div class="card card-body bg-light">
