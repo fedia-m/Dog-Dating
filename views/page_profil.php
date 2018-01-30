@@ -15,7 +15,13 @@ require("menu.php");
             <div class="row height align-items-center">
                 <div class="col-lg-3 col-md-4 col-sm-4">
                     <div class="card">
-                        <img class="card-img-top probootstrap-animate" src="<?php echo BASE_URL?>/avatars/Alexandra.png" alt="Card image cap" data-animate-effect="fadeIn">
+                        <img class="card-img-top probootstrap-animate" src=
+                        <?php
+                        if ($_SESSION['utilisateur']->getAvatar()==''){
+                            echo "http://via.placeholder.com/200x200";
+                        } else {
+                            echo BASE_URL.'avatars/'.$_SESSION['utilisateur']->getAvatar();
+                        }?> alt="Card image cap" data-animate-effect="fadeIn">
                     </div>
                 </div>
                 <div class="col-lg-9 col-md-8 col-sm-8">
