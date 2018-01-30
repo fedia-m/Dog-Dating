@@ -22,6 +22,6 @@
     <link rel="stylesheet" href="<?php echo BASE_URL?>assets/css/header.css">
     <link rel="stylesheet" href="<?php echo BASE_URL?>assets/css/footer.css">
 
-    <link rel="icon" type="image/png" href="<?php echo BASE_URL?>/images/chilogo.png" />
+    <link rel="icon" type="image/png" href="<?php echo BASE_URL?>images/chien_logo_128.png" />
 
 </head>
