@@ -1,5 +1,7 @@
 <?php
 require '../config.php';
+require '../classes/adherent.php';
+session_start();
 require("header.php");
 require("menu.php");
 ?>
@@ -14,7 +16,7 @@ require("menu.php");
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="prenomUser">Prénom</label>
-                        <input type="text" class="form-control" id="prenomUser" name="prenomUser">
+                        <input type="text" class="form-control" id="prenomUser" name="prenomUser" value="<?php $_SESSION['utilisateur']->getPrenom(); ?>">
                     </div>
                 </div>
                 <div class="col-md-6">

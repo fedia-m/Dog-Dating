@@ -6,20 +6,49 @@ class Race
 	private $id;	
 	private $nom;
 
-	public function getId()
-	{
-		return $this->id;
-	}
-
-	public function getNom()
-	{
-		return $this->nom;
-	}
-
-	public function objetSetId($sid,$snom)
+    /**
+     * @return mixed
+     */
+    public function getId()
     {
-        $this->id = $sid;
-        $this->nom = $snom;
+        return $this->id;
+    }
+
+    /**
+     * @param mixed $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getNom()
+    {
+        return $this->nom;
+    }
+
+    /**
+     * @param mixed $nom
+     */
+    public function setNom($nom)
+    {
+        $this->nom = $nom;
+    }
+
+    /**
+    Fonction permettant de setter
+     *@tabObject Array Tableau
+     */
+    public function objetSet($tabObject)
+    {
+        foreach($tabObject as $key => $val)
+        {
+            $set = "set".ucfirst($key);
+            $this->$set($val);
+        }
     }
 
 }
@@ -40,9 +69,11 @@ class Races
 
         while($res=$sql->fetch(PDO::FETCH_ASSOC))
         {
-
+            $tabObject = array('id' => $res['idRace'],
+                'nom' => $res['nomRace'],
+            );
             $oRace = new Race();
-            $oRace->objetSetId($res['idRace'],$res['nomRace']);
+            $oRace->objetSet($tabObject);
             $this->oCollRace[] = $oRace;
         }
 
