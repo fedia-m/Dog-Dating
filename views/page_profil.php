@@ -1,11 +1,12 @@
 <?php
 require '../config.php';
 require '../classes/adherent.php';
-require '../functions/villes.php';
+require '../functions/users.php';
+//require '../functions/chiens.php';
 //session_start();
+
 require("header.php");
 require("menu.php");
-
 ?>
 <div class="probootstrap-bar">
     <a href="#" class="probootstrap-toggle js-probootstrap-toggle"><span class="oi oi-menu"></span></a></a>
@@ -50,7 +51,14 @@ require("menu.php");
                 </div>
             </div>
             <div class="card-columns">
+                <?php
+                echo $meschiens->getId();
+                    ?>
+                    <a href="single.php">
+                        <img class="card-img-top probootstrap-animate" src="../images/img_1.jpg" alt="Card image cap" data-animate-effect="fadeIn">
+                    </a>
                 <div class="card">
+
                     <a href="single.php">
                         <img class="card-img-top probootstrap-animate" src="../images/img_1.jpg" alt="Card image cap" data-animate-effect="fadeIn">
                     </a>

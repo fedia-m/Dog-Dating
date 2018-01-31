@@ -1,8 +1,9 @@
 <?php
 require '../config.php';
 require '../classes/adherent.php';
-require '../classes/ville.php';
-require '../functions/villes.php';
+require '../functions/users.php';
+//require '../classes/ville.php';
+//require '../functions/villes.php';
 //session_start();
 require("header.php");
 require("menu.php");
