@@ -2,9 +2,6 @@
 require '../config.php';
 require '../classes/adherent.php';
 require '../functions/users.php';
-//require '../classes/ville.php';
-//require '../functions/villes.php';
-//session_start();
 require("header.php");
 require("menu.php");
 ?>
@@ -117,12 +114,12 @@ require("menu.php");
             <div class="row">
                 <div class="col-md-5">
                     <div class="form-group">
-                        <input type="text" class="form-control" id="cp" name="cp" placeholder="<?php echo $maville->getCp(); ?>">
+                        <input type="text" class="form-control" id="cp" name="cp" placeholder="<?php echo $maVille->getCp(); ?>">
                     </div>
                 </div>
                 <div class="col-md-7">
                     <div class="form-group">
-                        <input type="text" class="form-control" id="ville" name="ville" placeholder="<?php echo $maville->getNom(); ?>">
+                        <input type="text" class="form-control" id="ville" name="ville" placeholder="<?php echo $maVille->getNom(); ?>">
                     </div>
                 </div>
             </div>
