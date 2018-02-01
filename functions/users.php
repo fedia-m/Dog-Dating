@@ -34,7 +34,8 @@ foreach ($sql as $row) {
     //Si le dossier attribué à l'utilisateur n'existe pas on le crée
     if (!is_dir("$repertoire") == true)
     {
-        echo "Félicitation, votre dossier a été crée ! Bienvenu chez DOG DATING ☻";
+        //echo "Félicitation, votre dossier a été crée ! Bienvenu chez DOG DATING ☻";
+        //echo $repertoire;
         mkdir ($repertoire, 0777, true); //crée le dossier avatars pour y ranger les photos de profil
         mkdir ($repertoire . "/avatars", 0755, true); //crée le dossier dogs où irons les photos de son chien
         mkdir ($repertoire . "/dogs", 0755, true); //crée le dossier dogs où irons les photos de son chien
