@@ -20,7 +20,7 @@ require("menu.php");
                         if ($_SESSION['utilisateur']->getAvatar()==''){
                             echo "http://via.placeholder.com/200x200";
                         } else {
-                            echo BASE_URL.'avatars/'.$_SESSION['utilisateur']->getAvatar();
+                            echo BASE_URL.'images/'.$_SESSION['utilisateur']->getId().'/avatars/'.$_SESSION['utilisateur']->getAvatar();
                         }?> alt="Card image cap" data-animate-effect="fadeIn">
                     </div>
                 </div>
@@ -60,7 +60,7 @@ require("menu.php");
                 ?>
                     <div class="card-header">
                         <?php echo $row->getNom() ?>
-                        <img class="card-img-top probootstrap-animate" src="<?php echo BASE_URL?>images/dogs/<?php echo $row->getIdAdherent().'/'.$row->getPhoto()?>" alt="<?php echo $row->getNom()?>" data-animate-effect="fadeIn">
+                        <img class="card-img-top probootstrap-animate" src="<?php echo BASE_URL?>images/<?php echo $row->getIdAdherent().'/dogs/'.$row->getPhoto()?>" alt="<?php echo $row->getNom()?>" data-animate-effect="fadeIn">
                         <a href="<?php echo BASE_URL?>/views/edit_dog.php">
                             <i class="fa fa-pencil" aria-hidden="true"> Modifier</i>
                         </a>
