@@ -153,6 +153,3 @@ foreach ($sql as $row) {
     $unChien->objetSet($tabObject2);
     array_push($mesChiens,$unChien);
 }
-
-return $maVille;
-return $mesChiens;
