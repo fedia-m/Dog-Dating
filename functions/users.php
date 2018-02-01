@@ -29,14 +29,15 @@ $sql->execute(array('pseudo' => $login, 'mdp' => $password));
 
 foreach ($sql as $row) {
     $idAdherent = $row['idAdherent'];
-    $repertoire = "/var/www/html/Dog-Dating/images/" . $idAdherent;
+    $repertoire = "../images/" . $idAdherent;
     var_dump($repertoire);
     //Si le dossier attribué à l'utilisateur n'existe pas on le crée
     if (!is_dir("$repertoire") == true)
     {
-        echo $repertoire;
+        echo "Félicitation, votre dossier a été crée ! Bienvenu chez DOG DATING ☻";
         mkdir ($repertoire, 0777, true); //crée le dossier avatars pour y ranger les photos de profil
-        //mkdir (BASE_URL . $repertoire, 0755, true); //crée le dossier dogs où irons les photos de son chien
+        mkdir ($repertoire . "/avatars", 0755, true); //crée le dossier dogs où irons les photos de son chien
+        mkdir ($repertoire . "/dogs", 0755, true); //crée le dossier dogs où irons les photos de son chien
     }
 
 	$tabObject = array('id' => $row['idAdherent'], 

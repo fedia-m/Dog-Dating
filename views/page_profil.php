@@ -58,19 +58,19 @@ require("menu.php");
                 <?php
                 foreach ($mesChiens as $row){
                 ?>
-                    <div class="card-header">
-                        <?php echo $row->getNom() ?>
+                <div class="card">
+                    <?php echo $row->getNom() ?>
+                    <a href="<?php echo BASE_URL?>/views/edit_dog.php">
                         <img class="card-img-top probootstrap-animate" src="<?php echo BASE_URL?>images/<?php echo $row->getIdAdherent().'/dogs/'.$row->getPhoto()?>" alt="<?php echo $row->getNom()?>" data-animate-effect="fadeIn">
-                        <a href="<?php echo BASE_URL?>/views/edit_dog.php">
-                            <i class="fa fa-pencil" aria-hidden="true"> Modifier</i>
-                        </a>
-                        <a href="<?php echo BASE_URL?>/functions/chiens.php?deleteDog=true">
-                            <i class="fa fa-times" aria-hidden="true"> Supprimer</i>
-                        </a>
-                    </div>
-                    <?php
-                }
-                ?>
+                        <i class="fa fa-pencil" aria-hidden="true"> Modifier</i>
+                    </a>
+                    <a href="<?php echo BASE_URL?>/functions/chiens.php?deleteDog=true">
+                        <i class="fa fa-times" aria-hidden="true"> Supprimer</i>
+                    </a>
+                </div>
+                <?php } ?>
+            </div>
+            
             </div>
         </div>
     </div>
