@@ -54,7 +54,7 @@ foreach ($sql as $row) {
 	);
     $_SESSION['utilisateur'] = new Adherent();
     $_SESSION['utilisateur']->objetSet($tabObject);
-  	//header('Location: ../index.php');
+  	header('Location: ../index.php');
   	//var_dump($_SESSION['utilisateur']);
 
 }
