@@ -25,7 +25,7 @@ require_once 'menu.php';
 
 <section class="probootstrap-section">
     <div class="container-fluid">
-        <center><h2 class="h1 mb-5 mt-0">The Team</h2></center>
+        <center><h2 class="h1 mb-5 mt-0">Notre équipe</h2></center>
         <div class="row mb-5">
             <div class="col-md-12">
                 <div class="owl-carousel probootstrap-owl">
@@ -44,9 +44,9 @@ require_once 'menu.php';
                         </div>
                     </div>
                     <div class="item">
-                        <img src="../images/person_1.jpg" class="img-fluid" alt="Free Template by ProBootstrap.com">
+                        <img src="../images/ayhann.png" class="img-fluid" alt="Free Template by ProBootstrap.com">
                         <div class="p-4 border border-top-0">
-                            <h4>Ayhann DENIZ.</h4>
+                            <h4>Ayhann DENIZ</h4>
                             <p>Développeur</p>
                         </div>
                     </div>
