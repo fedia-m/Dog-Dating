@@ -67,7 +67,7 @@ require("menu.php");
                         <a href="<?php echo BASE_URL?>/functions/chiens.php?deleteDog=true">
                             <i class="fa fa-times" aria-hidden="true"> Supprimer</i>
                         </a>
-                        </div>
+                    </div>
                     <?php
                 }
                 ?>
