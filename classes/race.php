@@ -64,7 +64,7 @@ class Races
 
     private function __construct($bdd){
         $this->oCollRace = array();
-        $requete = "SELECT * FROM races";
+        $requete = "SELECT * FROM races ORDER BY nomRace ASC";
         $sql = $bdd->query($requete);
 
         while($res=$sql->fetch(PDO::FETCH_ASSOC))
