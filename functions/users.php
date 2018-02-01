@@ -28,6 +28,17 @@ $sql->execute(array('pseudo' => $login, 'mdp' => $password));
 //L'utilisateur est reconnu
 
 foreach ($sql as $row) {
+    $idAdherent = $row['idAdherent'];
+    $repertoire = "images/" . $idAdherent;
+    var_dump($repertoire);
+    //Si le dossier attribué à l'utilisateur n'existe pas on le crée
+    if (!is_dir("$repertoire") == true)
+    {
+        echo $repertoire;
+        mkdir ($repertoire, 0755, true); //crée le dossier avatars pour y ranger les photos de profil
+        //mkdir (BASE_URL . $repertoire, 0755, true); //crée le dossier dogs où irons les photos de son chien
+    }
+
 	$tabObject = array('id' => $row['idAdherent'], 
 	'nom' => $row['nomAdherent'],
 	'prenom' => $row['prenomAdherent'],
@@ -42,7 +53,7 @@ foreach ($sql as $row) {
 	);
     $_SESSION['utilisateur'] = new Adherent();
     $_SESSION['utilisateur']->objetSet($tabObject);
-  	header('Location: ../index.php');
+  	//header('Location: ../index.php');
   	//var_dump($_SESSION['utilisateur']);
 
 }
