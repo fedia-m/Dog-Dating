@@ -29,13 +29,13 @@ $sql->execute(array('pseudo' => $login, 'mdp' => $password));
 
 foreach ($sql as $row) {
     $idAdherent = $row['idAdherent'];
-    $repertoire = "images/" . $idAdherent;
+    $repertoire = "/var/www/html/Dog-Dating/images/" . $idAdherent;
     var_dump($repertoire);
     //Si le dossier attribué à l'utilisateur n'existe pas on le crée
     if (!is_dir("$repertoire") == true)
     {
         echo $repertoire;
-        mkdir ($repertoire, 0755, true); //crée le dossier avatars pour y ranger les photos de profil
+        mkdir ($repertoire, 0777, true); //crée le dossier avatars pour y ranger les photos de profil
         //mkdir (BASE_URL . $repertoire, 0755, true); //crée le dossier dogs où irons les photos de son chien
     }
 
