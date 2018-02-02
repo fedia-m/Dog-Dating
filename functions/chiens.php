@@ -4,8 +4,7 @@ require_once '../connexion_bdd.php';
 require_once '../classes/chien.php';
 
 $tabObject = [];
-$infoChien = [];
-$unChien;
+$unChien = new Chien();
 
 if (!empty($_GET['idChien'])) {
     $idChien = $_GET['idChien'];
@@ -38,10 +37,8 @@ if ( isset($idChien)){
             'idAdherent' => $row['id_Adherent'],
             'idRace' => $row['id_Race'],
         );
-        $unChien = new Chien();
-        $unChien->objetSet($tabObject);
     }
-    if (isset($infoChien)){
-        header('location:'.BASE_URL.'views/edit_dog.php');
-    }
+    $unChien->objetSet($tabObject);
+    //var_dump($unChien);
+    header('location:'.BASE_URL.'views/edit_dog.php');
 }
