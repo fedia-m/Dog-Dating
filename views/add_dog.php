@@ -13,15 +13,15 @@ $oCollRace = $oRace->getCollection();
 </div>
     <div class="col-xl-8 col-lg-12 mx-auto">
         <div class="card card-body bg-light">
-            <form class="form-horizontal" action="#" method="post">
+            <form class="form-horizontal" action="../functions/chiens.php" method="post" enctype="multipart/form-data">
             <!-- Form Name -->
                 <legend class="text-center"><h1>Inscription de l'animal</h1></legend>
                 <div class="row">
                     <!-- Text input Nom-->
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="nomchien">Nom (*)</label>
-                            <input id="nomchien" name="nomchien" type="text" placeholder="" class="form-control input-md" required="">
+                            <label for="nomChien">Nom (*)</label>
+                            <input id="nomChien" name="nomChien" type="text" placeholder="" class="form-control input-md" required="">
                         </div>
                     </div>
                     <!-- Select Race-->
@@ -78,22 +78,30 @@ $oCollRace = $oRace->getCollection();
                             <label for="numChien">Numéro puce / tatouage</label>
                             <input type="text" class="form-control" id="numChien" name="numChien">
                             <span class="help-block">ex : 250 26 10 55101789</span>
-
                         </div>
                     </div>
+                    <div class="col-md-12">
+                        <div class="form-group mb-2">
+                            <label for="description">Description (*)</label>
+                            <textarea cols="30" rows="3" class="form-control" id="description" name="description" placeholder="Dîtes nous en un peu plus sur votre chien (joyeux, timide...)." required></textarea>
+                            <span class="help-block"><i>Les autres utilisateurs liront la description avec attention afin de choisir au mieux le partenaire.</i></span>
+                            <br>
+                        </div>
+                    </div>
+
                 </div>
 
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="photoChien">Photo (*)</label>
-                            <input type="file" class="input-file" id="photoChien" name="photoChien">
+                            <input id="photoChien" name="photoChien" type="file" class="input-file" required>
                         </div>
                     </div>
                 </div>
 
                 <div class="form-group text-center">
-                    <input type="submit" class="btn btn-primary" id="submit" name="submit" value="Ajouter">
+                    <input type="submit" class="btn btn-primary" id="submit" name="addDog" value="Ajouter">
                 </div>
 
                 <i><p>(*) : Champs obligatoires.</p></i>
