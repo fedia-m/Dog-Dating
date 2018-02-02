@@ -4,6 +4,7 @@ require '../classes/adherent.php';
 require '../classes/race.php';
 require '../classes/chien.php';
 require '../functions/chiens.php';
+session_start();
 require("header.php");
 require("menu.php");
 
@@ -30,7 +31,7 @@ $oCollRace = $oRace->getCollection();
                                     echo "http://via.placeholder.com/200x200";
                                 } else {
                                     echo BASE_URL.'images/'.$_SESSION['utilisateur']->getId().'/dogs/'.$_SESSION['monChien']->getPhoto();
-                                }?>
+                                }?>>
                             </div>
                         </div>
                     </div>

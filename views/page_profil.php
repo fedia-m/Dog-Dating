@@ -65,10 +65,10 @@ require("menu.php");
                             <p class="card-text">
                                 <img src="<?php echo BASE_URL?>images/<?php echo $row->getIdAdherent().'/dogs/'.$row->getPhoto()?>" class="img-fluid" alt="Free Template by ProBootstrap.com">
                             </p>
-                            <a href="<?php echo BASE_URL?>functions/chiens.php?idChien=<?php echo $row->getId() ?>&editDog=true">
+                            <a href="<?php echo BASE_URL?>functions/chiens.php?idChien=<?php echo $row->getId() ?>&editDog=true" class="maClasse">
                                 <i class="fa fa-pencil" aria-hidden="true"> Modifier</i>
                             </a>
-                            <a href="<?php echo BASE_URL?>functions/chiens.php?idChien=<?php echo $row->getId() ?>&deleteDog=true">
+                            <a href="<?php echo BASE_URL?>functions/chiens.php?idChien=<?php echo $row->getId() ?>&deleteDog=true" class="maClasse">
                                 <i class="fa fa-times" aria-hidden="true"> Supprimer</i>
                             </a>
                         </div>
