@@ -30,21 +30,21 @@ require_once 'menu.php';
             <div class="col-md-12">
                 <div class="owl-carousel probootstrap-owl">
                     <div class="item">
-                        <img src="../images/person_3.jpg" class="img-fluid" alt="Free Template by ProBootstrap.com">
+                        <img src="<?php echo BASE_URL ?>images/3/avatars/fadia.png" class="img-fluid" alt="Free Template by ProBootstrap.com">
                         <div class="p-4 border border-top-0">
                             <h4>Fedia MEDDOUR</h4>
                             <p>Chef de projet. Fedia est notre pilote de projet depuis Octobre 2017.</p>
                         </div>
                     </div>
                     <div class="item">
-                        <img src="../images/person_2.jpg" class="img-fluid" alt="Free Template by ProBootstrap.com">
+                        <img src="<?php echo BASE_URL ?>images/2/avatars/tiona.png" class="img-fluid" alt="Free Template by ProBootstrap.com">
                         <div class="p-4 border border-top-0">
                             <h4>Tiona RALIJAONA </h4>
                             <p>Développeur.</p>
                         </div>
                     </div>
                     <div class="item">
-                        <img src="../images/ayhann.png" class="img-fluid" alt="Free Template by ProBootstrap.com">
+                        <img src="<?php echo BASE_URL ?>images/1/avatars/ayhann.png" class="img-fluid" alt="Free Template by ProBootstrap.com">
                         <div class="p-4 border border-top-0">
                             <h4>Ayhann DENIZ</h4>
                             <p>Développeur</p>

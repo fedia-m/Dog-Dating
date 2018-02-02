@@ -1,16 +1,22 @@
 <?php
 require '../config.php';
 require '../classes/race.php';
+require '../classes/chien.php';
+require '../functions/chiens.php';
 session_start();
 require("header.php");
 require("menu.php");
 
 $oRace = Races::getInstance($bdd);
 $oCollRace = $oRace->getCollection();
+
 ?>
     <div class="probootstrap-bar">
         <a href="#" class="probootstrap-toggle js-probootstrap-toggle"><span class="oi oi-menu"></span></a>
     </div>
+
+<?php    echo $unChien->getNom();
+?>
     <div class="col-xl-8 col-lg-12 mx-auto">
         <div class="card card-body bg-light">
             <form class="form-horizontal" action="#" method="post">
