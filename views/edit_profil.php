@@ -140,7 +140,7 @@ require("menu.php");
             <div class="form-group">
                 <div class="col-md-12 text-center">
                     <button type="submit" name='editUser' class="btn btn-primary btn-lg">Modifier</button>
-                    <button type="reset" name='annulerCreerUser' class="btn btn-danger btn-lg">Annuler</button>
+                    <a href="<?php echo BASE_URL.'views/page_profil.php'?>"><button type="button" name='annulerCreerUser' class="btn btn-danger btn-lg">Annuler</button></a>
                 </div>
             </div>
         </form>

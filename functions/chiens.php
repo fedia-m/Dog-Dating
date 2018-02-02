@@ -3,7 +3,6 @@ require_once '../config.php';
 require_once '../connexion_bdd.php';
 require_once '../classes/chien.php';
 require_once '../classes/adherent.php';
-session_start();
 $tabObject = [];
 $unChien = new Chien();
 
@@ -20,7 +19,7 @@ if (!empty($_GET['editDog'])) {
 }
 
 
-if (isset($idChien)) {
+if (isset($idChien) && $editDog) {
     $sql = $bdd->prepare('SELECT * FROM chiens WHERE idChien = :idChien');
     $sql->execute(array('idChien' => $idChien));
 
@@ -91,6 +90,12 @@ if (isset($_POST['addDog'])) {
         echo "Erreur d'upload.";
     }
 
+}
 
+if (isset($idChien) && $deleteDog){
+    function confirmation(){
+        return confirm("Êtes-vous sur de vouloir ajouter ce(s) produit(s) ?");
+    }
 
 }
+
