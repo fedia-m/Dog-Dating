@@ -3,6 +3,7 @@ require_once '../config.php';
 require_once '../connexion_bdd.php';
 require_once '../classes/chien.php';
 require_once '../classes/adherent.php';
+session_start();
 $tabObject = [];
 $unChien = new Chien();
 
