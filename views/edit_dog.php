@@ -4,7 +4,6 @@ require '../classes/adherent.php';
 require '../classes/race.php';
 require '../classes/chien.php';
 require '../functions/chiens.php';
-session_start();
 require("header.php");
 require("menu.php");
 
@@ -31,7 +30,7 @@ $oCollRace = $oRace->getCollection();
                                     echo "http://via.placeholder.com/200x200";
                                 } else {
                                     echo BASE_URL.'images/'.$_SESSION['utilisateur']->getId().'/dogs/'.$_SESSION['monChien']->getPhoto();
-                                }?> alt="Card image cap" data-animate-effect="fadeIn">
+                                }?>
                             </div>
                         </div>
                     </div>
@@ -129,7 +128,7 @@ $oCollRace = $oRace->getCollection();
                     <a href="<?php echo BASE_URL.'views/page_profil.php'?>"><input type="button" class="btn btn-danger" id="submit" name="submit" value="Annuler"></a>
                 </div>
 
-                <i><p>(*) : Champs obligatoires.</p></i>
+                    <p><i>(*) : Champs obligatoires.</i></p>
 
             </form>
         </div>

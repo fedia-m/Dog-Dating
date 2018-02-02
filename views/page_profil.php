@@ -7,7 +7,7 @@ require("header.php");
 require("menu.php");
 ?>
 <div class="probootstrap-bar">
-    <a href="#" class="probootstrap-toggle js-probootstrap-toggle"><span class="oi oi-menu"></span></a></a>
+    <a href="#" class="probootstrap-toggle js-probootstrap-toggle"><span class="oi oi-menu"></span></a>
 </div>
 <div class="main-wrapper-first">
     <div class="banner-area">
@@ -21,7 +21,7 @@ require("menu.php");
                             echo "http://via.placeholder.com/200x200";
                         } else {
                             echo BASE_URL.'images/'.$_SESSION['utilisateur']->getId().'/avatars/'.$_SESSION['utilisateur']->getAvatar();
-                        }?> alt="Card image cap" data-animate-effect="fadeIn">
+                        }?>
                     </div>
                 </div>
                 <div class="col-lg-9 col-md-8 col-sm-8">
@@ -54,27 +54,35 @@ require("menu.php");
                 </div>
             </div>
             <hr>
+
+
             <div class="card-columns">
                 <?php
                 foreach ($mesChiens as $row){
                 ?>
-                <div class="card-img">
-                    <?php echo $row->getNom() ?>
-                    <img class="card-img-top probootstrap-animate" src="<?php echo BASE_URL?>images/<?php echo $row->getIdAdherent().'/dogs/'.$row->getPhoto()?>" alt="<?php echo $row->getNom()?>" data-animate-effect="fadeIn">
-                    <a href="<?php echo BASE_URL?>functions/chiens.php?idChien=<?php echo $row->getId() ?>&editDog=true">
-                        <i class="fa fa-pencil" aria-hidden="true"> Modifier</i>
-                    </a>
-                    <a href="<?php echo BASE_URL?>functions/chiens.php?idChien=<?php echo $row->getId() ?>&deleteDog=true">
-                        <i class="fa fa-times" aria-hidden="true"> Supprimer</i>
-                    </a>
-                </div>
+                    <div class="item">
+                        <img src="<?php echo BASE_URL?>images/<?php echo $row->getIdAdherent().'/dogs/'.$row->getPhoto()?>" class="img-fluid" alt="Free Template by ProBootstrap.com">
+                        <div class="p-4 border border-top-0">
+                            <?php echo $row->getNom() ?>
+                            <br>
+                            <?php echo $row->getDescription() ?>
+                            <br>
+                            <a href="<?php echo BASE_URL?>functions/chiens.php?idChien=<?php echo $row->getId() ?>&editDog=true">
+                                <i class="fa fa-pencil" aria-hidden="true"> Modifier</i>
+                            </a>
+                            <a href="<?php echo BASE_URL?>functions/chiens.php?idChien=<?php echo $row->getId() ?>&deleteDog=true">
+                                <i class="fa fa-times" aria-hidden="true"> Supprimer</i>
+                            </a>
+                        </div>
+
+                    </div> <br><br>
+
                 <?php } ?>
             </div>
             
             </div>
         </div>
     </div>
-</div>
 <?php
 include 'footer.php';
 ?>
