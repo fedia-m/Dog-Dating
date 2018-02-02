@@ -21,7 +21,7 @@ require("menu.php");
                             echo "http://via.placeholder.com/200x200";
                         } else {
                             echo BASE_URL.'images/'.$_SESSION['utilisateur']->getId().'/avatars/'.$_SESSION['utilisateur']->getAvatar();
-                        }?>
+                        }?>>
                     </div>
                 </div>
                 <div class="col-lg-9 col-md-8 col-sm-8">
