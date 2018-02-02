@@ -61,7 +61,9 @@ require("menu.php");
                 foreach ($mesChiens as $row){
                 ?>
                     <div class="item">
-                        <img src="<?php echo BASE_URL?>images/<?php echo $row->getIdAdherent().'/dogs/'.$row->getPhoto()?>" class="img-fluid" alt="Free Template by ProBootstrap.com">
+                        <div class="card">
+                            <img src="<?php echo BASE_URL?>images/<?php echo $row->getIdAdherent().'/dogs/'.$row->getPhoto()?>" class="img-fluid" alt="Free Template by ProBootstrap.com">
+                        </div>
                         <div class="p-4 border border-top-0">
                             <?php echo $row->getNom() ?>
                             <br>
