@@ -38,7 +38,9 @@ if ( isset($idChien)){
             'idRace' => $row['id_Race'],
         );
     }
+    session_start();
     $unChien->objetSet($tabObject);
-    //var_dump($unChien);
+    $_SESSION['monChien'] = $unChien;
     header('location:'.BASE_URL.'views/edit_dog.php');
 }
+?>

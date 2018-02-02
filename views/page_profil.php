@@ -61,10 +61,10 @@ require("menu.php");
                 <div class="card-img">
                     <?php echo $row->getNom() ?>
                     <img class="card-img-top probootstrap-animate" src="<?php echo BASE_URL?>images/<?php echo $row->getIdAdherent().'/dogs/'.$row->getPhoto()?>" alt="<?php echo $row->getNom()?>" data-animate-effect="fadeIn">
-                    <a href="<?php echo BASE_URL?>/functions/chiens.php?idChien=<?php echo $row->getId() ?>&editDog=true">
+                    <a href="<?php echo BASE_URL?>functions/chiens.php?idChien=<?php echo $row->getId() ?>&editDog=true">
                         <i class="fa fa-pencil" aria-hidden="true"> Modifier</i>
                     </a>
-                    <a href="<?php echo BASE_URL?>/functions/chiens.php?idChien=<?php echo $row->getId() ?>&deleteDog=true">
+                    <a href="<?php echo BASE_URL?>functions/chiens.php?idChien=<?php echo $row->getId() ?>&deleteDog=true">
                         <i class="fa fa-times" aria-hidden="true"> Supprimer</i>
                     </a>
                 </div>
