@@ -64,9 +64,19 @@ $oCollRace = $oRace->getCollection();
                                 <?php
 
                                 for ($i=0; $i < count($oCollRace) ; $i++) {
-                                    echo '<option value = ' . $oCollRace[$i]->getId() . '>' . $oCollRace[$i]->getNom() . '</option>';
-                                }
-
+                                    ?>
+                                    <option value ="<?php echo $oCollRace[$i]->getId(); ?>"
+                                        <?php
+                                            if ($oCollRace[$i]->getId()==$_SESSION['monChien']->getIdRace()){
+                                                echo 'selected';
+                                        }
+                                        ?>
+                                    >
+                                        <?php
+                                        echo $oCollRace[$i]->getNom(); ?>
+                                    </option>
+                                <?php
+                                    }
                                 ?>
                             </select>
                         </div>
