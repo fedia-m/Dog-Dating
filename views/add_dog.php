@@ -4,10 +4,14 @@ require '../classes/race.php';
 session_start();
 require("header.php");
 require("menu.php");
-
 $oRace = Races::getInstance($bdd);
 $oCollRace = $oRace->getCollection();
 ?>
+    <script type="text/javascript">
+        window.onload = function(){
+            document.getElementById('nomChien').focus();
+        }
+    </script>
 <div class="probootstrap-bar">
     <a href="#" class="probootstrap-toggle js-probootstrap-toggle"><span class="oi oi-menu"></span></a>
 </div>

@@ -3,6 +3,11 @@ require '../config.php';
 require("header.php");
 require("menu.php");
 ?>
+<script type="text/javascript">
+    window.onload = function(){
+        document.getElementById('prenomUser').focus();
+    }
+</script>
 <div class="probootstrap-bar">
     <a href="#" class="probootstrap-toggle js-probootstrap-toggle"><span class="oi oi-menu"></span></a></a>
 </div>
