@@ -125,7 +125,7 @@ $oCollRace = $oRace->getCollection();
                 </div>
                 <div class="form-group text-center">
                     <input type="submit" class="btn btn-primary" id="submit" name="submit" value="Modifier">
-                    <a href="<?php echo BASE_URL.'views/page_profil.php'?>"><input type="button" class="btn btn-danger" id="submit" name="submit" value="Annuler"></a>
+                    <a href="<?php echo BASE_URL.'views/dog_profil.php'?>"><input type="button" class="btn btn-danger" id="submit" name="submit" value="Annuler"></a>
                 </div>
 
                     <p><i>(*) : Champs obligatoires.</i></p>

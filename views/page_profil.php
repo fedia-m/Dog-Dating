@@ -58,20 +58,17 @@ require("menu.php");
                 <?php
                 foreach ($mesChiens as $row){
                 ?>
+
                     <div class="card w-100">
-                        <div class="card-body">
-                            <h5 class="card-title"><?php echo $row->getNom() ?></h5>
-                            <p class="card-text"><?php echo $row->getDescription() ?></p>
-                            <p class="card-text">
-                                <img src="<?php echo BASE_URL?>images/<?php echo $row->getIdAdherent().'/dogs/'.$row->getPhoto()?>" class="img-fluid" alt="Free Template by ProBootstrap.com">
-                            </p>
-                            <a href="<?php echo BASE_URL?>functions/chiens.php?idChien=<?php echo $row->getId() ?>&editDog=true" class="maClasse">
-                                <i class="fa fa-pencil" aria-hidden="true"> Modifier</i>
-                            </a>
-                            <a href="<?php echo BASE_URL?>functions/chiens.php?idChien=<?php echo $row->getId() ?>&deleteDog=true" class="maClasse">
-                                <i class="fa fa-times" aria-hidden="true"> Supprimer</i>
-                            </a>
-                        </div>
+                        <a href="<?php echo BASE_URL?>functions/chiens.php?idChien=<?php echo $row->getId()?>&dogProfil=true">
+                            <div class="card-body">
+                                <h5 class="card-title"><?php echo $row->getNom() ?></h5>
+                                <p class="card-text"><?php echo $row->getDescription() ?></p>
+                                <p class="card-text">
+                                    <img src="<?php echo BASE_URL?>images/<?php echo $row->getIdAdherent().'/dogs/'.$row->getPhoto()?>" class="img-fluid" alt="<?php echo $row->getNom();?>">
+                                </p>
+                            </div>
+                        </a>
                     </div>
                 <?php
                 }

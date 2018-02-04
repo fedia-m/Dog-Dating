@@ -4,7 +4,7 @@ require_once '../connexion_bdd.php';
 require_once '../classes/adherent.php';
 require_once '../classes/ville.php';
 require_once '../classes/chien.php';
-
+require_once '../classes/race.php';
 session_start();
 
 $tabObject = [];
