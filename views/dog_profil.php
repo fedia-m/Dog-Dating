@@ -58,13 +58,13 @@ require("menu.php");
                     if (($_SESSION['utilisateur'])->getId()!= $_SESSION['monChien']->getIdAdherent()){
                         ?>
                         <a href="<?php echo BASE_URL?>views/recherche.php">
-                        <i class="fa fa-user" aria-hidden="true"> Retour</i>
+                        <i class="fa fa-arrow-circle-left" aria-hidden="true"> Retour</i>
                     </a>
                     <?php
                     } else {
                     ?>
                     <a href="<?php echo BASE_URL?>views/page_profil.php">
-                        <i class="fa fa-user" aria-hidden="true"> Retour</i>
+                        <i class="fa fa-arrow-circle-left" aria-hidden="true"> Retour</i>
                     </a>
                     <a href="<?php echo BASE_URL?>functions/chiens.php?idChien=<?php echo $_SESSION['monChien']->getId(); ?>&editDog=true" >
                         <i class="fa fa-pencil" aria-hidden="true"> Modifier</i>
