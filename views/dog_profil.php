@@ -30,7 +30,7 @@ require("menu.php");
                             if ($_SESSION['monChien']->getPhoto()==''){
                                 echo "http://via.placeholder.com/200x200";
                             } else {
-                                echo BASE_URL.'images/'.$_SESSION['utilisateur']->getId().'/dogs/'.$_SESSION['monChien']->getPhoto();
+                                echo BASE_URL.'images/'.$_SESSION['monChien']->getIdAdherent().'/dogs/'.$_SESSION['monChien']->getPhoto();
                             }?>>
                     </div>
                 </div>
