@@ -10,11 +10,14 @@ require("menu.php");
 
 $oChiens = Chiens::getInstance($bdd);
 $oCollChien = $oChiens->getCollection();
+//L'utilisateur n'as pas de chien pour l'instant, utile pour afficher ses chiens plutard
+$avoirChien = false;
 for ($i=0;$i<count($oCollChien);$i++)
 {
     if ($oCollChien[$i]->getIdAdherent() == $_SESSION['utilisateur']->getId())
     {
         $chienUser[] = $oCollChien[$i];
+        $avoirChien = true;
     }
 }
 $aVille = new Ville();
@@ -70,6 +73,12 @@ $aVille->getNomParId($bdd,$_SESSION['utilisateur']->getIdVille());
             <hr>
             <div class="card-columns">
                 <?php
+                //Si l'user n'as pas de chien
+                if (!$avoirChien){
+                    echo "Vous n'avez pas de chien";
+                }
+                //L'user a des chiens
+                else{
                 foreach ($chienUser as $row){
                 ?>
 
@@ -86,6 +95,7 @@ $aVille->getNomParId($bdd,$_SESSION['utilisateur']->getIdVille());
                     </div>
                 <?php
                 }
+                }//Fin du else si pas de chien
                 ?>
             </div>
         </div>

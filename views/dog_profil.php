@@ -50,12 +50,11 @@ require("menu.php");
                             echo $mysqldate.''.$_SESSION['monChien']->getDescription();
 
                             ?>
-
                         </p>
                     </div>
                     <?php
                     // si pas proprio du chien juste bouton retour
-                    if (($_SESSION['utilisateur'])->getId()!= $_SESSION['monChien']->getIdAdherent()){
+                    if ($_SESSION['utilisateur']->getId() != $_SESSION['monChien']->getIdAdherent()){
                         ?>
                         <a href="<?php echo BASE_URL?>views/recherche.php">
                         <i class="fa fa-user" aria-hidden="true"> Retour</i>
