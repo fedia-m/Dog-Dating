@@ -53,20 +53,34 @@ require("menu.php");
 
                         </p>
                     </div>
+                    <?php
+                    // si pas proprio du chien juste bouton retour
+                    if (($_SESSION['utilisateur'])->getId()!= $_SESSION['monChien']->getIdAdherent()){
+                        ?>
+                        <a href="<?php echo BASE_URL?>views/recherche.php">
+                        <i class="fa fa-user" aria-hidden="true"> Retour</i>
+                    </a>
+                    <?php
+                    } else {
+                    ?>
+                    <a href="<?php echo BASE_URL?>views/page_profil.php">
+                        <i class="fa fa-user" aria-hidden="true"> Retour</i>
+                    </a>
+                    <a href="<?php echo BASE_URL?>functions/chiens.php?idChien=<?php echo $_SESSION['monChien']->getId(); ?>&editDog=true" >
+                        <i class="fa fa-pencil" aria-hidden="true"> Modifier</i>
+                    </a>
+                    <a href="<?php echo BASE_URL?>functions/chiens.php?idChien=<?php echo $_SESSION['monChien']->getId(); ?>&deleteDog=true">
+                        <i class="fa fa-times" aria-hidden="true"> Supprimer</i>
+                    </a>
+                        <?php
+                    }
+                    ?>
                 </div>
-                <a href="<?php echo BASE_URL?>views/page_profil.php">
-                    <i class="fa fa-user" aria-hidden="true"> Retour</i>
-                </a>
             </div>
         </div>
     </div>
 </div>
-        <a href="<?php echo BASE_URL?>functions/chiens.php?idChien=<?php echo $_SESSION['monChien']->getId(); ?>&editDog=true" >
-            <i class="fa fa-pencil" aria-hidden="true"> Modifier</i>
-        </a>
-        <a href="<?php echo BASE_URL?>functions/chiens.php?idChien=<?php echo $_SESSION['monChien']->getId(); ?>&deleteDog=true">
-            <i class="fa fa-times" aria-hidden="true"> Supprimer</i>
-        </a>
+
 
 <?php
 include 'footer.php';
