@@ -1,14 +1,24 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: mahatehotia
- * Date: 30/01/18
- * Time: 16:59
- */
 require '../config.php';
+require '../classes/adherent.php';
+require '../classes/chien.php';
+require '../classes/ville.php';
+//require '../functions/users.php';
 session_start();
 require("header.php");
 require("menu.php");
+
+$oChiens = Chiens::getInstance($bdd);
+$oCollChien = $oChiens->getCollection();
+//On recupere tous les chiens sauf ceux de l'user connecté car il recherche des chiens
+for ($i=0;$i<count($oCollChien);$i++)
+{
+    if ($oCollChien[$i]->getIdAdherent() != $_SESSION['utilisateur']->getId())
+    {
+        $oCollChienRecherche[] = $oCollChien[$i];
+    }
+}
+
 ?>
     <div class="main-wrapper">
         <div class="working-process-area">
@@ -21,111 +31,25 @@ require("menu.php");
                     </div>
                 </div>
                 <div class="card-columns">
-                    <div class="card">
-                        <a href="single.php">
-                            <img class="card-img-top probootstrap-animate" src="../images/img_1.jpg" alt="Card image cap" data-animate-effect="fadeIn">
-                        </a>
-                    </div>
-                    <div class="card">
-                        <a href="single.php">
-                            <img class="card-img-top probootstrap-animate" src="../images/img_2.jpg" alt="Card image cap" data-animate-effect="fadeIn">
-                        </a>
-                    </div>
-                    <div class="card">
-                        <a href="single.php">
-                            <img class="card-img-top probootstrap-animate" src="../images/img_3.jpg" alt="Card image cap" data-animate-effect="fadeIn">
-                        </a>
-                    </div>
-                    <div class="card">
-                        <a href="single.php">
-                            <img class="card-img-top probootstrap-animate" src="../images/img_4.jpg" alt="Card image cap" data-animate-effect="fadeIn">
-                        </a>
-                    </div>
-                    <div class="card">
-                        <a href="single.php">
-                            <img class="card-img-top probootstrap-animate" src="../images/img_5.jpg" alt="Card image cap" data-animate-effect="fadeIn">
-                        </a>
-                    </div>
-                    <div class="card">
-                        <a href="single.php">
-                            <img class="card-img-top probootstrap-animate" src="../images/img_6.jpg" alt="Card image cap" data-animate-effect="fadeIn">
-                        </a>
-                    </div>
-                    <div class="card">
-                        <a href="single.php">
-                            <img class="card-img-top probootstrap-animate" src="../images/img_7.jpg" alt="Card image cap" data-animate-effect="fadeIn">
-                        </a>
-                    </div>
-                    <div class="card">
-                        <a href="single.php">
-                            <img class="card-img-top probootstrap-animate" src="../images/img_8.jpg" alt="Card image cap" data-animate-effect="fadeIn">
-                        </a>
-                    </div>
-                    <div class="card">
-                        <a href="single.php">
-                            <img class="card-img-top probootstrap-animate" src="../images/img_9.jpg" alt="Card image cap" data-animate-effect="fadeIn">
-                        </a>
-                    </div>
-                    <div class="card">
-                        <a href="single.php">
-                            <img class="card-img-top probootstrap-animate" src="../images/img_10.jpg" alt="Card image cap" data-animate-effect="fadeIn">
-                        </a>
-                    </div>
-                    <div class="card">
-                        <a href="single.php">
-                            <img class="card-img-top probootstrap-animate" src="../images/img_11.jpg" alt="Card image cap" data-animate-effect="fadeIn">
-                        </a>
-                    </div>
-                    <div class="card">
-                        <a href="single.php">
-                            <img class="card-img-top probootstrap-animate" src="../images/img_12.jpg" alt="Card image cap" data-animate-effect="fadeIn">
-                        </a>
-                    </div>
-                    <div class="card">
-                        <a href="single.php">
-                            <img class="card-img-top probootstrap-animate" src="../images/img_13.jpg" alt="Card image cap" data-animate-effect="fadeIn">
-                        </a>
-                    </div>
-                    <div class="card">
-                        <a href="single.php">
-                            <img class="card-img-top probootstrap-animate" src="../images/img_14.jpg" alt="Card image cap" data-animate-effect="fadeIn">
-                        </a>
-                    </div>
-                    <div class="card">
-                        <a href="single.php">
-                            <img class="card-img-top probootstrap-animate" src="../images/img_15.jpg" alt="Card image cap" data-animate-effect="fadeIn">
-                        </a>
-                    </div>
-                    <div class="card">
-                        <a href="single.php">
-                            <img class="card-img-top probootstrap-animate" src="../images/img_16.jpg" alt="Card image cap" data-animate-effect="fadeIn">
-                        </a>
-                    </div>
-                    <div class="card">
-                        <a href="single.php">
-                            <img class="card-img-top probootstrap-animate" src="../images/img_17.jpg" alt="Card image cap" data-animate-effect="fadeIn">
-                        </a>
-                    </div>
-                    <div class="card">
-                        <a href="single.php">
-                            <img class="card-img-top probootstrap-animate" src="../images/img_18.jpg" alt="Card image cap" data-animate-effect="fadeIn">
-                        </a>
-                    </div>
-                    <div class="card">
-                        <a href="single.php">
-                            <img class="card-img-top probootstrap-animate" src="../images/img_19.jpg" alt="Card image cap" data-animate-effect="fadeIn">
-                        </a>
-                    </div>
-                    <div class="card">
-                        <a href="single.php">
-                            <img class="card-img-top probootstrap-animate" src="../images/img_20.jpg" alt="Card image cap" data-animate-effect="fadeIn">
-                        </a>
-                    </div>
-                    <div class="card">
-                        <a href="single.php">
-                            <img class="card-img-top probootstrap-animate" src="../images/img_21.jpg" alt="Card image cap" data-animate-effect="fadeIn">
-                        </a>
-                    </div>
+                    <?php
+                    foreach ($oCollChienRecherche as $row){
+                        ?>
+
+                        <div class="card w-100">
+                            <a href="<?php echo BASE_URL?>functions/chiens.php?idChien=<?php echo $row->getId()?>&dogProfil=true">
+                                <div class="card-body">
+                                    <h5 class="card-title"><?php echo $row->getNom() ?></h5>
+                                    <p class="card-text">Propriétaire : <?php var_dump( $row->getNomAdherentParId($bdd,$row->getIdAdherent())) ?></p>
+                                    <p class="card-text"><?php echo $row->getDescription() ?></p>
+                                    <p class="card-text">
+                                        <img src="<?php echo BASE_URL?>images/<?php echo $row->getIdAdherent().'/dogs/'.$row->getPhoto()?>" class="img-fluid" alt="<?php echo $row->getNom();?>">
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <?php
+                    }
+                    ?>
                 </div>
             </div>
         </div>

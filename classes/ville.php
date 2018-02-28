@@ -85,6 +85,19 @@ class Ville
         }
     }
 
+    public function getNomParId($bdd,$idVille){
+        $sql = $bdd->prepare('SELECT * FROM villes WHERE idVille = :idVille');
+        $sql->execute(array('idVille' => $idVille));
+        $oVille = new Ville();
+        foreach ($sql as $row) {
+                $oVille->setId($row['idVille']);
+                $oVille->setIdDepartement($row['id_Departement']);
+                $oVille->setNom($row['nomVille']);
+                $oVille->setCp($row['cpVille']);
+            }
+            return $oVille;
+        }
+
 }
 
 

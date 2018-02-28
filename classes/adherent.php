@@ -1,7 +1,8 @@
 <?php 
-require_once '../connexion_bdd.php';
 
-class Adherent{
+
+class Adherent
+{
     private $id;
     private $nom;
     private $prenom;
@@ -190,8 +191,6 @@ class Adherent{
         $this->idVille = $idVille;
     }
 
-    
-
     /**
     Fonction permettant de setter
     *@tabObject Array Tableau 
@@ -203,6 +202,81 @@ class Adherent{
             $set = "set".ucfirst($key);
             $this->$set($val);
         }
+    }
+
+    public static function pseudoExiste($bdd,$pseudo){
+        //on initilise à false
+        $pseudoexistant = false;
+        $sql = $bdd->prepare('SELECT * FROM adherents WHERE pseudoAdherent = :pseudo');
+
+        $sql->execute(array('pseudo' => $pseudo));
+        //parcours de la base
+        foreach ($sql as $row) {
+            //si il y a un enregistrement en base avec le même pseudo, on le met a true
+            $pseudoexistant = true;
+        }
+        return $pseudoexistant;
+    }
+
+    public function connect($bdd,$oAdherent)
+    {
+        $pseudo = $oAdherent->getPseudo();
+        $mdp = $oAdherent->getMdp();
+        $sql = $bdd->prepare('SELECT * FROM adherents WHERE pseudoAdherent = :pseudo and mdpAdherent = :mdp');
+        $sql->execute(array('pseudo' => $pseudo, 'mdp' => $mdp));
+        //L'utilisateur est reconnu
+        foreach ($sql as $row) {
+            $idAdherent = $row['idAdherent'];
+            $repertoire = "../images/" . $idAdherent;
+            var_dump($repertoire);
+            //Si le dossier attribué à l'utilisateur n'existe pas on le crée
+            if (!is_dir("$repertoire")) {
+                //echo "Félicitation, votre dossier a été crée ! Bienvenu chez DOG DATING ☻";
+                //echo $repertoire;
+                mkdir($repertoire, 0777, true); //crée le dossier avatars pour y ranger les photos de profil
+                mkdir($repertoire . "/avatars", 0755, true); //crée le dossier dogs où irons les photos de son chien
+                mkdir($repertoire . "/dogs", 0755, true); //crée le dossier dogs où irons les photos de son chien
+            }
+            $tabObject = array('id' => $row['idAdherent'],
+                'nom' => $row['nomAdherent'],
+                'prenom' => $row['prenomAdherent'],
+                'pseudo' => $row['pseudoAdherent'],
+                'mdp' => $row['mdpAdherent'],
+                'mail' => $row['mailAdherent'],
+                'adresse' => $row['adresseAdherent'],
+                'sexe' => $row['sexeAdherent'],
+                'avatar' => $row['avatarAdherent'],
+                'role' => $row['roleAdherent'],
+                'idVille' => $row['id_Ville'],
+            );
+            $_SESSION['utilisateur'] = new Adherent();
+            $_SESSION['utilisateur']->objetSet($tabObject);
+            header('Location: ' . BASE_URL);
+            //var_dump($_SESSION['utilisateur']);
+        }
+    }
+
+    //Méthode qui permet l'ajout du chien
+    public function inscrireUser($bdd,$oAdherent){
+        $nom = $oAdherent->getNom();
+        $prenom = $oAdherent->getPrenom();
+        $pseudo = $oAdherent->getPseudo();
+        $mdp = $oAdherent->getMdp();
+        $mail = $oAdherent->getMail();
+        $sexe = $oAdherent->getSexe();
+        $role = $oAdherent->getRole();
+        //DEBUT INSERTION SQL
+        $sql = $bdd->prepare("INSERT INTO adherents (nomAdherent,prenomAdherent,pseudoAdherent,mdpAdherent,mailAdherent,sexeAdherent,roleAdherent) VALUES (:nom, :prenom, :pseudo, :mdp, :mail, :sexe, :role)");
+        // :XXX où XXX est l'attribut de la classe en question
+        $sql->bindParam(':nom', $nom);
+        $sql->bindParam(':prenom', $prenom);
+        $sql->bindParam(':pseudo', $pseudo);
+        $sql->bindParam(':mdp', $mdp);
+        $sql->bindParam(':mail', $mail);
+        $sql->bindParam(':sexe', $sexe);
+        $sql->bindParam(':role', $role);
+        $sql->execute();
+        header('location:'.BASE_URL.'views/bienvenue.php');
     }
 }
 

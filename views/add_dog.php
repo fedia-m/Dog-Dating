@@ -17,7 +17,7 @@ $oCollRace = $oRace->getCollection();
 </div>
     <div class="col-xl-8 col-lg-12 mx-auto">
         <div class="card card-body bg-light">
-            <form class="form-horizontal" action="../functions/chiens.php" method="post" enctype="multipart/form-data">
+            <form class="form-horizontal" action="<?= BASE_URL ?>controllers/ajouter_chien.php" method="post" enctype="multipart/form-data">
             <!-- Form Name -->
                 <legend class="text-center"><h1>Inscription de l'animal</h1></legend>
                 <div class="row">
