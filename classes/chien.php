@@ -189,7 +189,11 @@ class Chien
 
     public function getNomAdherentParId($bdd,$idAdherent){
         $sql = $bdd->prepare('SELECT nomAdherent, prenomAdherent FROM adherents WHERE idAdherent = :idAdherent');
-        return $sql->execute(array(':idAdherent' => $idAdherent));
+        $sql->execute(array(':idAdherent' => $idAdherent));
+        foreach ($sql as $row) {
+            $nomAdherent = $row['nomAdherent'] . " " . $row['prenomAdherent'];
+        }
+        return $nomAdherent;
     }
     public function getListeChienParId($bdd,$idUtilisateur)
     {

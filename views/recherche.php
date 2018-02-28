@@ -39,7 +39,7 @@ for ($i=0;$i<count($oCollChien);$i++)
                             <a href="<?php echo BASE_URL?>functions/chiens.php?idChien=<?php echo $row->getId()?>&dogProfil=true">
                                 <div class="card-body">
                                     <h5 class="card-title"><?php echo $row->getNom() ?></h5>
-                                    <p class="card-text">Propriétaire : <?php var_dump( $row->getNomAdherentParId($bdd,$row->getIdAdherent())) ?></p>
+                                    <p class="card-text">Propriétaire : <?php echo $row->getNomAdherentParId($bdd,$row->getIdAdherent()) ?></p>
                                     <p class="card-text"><?php echo $row->getDescription() ?></p>
                                     <p class="card-text">
                                         <img src="<?php echo BASE_URL?>images/<?php echo $row->getIdAdherent().'/dogs/'.$row->getPhoto()?>" class="img-fluid" alt="<?php echo $row->getNom();?>">
