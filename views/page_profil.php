@@ -71,7 +71,7 @@ $aVille->getNomParId($bdd,$_SESSION['utilisateur']->getIdVille());
                 </div>
             </div>
             <hr>
-            <div class="card-columns">
+            <div class="container-fluid      card-columns">
                 <?php
                 //Si l'user n'as pas de chien
                 if (!$avoirChien){

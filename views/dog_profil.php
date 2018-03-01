@@ -38,27 +38,38 @@ require("menu.php");
                     <div class="banner-content">
                         <h1><?= $_SESSION['monChien']->getNom();?></h1>
                         <p>
-                        <h2>Description: </h2>
+                        <h2>Description </h2>
                         <p>
-                            <?php echo $_SESSION['raceChien']->getNom().''.
-                            $_SESSION['monChien']->getLof();
-                            ?>
-                            <br>
-                            <?php
-                            $phpdate = strtotime( $_SESSION['monChien']->getNaissance() );
-                            $mysqldate = date( 'd/m/Y', $phpdate );
-                            echo $mysqldate.''.$_SESSION['monChien']->getDescription();
-
-                            ?>
+                            <div class="container-fluid">
+                                <div class="row">
+                                    Race <?php echo $_SESSION['raceChien']->getNom(); ?>
+                                </div>
+                                <div class="row">
+                                    Lof <?php echo $_SESSION['monChien']->getLof(); ?>
+                                </div>
+                                <div class="row">
+                                    Date <?php
+                                    $phpdate = strtotime( $_SESSION['monChien']->getNaissance() );
+                                    $mysqldate = date( 'd/m/Y', $phpdate );
+                                    echo $mysqldate;
+                                    ?>
+                                </div>
+                                <div class="row">
+                                    <?php echo $_SESSION['monChien']->getDescription();?>
+                                </div>
+                            </div>
                         </p>
                     </div>
                     <?php
-                    // si pas proprio du chien juste bouton retour
+                    // si pas proprio du chien juste bouton retour mais bouton contact proprio
                     if ($_SESSION['utilisateur']->getId() != $_SESSION['monChien']->getIdAdherent()){
                         ?>
                         <a href="<?php echo BASE_URL?>views/recherche.php">
-                        <i class="fa fa-arrow-circle-left" aria-hidden="true"> Retour</i>
-                    </a>
+                            <i class="fa fa-arrow-circle-left" aria-hidden="true"> Retour</i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-address-book" aria-hidden="true"> Contact</i>
+                        </a>
                     <?php
                     } else {
                     ?>
