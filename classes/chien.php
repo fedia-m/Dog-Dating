@@ -243,6 +243,15 @@ class Chien
         header('location:' . BASE_URL . 'views/page_profil.php');
     }
 
+    public function deleteDog($bdd,$oChien){
+        $idChien = $oChien->getId();
+        $sql = $bdd->prepare("DELETE FROM chiens WHERE idChien = :idChien");
+        $sql->bindParam(':idChien', $idChien);
+        $sql->execute();
+        header('location:' . BASE_URL . 'views/page_profil.php');
+
+    }
+
 
 
 } //Fin de la classe chien

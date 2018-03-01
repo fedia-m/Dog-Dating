@@ -53,7 +53,7 @@ require("menu.php");
                                         <a href="<?php echo BASE_URL?>functions/chiens.php?idChien=<?php echo $_SESSION['monChien']->getId(); ?>&editDog=true" >
                                             <i class="fa fa-pencil" aria-hidden="true"> Modifier</i>
                                         </a>
-                                        <a href="<?php echo BASE_URL?>functions/chiens.php?idChien=<?php echo $_SESSION['monChien']->getId(); ?>&deleteDog=true">
+                                        <a href="<?php echo BASE_URL?>controllers/supprimer_chien.php?idChien=<?php echo $_SESSION['monChien']->getId(); ?>">
                                             <i class="fa fa-times" aria-hidden="true"> Supprimer</i>
                                         </a>
                                         <?php
