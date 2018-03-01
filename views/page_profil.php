@@ -29,7 +29,7 @@ $aVille->getNomParId($bdd,$_SESSION['utilisateur']->getIdVille());
 <div class="main-wrapper-first">
     <div class="banner-area">
         <div class="container">
-            <div class="row height align-items-center">
+            <div class="row height ">
                 <div class="col-lg-3 col-md-4 col-sm-4">
                     <div class="card">
                         <img class="card-img-top probootstrap-animate" src=
@@ -41,13 +41,18 @@ $aVille->getNomParId($bdd,$_SESSION['utilisateur']->getIdVille());
                         }?>>
                     </div>
                 </div>
-                <div class="col-lg-9 col-md-8 col-sm-8">
+                <div class="col-lg-8 col-md-7 col-sm-7">
                     <div class="banner-content">
                         <h1><?= $_SESSION['utilisateur']->getNom() . ' ' . $_SESSION['utilisateur']->getPrenom(); ?></h1>
                         <p>
                             <h2>Mon adresse:</h2>
                         <p> <?= $_SESSION['utilisateur']->getAdresse()?><br> <?php echo $aVille->getCp().' '.$aVille->getNom()?></p>
                         <a href="<?php echo BASE_URL?>views/edit_profil.php"><i class="fa fa-pencil" aria-hidden="true">Modifier profil</i><span class="lnr lnr-arrow-right"></span></a>
+                    </div>
+                </div>
+                <div class="col-lg-1 col-md-1 col-sm-1">
+                    <div class="banner-content">
+                        <a href="<?php echo BASE_URL?>views/mes_messages.php"><i class=" fa fa-envelope fa-2x" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>
