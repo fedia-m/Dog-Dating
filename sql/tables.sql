@@ -3,11 +3,11 @@
 
 DROP TABLE IF EXISTS chiens;
 DROP TABLE IF EXISTS races;
+DROP TABLE IF EXISTS messages;
 DROP TABLE IF EXISTS adherents;
 DROP TABLE IF EXISTS villes;
 DROP TABLE IF EXISTS departements;
 DROP TABLE IF EXISTS regions;
-
 #------------------------------------------------------------
 # Table: regions
 #------------------------------------------------------------
@@ -59,6 +59,19 @@ CREATE TABLE adherents(
   id_Ville INT(10),
   PRIMARY KEY (idAdherent),
   FOREIGN KEY (id_Ville) REFERENCES villes(idVille) ON DELETE CASCADE 
+)ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
+
+#------------------------------------------------------------
+# Table: messages
+#------------------------------------------------------------
+CREATE TABLE messages(
+  idMessage INT(10) AUTO_INCREMENT NOT NULL,
+  idExpediteur INT(10),
+  idDestinataire INT(10),
+  idChien INT(10),
+  objetMessage VARCHAR(50),
+  contenuMessage LONGTEXT,
+  PRIMARY KEY (idMessage)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
 
 
