@@ -124,6 +124,14 @@ class Message
             $this->$set($val);
         }
     }
+
+    public function deleteMessage($bdd,$oMessage){
+        $idMessage = $oMessage->getId();
+        $sql = $bdd->prepare("DELETE FROM messages WHERE idMessage = :idMessage");
+        $sql->bindParam(':idMessage', $idMessage);
+        $sql->execute();
+        header('location:' . BASE_URL . 'views/mes_messages.php');
+    }
 }
 
 class Messages{

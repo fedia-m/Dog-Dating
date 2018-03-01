@@ -89,7 +89,7 @@ require("menu.php");
                                 </div>
                             </div>
                             <div class="col-lg-2 col-md-1 col-sm-1">
-                                <a href="<?php echo BASE_URL?>views/edit_profil.php?idMessage=<?php echo $messageRecus[$i]->getId()?>"><i class="fa fa-times" aria-hidden="true"></i></a>
+                                <a href="<?php echo BASE_URL?>controllers/supprimer_message.php?idMessage=<?php echo $messageRecus[$i]->getId()?>"><i class="fa fa-times" aria-hidden="true"></i></a>
                             </div>
                         </div>
                         <div class="row">
