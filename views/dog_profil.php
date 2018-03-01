@@ -99,7 +99,7 @@ require("menu.php");
                                         <?php
                                         if ($_SESSION['utilisateur']->getId() != $_SESSION['monChien']->getIdAdherent()){
                                             ?>
-                                            <a href="#">
+                                            <a href="<?php echo BASE_URL.'views/contact_proprio.php'?>">
                                                 <div class="form-group text-center">
                                                     <input type="button" class="btn btn-primary" id="btnContacter" name="btnContacter" value="Contact">
                                                 </div>
