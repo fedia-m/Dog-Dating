@@ -4,6 +4,11 @@ session_start();
 require("header.php");
 require("menu.php");
 ?>
+<script type="text/javascript">
+    window.onload = function(){
+        document.getElementById('pseudo').focus();
+    }
+</script>
 <div class="probootstrap-bar">
     <a href="#" class="probootstrap-toggle js-probootstrap-toggle"><span class="oi oi-menu"></span></a></a>
 </div>
@@ -18,13 +23,13 @@ require("menu.php");
 <div class="container-fluid">
     <div class="col-xl-6 col-lg-10 mx-auto">
         <div class="card card-body bg-light">
-            <form action="<?php echo BASE_URL?>functions/users.php" method="post" class="probootstrap-form mb-5">
+            <form action="<?= BASE_URL ?>controllers/connect.php" method="post" class="probootstrap-form mb-5">
                 <legend class="text-center"><h1>Connexion</h1></legend>
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group">
-                            <label for="login">Login</label>
-                            <input type="text" class="form-control" id="login" name="login" required="">
+                            <label for="pseudo">Pseudo</label>
+                            <input type="text" class="form-control" id="pseudo" name="pseudo" required="">
                         </div>
                     </div>
                 </div>
