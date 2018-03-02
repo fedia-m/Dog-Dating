@@ -27,6 +27,8 @@ if (isset($_POST['btnEnvoyer'])){
     $message->setIdChien($idChien);
     $message->setObjet($objet);
     $message->setContenu($contenu);
+    $message->setArchiveExp('0');
+    $message->setArchiveDest('0');
     //var_dump($message);
     $message->envoyerMessage($bdd,$message);
     header('location:' . BASE_URL . 'views/mes_messages.php');

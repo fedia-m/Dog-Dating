@@ -9,13 +9,13 @@
 class Message
 {
     private $id;
-    private $idExpediteur;
-    private $idDestinataire;
-    private $idChien;
-    private $objet;
-    private $contenu;
-    private $archiveExp;
-    private $archiveDest;
+    private $id_Expediteur;
+    private $id_Destinataire;
+    private $id_Chien;
+    private $objetMessage;
+    private $contenuMessage;
+    private $messageArchiveE;
+    private $messageArchiveD;
 
     /**
      * @return mixed
@@ -36,113 +36,113 @@ class Message
     /**
      * @return mixed
      */
-    public function getIdExpediteur()
+    public function getId_Expediteur()
     {
-        return $this->idExpediteur;
+        return $this->id_Expediteur;
     }
 
     /**
-     * @param mixed $idExpediteur
+     * @param mixed $id_Expediteur
      */
-    public function setIdExpediteur($idExpediteur)
+    public function setId_Expediteur($id_Expediteur)
     {
-        $this->idExpediteur = $idExpediteur;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getIdDestinataire()
-    {
-        return $this->idDestinataire;
-    }
-
-    /**
-     * @param mixed $idDestinataire
-     */
-    public function setIdDestinataire($idDestinataire)
-    {
-        $this->idDestinataire = $idDestinataire;
+        $this->id_Expediteur = $id_Expediteur;
     }
 
     /**
      * @return mixed
      */
-    public function getIdChien()
+    public function getId_Destinataire()
     {
-        return $this->idChien;
+        return $this->id_Destinataire;
     }
 
     /**
-     * @param mixed $idChien
+     * @param mixed $id_Destinataire
      */
-    public function setIdChien($idChien)
+    public function setId_Destinataire($id_Destinataire)
     {
-        $this->idChien = $idChien;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getObjet()
-    {
-        return $this->objet;
-    }
-
-    /**
-     * @param mixed $objet
-     */
-    public function setObjet($objet)
-    {
-        $this->objet = $objet;
+        $this->id_Destinataire = $id_Destinataire;
     }
 
     /**
      * @return mixed
      */
-    public function getContenu()
+    public function getId_Chien()
     {
-        return $this->contenu;
+        return $this->id_Chien;
     }
 
     /**
-     * @param mixed $contenu
+     * @param mixed $id_Chien
      */
-    public function setContenu($contenu)
+    public function setId_Chien($id_Chien)
     {
-        $this->contenu = $contenu;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getArchiveExp()
-    {
-        return $this->archiveExp;
-    }
-
-    /**
-     * @param mixed $archiveDest
-     */
-    public function setArchiveDest($archiveDest)
-    {
-        $this->archiveDest = $archiveDest;
+        $this->id_Chien = $id_Chien;
     }
 
     /**
      * @return mixed
      */
-    public function getArchiveDest()
+    public function getObjetMessage()
     {
-        return $this->archiveDest;
+        return $this->objetMessage;
     }
 
     /**
-     * @param mixed $archiveExp
+     * @param mixed $objetMessage
      */
-    public function setArchiveExp($archiveExp)
+    public function setObjetMessage($objetMessage)
     {
-        $this->archiveExp = $archiveExp;
+        $this->objetMessage = $objetMessage;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getContenuMessage()
+    {
+        return $this->contenuMessage;
+    }
+
+    /**
+     * @param mixed $contenuMessage
+     */
+    public function setContenuMessage($contenuMessage)
+    {
+        $this->contenuMessage = $contenuMessage;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getMessageArchiveE()
+    {
+        return $this->messageArchiveE;
+    }
+
+    /**
+     * @param mixed $messageArchiveE
+     */
+    public function setMessageArchiveE($messageArchiveE)
+    {
+        $this->messageArchiveE = $messageArchiveE;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getMessageArchiveD()
+    {
+        return $this->messageArchiveD;
+    }
+
+    /**
+     * @param mixed $messageArchiveD
+     */
+    public function setMessageArchiveD($messageArchiveD)
+    {
+        $this->messageArchiveD = $messageArchiveD;
     }
 
 
@@ -168,22 +168,22 @@ class Message
     }
 
     public function envoyerMessage($bdd,$oMessage){
-            $idExp = $oMessage->getIdExpediteur();
-            $idDest = $oMessage->getIdDestinataire();
-            $idChien = $oMessage->getIdChien();
+            $id_Expediteur = $oMessage->getIdExpediteur();
+            $id_Destinataire = $oMessage->getIdDestinataire();
+            $id_Chien = $oMessage->getIdChien();
             $objetMessage = $oMessage->getObjet();
             $contenuMessage = $oMessage->getContenu();
-            $archiveExp = $oMessage->getArchiveExp();
-            $archiveDest = $oMessage->getArchiveDest();
+            $messageArchiveE = $oMessage->getMessageArchiveE();
+            $messageArchiveD = $oMessage->getMessageArchiveD();
             //DEBUT INSERTION SQL
-            $sql = $bdd->prepare("INSERT INTO messages (idExpediteur, idDestinataire, idChien, objetMessage, contenuMessage, archiveExp, archiveDest) VALUES (:idExpediteur, :idDestinataire, :idChien, :objetMessage, :contenuMessage, :archiveExp, :archiveDest)");
-            $sql->bindParam(':idExpediteur', $idExp);
-            $sql->bindParam(':idDestinataire', $idDest);
-            $sql->bindParam(':idChien', $idChien);
+            $sql = $bdd->prepare("INSERT INTO messages (id_Expediteur, id_Destinataire, id_Chien, objetMessage, contenuMessage, archiveExp, archiveDest) VALUES (:idExpediteur, :idDestinataire, :idChien, :objetMessage, :contenuMessage, :messageArchiveE, :messageArchiveD)");
+            $sql->bindParam(':id_Expediteur', $id_Expediteur);
+            $sql->bindParam(':id_Destinataire', $id_Destinataire);
+            $sql->bindParam(':id_Chien', $id_Chien);
             $sql->bindParam(':objetMessage', $objetMessage);
             $sql->bindParam(':contenuMessage', $contenuMessage);
-            $sql->bindParam(':archiveExp', $archiveExp);
-            $sql->bindParam(':archiveDest', $archiveDest);
+            $sql->bindParam(':messageArchiveE', $messageArchiveE);
+            $sql->bindParam(':messageArchiveD', $messageArchiveD);
             $sql->execute();
     }
 }

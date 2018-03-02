@@ -5,6 +5,7 @@ require '../functions/messages.php';
 require("header.php");
 require("menu.php");
 
+
 ?>
     <div class="probootstrap-bar">
         <a href="#" class="probootstrap-toggle js-probootstrap-toggle"><span class="oi oi-menu"></span></a>
@@ -64,7 +65,7 @@ require("menu.php");
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 mx-auto">
             <div class="card-title text-center"><h2> <i class="fa fa-chevron-circle-down" aria-hidden="true"></i> Reçus </h2></div>
                 <?php
-                /*echo count($messageEnvoyes);*/
+                /*echo count($messageEnvoyes);
                 for ($i=0 ; $i<count($messageRecus) ; $i++){
                     ?>
             <div class="card card-body bg-light">
