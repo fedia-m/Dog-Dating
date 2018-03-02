@@ -71,7 +71,13 @@ CREATE TABLE messages(
   idChien INT(10),
   objetMessage VARCHAR(50),
   contenuMessage LONGTEXT,
-  PRIMARY KEY (idMessage)
+  id_Exp INT(10) NOT NULL,
+  id_Des INT(10) NOT NULL,
+  id_Chien INT(10) NOT NULL,
+  PRIMARY KEY (idMessage),
+  FOREIGN KEY (id_Exp) REFERENCES adherents(idAdherent) ON DELETE CASCADE,
+  FOREIGN KEY (id_Des) REFERENCES adherents(idAdherent) ON DELETE CASCADE,
+  FOREIGN KEY (id_Chien) REFERENCES chiens(idChien) ON DELETE CASCADE
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
 
 
@@ -98,6 +104,8 @@ CREATE TABLE chiens(
   numeroPuce         VARCHAR (25) ,
   photoChien         VARCHAR (255),
   descriptionChien   LONGTEXT,
+  dateAjout          DATE NOT NULL,
+  disponible         ENUM('0','1') NOT NULL,
   id_Adherent INT(10) NOT NULL,
   id_Race INT(10) NOT NULL,
   PRIMARY KEY (idChien),
