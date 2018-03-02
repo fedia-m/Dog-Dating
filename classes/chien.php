@@ -252,6 +252,27 @@ class Chien
 
     }
 
+    public function dspChien($bdd,$chienById){
+        $idChien = $chienById->getId();
+        $sql = $bdd->prepare("SELECT * FROM chiens WHERE idChien = :idChien");
+        $sql->bindParam(':idChien', $idChien);
+        $sql->execute();
+        $chienById = new Chien();
+        foreach ($sql as $row){
+            $chienById->setId($row['idChien']);
+            $chienById->setNom($row['nomChien']);
+            $chienById->setSexe($row['sexeChien']);
+            $chienById->setNaissance($row['dateNaissanceChien']);
+            $chienById->setLof($row['lofChien']);
+            $chienById->setNumeroPuce($row['numeroPuce']);
+            $chienById->setPhoto($row['photoChien']);
+            $chienById->setDescription($row['descriptionChien']);
+            $chienById->setIdAdherent($row['id_Adherent']);
+            $chienById->setIdRace($row['id_Race']);
+        }
+        return $chienById;
+    }
+
 
 
 } //Fin de la classe chien

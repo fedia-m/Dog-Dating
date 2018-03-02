@@ -132,6 +132,23 @@ class Message
         $sql->execute();
         header('location:' . BASE_URL . 'views/mes_messages.php');
     }
+
+    public function envoyerMessage($bdd,$oMessage){
+            $idExp = $oMessage->getIdExpediteur();
+            $idDest = $oMessage->getIdDestinataire();
+            $idChien = $oMessage->getIdChien();
+            $objetMessage = $oMessage->getObjet();
+            $contenuMessage = $oMessage->getContenu();
+            //DEBUT INSERTION SQL
+            $sql = $bdd->prepare("INSERT INTO messages (idExpediteur, idDestinataire, idChien, objetMessage, contenuMessage) VALUES (:idExp, :idDest, :idChien, :objetMessage, :contenuMessage)");
+            // :XXX où XXX est l'attribut de la classe en question
+            $sql->bindParam(':idExpediteur', $idExp);
+            $sql->bindParam(':idDestinataire', $idDest);
+            $sql->bindParam(':idChien', $idChien);
+            $sql->bindParam(':objet', $objetMessage);
+            $sql->bindParam(':contenu', $contenuMessage);
+            $sql->execute();
+    }
 }
 
 class Messages{
