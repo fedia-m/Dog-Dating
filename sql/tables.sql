@@ -1,9 +1,9 @@
 #------------------------------------------------------------
 #        Script MySQL.
 
+DROP TABLE IF EXISTS messages;
 DROP TABLE IF EXISTS chiens;
 DROP TABLE IF EXISTS races;
-DROP TABLE IF EXISTS messages;
 DROP TABLE IF EXISTS adherents;
 DROP TABLE IF EXISTS villes;
 DROP TABLE IF EXISTS departements;
@@ -61,35 +61,15 @@ CREATE TABLE adherents(
   FOREIGN KEY (id_Ville) REFERENCES villes(idVille) ON DELETE CASCADE 
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
 
-#------------------------------------------------------------
-# Table: messages
-#------------------------------------------------------------
-CREATE TABLE messages(
-  idMessage INT(10) AUTO_INCREMENT NOT NULL,
-  idExpediteur INT(10),
-  idDestinataire INT(10),
-  idChien INT(10),
-  objetMessage VARCHAR(50),
-  contenuMessage LONGTEXT,
-  messageArchiveE ENUM('0','1'),
-  messageArchiveD ENUM('0','1'),
-  id_Exp INT(10) NOT NULL,
-  id_Des INT(10) NOT NULL,
-  id_Chien INT(10) NOT NULL,
-  PRIMARY KEY (idMessage),
-  FOREIGN KEY (id_Exp) REFERENCES adherents(idAdherent) ON DELETE CASCADE,
-  FOREIGN KEY (id_Des) REFERENCES adherents(idAdherent) ON DELETE CASCADE,
-  FOREIGN KEY (id_Chien) REFERENCES chiens(idChien) ON DELETE CASCADE
-)ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
 
 
 #------------------------------------------------------------
 # Table: races
 #------------------------------------------------------------
 CREATE TABLE races(
-  idRace INT(10) AUTO_INCREMENT NOT NULL ,
-  nomRace VARCHAR(50) NOT NULL,
-  PRIMARY KEY (idRace)
+idRace INT(10) AUTO_INCREMENT NOT NULL ,
+nomRace VARCHAR(50) NOT NULL,
+PRIMARY KEY (idRace)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
 
 
@@ -98,21 +78,38 @@ CREATE TABLE races(
 #------------------------------------------------------------
 
 CREATE TABLE chiens(
-  idChien            INT(10) AUTO_INCREMENT NOT NULL ,
-  nomChien           VARCHAR (32) NOT NULL ,
-  sexeChien          CHAR (1) NOT NULL ,
-  dateNaissanceChien DATE NOT NULL ,
-  lofChien           VARCHAR (25) ,
-  numeroPuce         VARCHAR (25) ,
-  photoChien         VARCHAR (255),
-  descriptionChien   LONGTEXT,
-  dateAjout          DATE NOT NULL,
-  disponible         ENUM('0','1') NOT NULL,
-  id_Adherent INT(10) NOT NULL,
-  id_Race INT(10) NOT NULL,
-  PRIMARY KEY (idChien),
-  FOREIGN KEY (id_Race) REFERENCES races(idRace) ON DELETE CASCADE,
-  FOREIGN KEY (id_Adherent) REFERENCES adherents(idAdherent) ON DELETE CASCADE
+idChien            INT(10) AUTO_INCREMENT NOT NULL ,
+nomChien           VARCHAR (32) NOT NULL ,
+sexeChien          CHAR (1) NOT NULL ,
+dateNaissanceChien DATE NOT NULL ,
+lofChien           VARCHAR (25) ,
+numeroPuce         VARCHAR (25) ,
+photoChien         VARCHAR (255),
+descriptionChien   LONGTEXT,
+dateAjout          DATE NOT NULL,
+disponible         ENUM('0','1') NOT NULL,
+id_Adherent INT(10) NOT NULL,
+id_Race INT(10) NOT NULL,
+PRIMARY KEY (idChien),
+FOREIGN KEY (id_Race) REFERENCES races(idRace) ON DELETE CASCADE,
+FOREIGN KEY (id_Adherent) REFERENCES adherents(idAdherent) ON DELETE CASCADE
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
 
 
+#------------------------------------------------------------
+# Table: messages
+#------------------------------------------------------------
+CREATE TABLE messages(
+  idMessage INT(10) AUTO_INCREMENT NOT NULL,
+  id_Expediteur INT(10) NOT NULL,
+  id_Destinataire INT(10) NOT NULL,
+  id_Chien INT(10) NOT NULL,
+  objetMessage VARCHAR(50),
+  contenuMessage LONGTEXT,
+  messageArchiveE ENUM('0','1'),
+  messageArchiveD ENUM('0','1'),
+  PRIMARY KEY (idMessage),
+  FOREIGN KEY (id_Expediteur) REFERENCES adherents(idAdherent) ON DELETE CASCADE,
+  FOREIGN KEY (id_Destinataire) REFERENCES adherents(idAdherent) ON DELETE CASCADE,
+  FOREIGN KEY (id_Chien) REFERENCES chiens(idChien) ON DELETE CASCADE
+)ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
