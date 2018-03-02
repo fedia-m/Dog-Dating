@@ -14,6 +14,8 @@ class Message
     private $idChien;
     private $objet;
     private $contenu;
+    private $archiveExp;
+    private $archiveDest;
 
     /**
      * @return mixed
@@ -111,6 +113,38 @@ class Message
         $this->contenu = $contenu;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getArchiveExp()
+    {
+        return $this->archiveExp;
+    }
+
+    /**
+     * @param mixed $archiveDest
+     */
+    public function setArchiveDest($archiveDest)
+    {
+        $this->archiveDest = $archiveDest;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getArchiveDest()
+    {
+        return $this->archiveDest;
+    }
+
+    /**
+     * @param mixed $archiveExp
+     */
+    public function setArchiveExp($archiveExp)
+    {
+        $this->archiveExp = $archiveExp;
+    }
+
 
     /**
     Fonction permettant de setter
@@ -139,13 +173,17 @@ class Message
             $idChien = $oMessage->getIdChien();
             $objetMessage = $oMessage->getObjet();
             $contenuMessage = $oMessage->getContenu();
+            $archiveExp = $oMessage->getArchiveExp();
+            $archiveDest = $oMessage->getArchiveDest();
             //DEBUT INSERTION SQL
-            $sql = $bdd->prepare("INSERT INTO messages (idExpediteur, idDestinataire, idChien, objetMessage, contenuMessage) VALUES (:idExpediteur, :idDestinataire, :idChien, :objetMessage, :contenuMessage)");
+            $sql = $bdd->prepare("INSERT INTO messages (idExpediteur, idDestinataire, idChien, objetMessage, contenuMessage, archiveExp, archiveDest) VALUES (:idExpediteur, :idDestinataire, :idChien, :objetMessage, :contenuMessage, :archiveExp, :archiveDest)");
             $sql->bindParam(':idExpediteur', $idExp);
             $sql->bindParam(':idDestinataire', $idDest);
             $sql->bindParam(':idChien', $idChien);
             $sql->bindParam(':objetMessage', $objetMessage);
             $sql->bindParam(':contenuMessage', $contenuMessage);
+            $sql->bindParam(':archiveExp', $archiveExp);
+            $sql->bindParam(':archiveDest', $archiveDest);
             $sql->execute();
     }
 }
@@ -164,7 +202,7 @@ class Messages{
         {
 
             $oMessage = new Message();
-            $oMessage->objetSetId($res['idMessage'],$res['idExpediteur'],$res['idDestinataire'],$res['idChien'],$res['objet'],$res['contenu']);
+            $oMessage->objetSetId($res['idMessage'],$res['id_Expediteur'],$res['id_Destinataire'],$res['id_Chien'],$res['objet'],$res['contenu'],$res['archiveExp'],$res['archiveDest']);
             $this->oCollMessage[] = $oMessage;
         }
 

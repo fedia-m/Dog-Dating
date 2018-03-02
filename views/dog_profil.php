@@ -50,10 +50,10 @@ require("menu.php");
                                     <?php
                                     if ($_SESSION['utilisateur']->getId() == $_SESSION['monChien']->getIdAdherent()){
                                         ?>
-                                        <a href="<?php echo BASE_URL?>functions/chiens.php?idChien=<?php echo $_SESSION['monChien']->getId(); ?>&editDog=true" >
+                                        <a href="<?php echo BASE_URL?>functions/chiens.php?idChien=<?php echo $_SESSION['monChien']->getId(); ?>&editDog=true" title="Modifier chien">
                                             <i class="fa fa-pencil" aria-hidden="true"> Modifier</i>
                                         </a>
-                                        <a href="<?php echo BASE_URL?>controllers/supprimer_chien.php?idChien=<?php echo $_SESSION['monChien']->getId(); ?>">
+                                        <a href="<?php echo BASE_URL?>controllers/supprimer_chien.php?idChien=<?php echo $_SESSION['monChien']->getId(); ?>" title="Supprimer chien">
                                             <i class="fa fa-times" aria-hidden="true"> Supprimer</i>
                                         </a>
                                         <?php
@@ -99,7 +99,7 @@ require("menu.php");
                                         <?php
                                         if ($_SESSION['utilisateur']->getId() != $_SESSION['monChien']->getIdAdherent()){
                                             ?>
-                                            <a href="<?php echo BASE_URL.'controllers/afficher_chien.php?idChien='.$_SESSION['monChien']->getId()?>">
+                                            <a href="<?php echo BASE_URL.'controllers/afficher_chien.php?idChien='.$_SESSION['monChien']->getId()?>" title="Contacter propriétaire">
                                                 <div class="form-group text-center">
                                                     <input type="button" class="btn btn-primary" id="btnContacter" name="btnContacter" value="Contact">
                                                 </div>

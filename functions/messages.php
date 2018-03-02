@@ -34,6 +34,8 @@ foreach ($sql as $row) {
         'idChien' => $row['idChien'],
         'objet' => $row['objetMessage'],
         'contenu' => $row['contenuMessage'],
+        'archiveExp' => $row['archiveExp'],
+        'archiveDest' => $row['archiveDest'],
     );
     $messageRecu = new Message();
     $messageRecu->objetSet($tabObject);
@@ -74,6 +76,8 @@ foreach ($sql as $row) {
         'idChien' => $row['idChien'],
         'objet' => $row['objetMessage'],
         'contenu' => $row['contenuMessage'],
+        'archiveExp' => $row['archiveExp'],
+        'archiveDest' => $row['archiveDest'],
     );
     $messageEnvoye = new Message();
     $messageEnvoye->objetSet($tabObject2);

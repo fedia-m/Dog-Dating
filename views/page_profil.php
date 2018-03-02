@@ -47,12 +47,12 @@ $aVille->getNomParId($bdd,$_SESSION['utilisateur']->getIdVille());
                         <p>
                             <h2>Mon adresse:</h2>
                         <p> <?= $_SESSION['utilisateur']->getAdresse()?><br> <?php echo $aVille->getCp().' '.$aVille->getNom()?></p>
-                        <a href="<?php echo BASE_URL?>views/edit_profil.php"><i class="fa fa-pencil" aria-hidden="true">Modifier profil</i><span class="lnr lnr-arrow-right"></span></a>
+                        <a href="<?php echo BASE_URL?>views/edit_profil.php" title="Modifier son profil"><i class="fa fa-pencil" aria-hidden="true">Modifier profil</i><span class="lnr lnr-arrow-right"></span></a>
                     </div>
                 </div>
                 <div class="col-lg-1 col-md-1 col-sm-1">
                     <div class="banner-content">
-                        <a href="<?php echo BASE_URL?>views/mes_messages.php"><i class=" fa fa-envelope fa-2x" aria-hidden="true"></i></a>
+                        <a href="<?php echo BASE_URL?>views/mes_messages.php" title="Mes messages"><i class=" fa fa-envelope fa-2x" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>
@@ -70,7 +70,7 @@ $aVille->getNomParId($bdd,$_SESSION['utilisateur']->getIdVille());
                     </div>
                 </div>
                 <div class="col-lg-2">
-                    <a href="<?php echo BASE_URL?>views/add_dog.php">
+                    <a href="<?php echo BASE_URL?>views/add_dog.php" title="Ajouter un chien">
                         <i class="fa fa-plus" aria-hidden="true"> Ajouter</i>
                     </a>
                 </div>
