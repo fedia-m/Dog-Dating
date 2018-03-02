@@ -88,7 +88,7 @@ require("menu.php");
                                     <h1>Objet</h1> <?php echo $messageRecus[$i]->getObjet();?>
                                 </div>
                             </div>
-                            <div class="col-lg-2 col-md-1 col-sm-1">
+                            <div class="col-lg-2 col-md-1 col-sm-1 -align-right">
                                 <a href="<?php echo BASE_URL?>controllers/supprimer_message.php?idMessage=<?php echo $messageRecus[$i]->getId()?>"><i class="fa fa-times" aria-hidden="true"></i></a>
                             </div>
                         </div>
@@ -98,6 +98,15 @@ require("menu.php");
                                 <p>
                                     <?php echo $messageRecus[$i]->getContenu();?>
                                 </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-8 col-md-8 col-sm-8">
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                <a href="#">
+                                    <i class="fa fa-share-square"></i> Répondre
+                                </a>
                             </div>
                         </div>
                     </div>
