@@ -71,6 +71,8 @@ CREATE TABLE messages(
   idChien INT(10),
   objetMessage VARCHAR(50),
   contenuMessage LONGTEXT,
+  messageArchiveE BOOLEAN DEFAULT FALSE,
+  messageArchiveD BOOLEAN DEFAULT FALSE,
   id_Exp INT(10) NOT NULL,
   id_Des INT(10) NOT NULL,
   id_Chien INT(10) NOT NULL,
