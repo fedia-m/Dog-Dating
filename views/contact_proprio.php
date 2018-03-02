@@ -6,7 +6,7 @@ require '../functions/messages.php';
 require("header.php");
 require("menu.php");
 
-session_start();
+//session_start();
 
 ?>
 <div class="probootstrap-bar">

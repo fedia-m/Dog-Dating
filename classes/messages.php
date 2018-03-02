@@ -140,13 +140,12 @@ class Message
             $objetMessage = $oMessage->getObjet();
             $contenuMessage = $oMessage->getContenu();
             //DEBUT INSERTION SQL
-            $sql = $bdd->prepare("INSERT INTO messages (idExpediteur, idDestinataire, idChien, objetMessage, contenuMessage) VALUES (:idExp, :idDest, :idChien, :objetMessage, :contenuMessage)");
-            // :XXX où XXX est l'attribut de la classe en question
+            $sql = $bdd->prepare("INSERT INTO messages (idExpediteur, idDestinataire, idChien, objetMessage, contenuMessage) VALUES (:idExpediteur, :idDestinataire, :idChien, :objetMessage, :contenuMessage)");
             $sql->bindParam(':idExpediteur', $idExp);
             $sql->bindParam(':idDestinataire', $idDest);
             $sql->bindParam(':idChien', $idChien);
-            $sql->bindParam(':objet', $objetMessage);
-            $sql->bindParam(':contenu', $contenuMessage);
+            $sql->bindParam(':objetMessage', $objetMessage);
+            $sql->bindParam(':contenuMessage', $contenuMessage);
             $sql->execute();
     }
 }
