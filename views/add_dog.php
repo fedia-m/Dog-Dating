@@ -110,6 +110,23 @@ $oCollRace = $oRace->getCollection();
                         </div>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="disponible">Votre chien est-il disponible ? (*) <i>(Modifiable par la suite)</i></label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="radio-inline"><input type="radio" id="oui" name="disponible" value="1" checked required> Oui</label>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="radio-inline"><input type="radio" id="non" name="disponible"  value="0"> Non</label>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="form-group text-center">
                     <input type="submit" class="btn btn-primary" id="submit" name="addDog" value="Ajouter">

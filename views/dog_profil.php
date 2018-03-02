@@ -85,7 +85,7 @@ require("menu.php");
                                                     Lof <?php echo $_SESSION['monChien']->getLof(); ?>
                                                 </div>
                                                 <div class="row">
-                                                    Date <?php
+                                                    Date naissance : <?php
                                                     $phpdate = strtotime( $_SESSION['monChien']->getNaissance() );
                                                     $mysqldate = date( 'd/m/Y', $phpdate );
                                                     echo $mysqldate;
@@ -93,6 +93,17 @@ require("menu.php");
                                                 </div>
                                                 <div class="row">
                                                     <?php echo $_SESSION['monChien']->getDescription();?>
+                                                </div>
+                                                <div class="row">
+                                                    <?php
+                                                    echo 'Disponible : ';
+                                                    if ($_SESSION['monChien']->getDisponible() == "1"){
+                                                        echo 'oui.';
+                                                    }
+                                                    else{
+                                                        echo 'non.';
+                                                    }
+                                                    ?>
                                                 </div>
                                             </div>
                                         <br>

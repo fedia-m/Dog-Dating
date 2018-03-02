@@ -123,11 +123,25 @@ $oCollRace = $oRace->getCollection();
                         </div>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="disponible">Disponible (*)</label>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label class="radio-inline"><input type="radio" id="disponible" name="disponible" value="1" <?php if ($_SESSION['monChien']->getDisponible()=='1') echo "checked" ; ?> required> Oui</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="radio-inline"><input type="radio" id="disponible" name="disponible"  value="0" <?php if ($_SESSION['monChien']->getDisponible()=='0') echo "checked" ; ?>> Non</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="form-group text-center">
                     <input type="submit" class="btn btn-primary" id="submit" name="submit" value="Modifier">
                     <a href="<?php echo BASE_URL.'views/dog_profil.php'?>"><input type="button" class="btn btn-danger" id="submit" name="submit" value="Annuler"></a>
                 </div>
-
                     <p><i>(*) : Champs obligatoires.</i></p>
 
             </form>

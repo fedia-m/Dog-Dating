@@ -11,6 +11,8 @@ class Chien
 	private $numeroPuce;
 	private $photo;
 	private $description;
+	private $dateAjout;
+	private $disponible;
 	private $idAdherent;
 	private $idRace;
 
@@ -145,6 +147,40 @@ class Chien
     /**
      * @return mixed
      */
+    public function getDateAjout()
+    {
+        return $this->dateAjout;
+    }
+
+    /**
+     * @param mixed $dateAjout
+     */
+    public function setDateAjout($dateAjout)
+    {
+        $this->dateAjout = $dateAjout;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDisponible()
+    {
+        return $this->disponible;
+    }
+
+    /**
+     * @param mixed $disponible
+     */
+    public function setDisponible($disponible)
+    {
+        $this->disponible = $disponible;
+    }
+
+
+
+    /**
+     * @return mixed
+     */
     public function getIdAdherent()
     {
         return $this->idAdherent;
@@ -210,6 +246,8 @@ class Chien
             $oChien->setNumeroPuce($row['numeroPuce']);
             $oChien->setPhoto($row['photoChien']);
             $oChien->setDescription($row['descriptionChien']);
+            $oChien->setDateAjout($row['dateAjout']);
+            $oChien->setDisponible($row['disponible']);
             $oChien->setIdAdherent($row['id_Adherent']);
             $oChien->setIdRace($row['id_Race']);
             $this->oCollChien[] = $oChien;
@@ -225,10 +263,12 @@ class Chien
         $numeroPuce = $oChien->getNumeroPuce();
         $photo = $oChien->getPhoto();
         $description = $oChien->getDescription();
+        $dateAjout = $oChien->getDateAjout();
+        $disponible = $oChien->getDisponible();
         $idAdherent = $oChien->getIdAdherent();
         $idRace = $oChien->getIdRace();
         //DEBUT INSERTION SQL
-        $sql = $bdd->prepare("INSERT INTO chiens (nomChien,sexeChien,dateNaissanceChien,lofChien,numeroPuce,photoChien,descriptionChien,id_Adherent,id_Race) VALUES (:nom, :sexe, :naissance, :lof, :numeroPuce, :photo, :description, :idAdherent, :idRace)");
+        $sql = $bdd->prepare("INSERT INTO chiens (nomChien,sexeChien,dateNaissanceChien,lofChien,numeroPuce,photoChien,descriptionChien,dateAjout,disponible,id_Adherent,id_Race) VALUES (:nom, :sexe, :naissance, :lof, :numeroPuce, :photo, :description, :dateAjout, :disponible,:idAdherent, :idRace)");
         // :XXX où XXX est l'attribut de la classe en question
         $sql->bindParam(':nom', $nom);
         $sql->bindParam(':sexe', $sexe);
@@ -237,6 +277,8 @@ class Chien
         $sql->bindParam(':numeroPuce', $numeroPuce);
         $sql->bindParam(':photo', $photo);
         $sql->bindParam(':description', $description);
+        $sql->bindParam(':dateAjout', $dateAjout);
+        $sql->bindParam(':disponible', $disponible);
         $sql->bindParam(':idAdherent', $idAdherent);
         $sql->bindParam(':idRace', $idRace);
         $sql->execute();
@@ -267,6 +309,8 @@ class Chien
             $chienById->setNumeroPuce($row['numeroPuce']);
             $chienById->setPhoto($row['photoChien']);
             $chienById->setDescription($row['descriptionChien']);
+            $chienById->setDateAjout($row['dateAjout']);
+            $chienById->setDisponible($row['disponible']);
             $chienById->setIdAdherent($row['id_Adherent']);
             $chienById->setIdRace($row['id_Race']);
         }
@@ -302,6 +346,8 @@ class Chiens
             $oChien->setPhoto($res['photoChien']);
             $oChien->setNumeroPuce($res['numeroPuce']);
             $oChien->setDescription($res['descriptionChien']);
+            $oChien->setDateAjout($res['dateAjout']);
+            $oChien->setDisponible($res['disponible']);
             $oChien->setIdAdherent($res['id_Adherent']);
             $oChien->setIdRace($res['id_Race']);
             $this->oCollChien[] = $oChien;

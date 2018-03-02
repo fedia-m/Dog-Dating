@@ -13,7 +13,7 @@ $oCollChien = $oChiens->getCollection();
 //On recupere tous les chiens sauf ceux de l'user connecté car il recherche des chiens
 for ($i=0;$i<count($oCollChien);$i++)
 {
-    if ($oCollChien[$i]->getIdAdherent() != $_SESSION['utilisateur']->getId())
+    if ($oCollChien[$i]->getIdAdherent() != $_SESSION['utilisateur']->getId() && $oCollChien[$i]->getDisponible() == "1")
     {
         $oCollChienRecherche[] = $oCollChien[$i];
     }

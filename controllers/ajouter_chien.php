@@ -13,6 +13,8 @@ $idRace = $_POST['raceChien'];
 $sexeChien = $_POST['sexeChien'];
 $naissance = $_POST['dateNaissance'];
 $description = $_POST['description'];
+$dateAjout = date("Y-m-d");
+$disponible = $_POST['disponible'];
 //lof pas obligé donc on crée la variable seulement si l'user a renseigner
 if (!empty($_POST['lofChien'])) {
     $lof = $_POST['lofChien'];
@@ -40,6 +42,8 @@ if (move_uploaded_file($_FILES['photoChien']['tmp_name'], $uploadfile)) {
         'numeroPuce' => $numChien,
         'photo' => basename($_FILES['photoChien']['name']),
         'description' => $description,
+        'dateAjout' => $dateAjout,
+        'disponible' => $disponible,
         'idAdherent' => $_SESSION['utilisateur']->getId(),
         'idRace' => $idRace,
     );

@@ -41,6 +41,8 @@ if (isset($idChien) && $editDog ){
             'numeroPuce' => $row['numeroPuce'],
             'photo' => $row['photoChien'],
             'description' => $row['descriptionChien'],
+            'dateAjout' => $row['dateAjout'],
+            'disponible' => $row['disponible'],
             'idAdherent' => $row['id_Adherent'],
             'idRace' => $row['id_Race'],
         );
@@ -67,6 +69,8 @@ if (isset($idChien) && $dogProfil ){
             'numeroPuce' => $row['numeroPuce'],
             'photo' => $row['photoChien'],
             'description' => $row['descriptionChien'],
+            'dateAjout' => $row['dateAjout'],
+            'disponible' => $row['disponible'],
             'idAdherent' => $row['id_Adherent'],
             'idRace' => $row['id_Race'],
         );
