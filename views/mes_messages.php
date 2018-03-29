@@ -43,9 +43,6 @@ require("menu.php");
                                                 <h1>Objet</h1> <?php echo $messageEnvoyes[$i]->getObjetMessage(); ?>
                                             </div>
                                         </div>
-                                        <!--<div class="col-lg-2 col-md-1 col-sm-1">
-                                        <a href="<?php echo BASE_URL ?>views/edit_profil.php?idMessage=<?php echo $messageEnvoyes[$i]->getId() ?>"><i class="fa fa-times" aria-hidden="true"></i></a>
-                                    </div>-->
                                     </div>
                                     <div class="row">
                                         <div class="col-lg-12 col-md-12 col-sm-12">
@@ -59,7 +56,7 @@ require("menu.php");
                                         <div class="col-lg-8 col-md-8 col-sm-8">
                                         </div>
                                         <div class="col-lg-4 col-md-4 col-sm-4">
-                                            <a href="#">
+                                            <a href="<?php echo BASE_URL?>controllers/archiver_message.php?idMessage=<?php echo $messageEnvoyes[$i]->getId()?>&messageEnvoye=true">
                                                 <i class="fa fa-archive"></i> Archiver
                                             </a>
                                         </div>
@@ -116,7 +113,7 @@ require("menu.php");
                                         <div class="col-lg-8 col-md-8 col-sm-8">
                                         </div>
                                         <div class="col-lg-4 col-md-4 col-sm-4">
-                                            <a href="#">
+                                            <a href="<?php echo BASE_URL?>controllers/archiver_message.php?idMessage=<?php echo $messageRecus[$i]->getId()?>&messageRecu=true">
                                                 <i class="fa fa-archive"></i> Archiver
                                             </a>
                                         </div>
