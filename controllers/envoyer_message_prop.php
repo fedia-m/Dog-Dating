@@ -22,13 +22,13 @@ if (isset($_POST['btnEnvoyer'])){
 
     $message = new Message();
 
-    $message->setIdExpediteur($idExp);
-    $message->setIdDestinataire($idDest);
-    $message->setIdChien($idChien);
-    $message->setObjet($objet);
-    $message->setContenu($contenu);
-    $message->setArchiveExp('0');
-    $message->setArchiveDest('0');
+    $message->setId_Expediteur($idExp);
+    $message->setId_Destinataire($idDest);
+    $message->setId_Chien($idChien);
+    $message->setObjetMessage($objet);
+    $message->setContenuMessage($contenu);
+    $message->setMessageArchiveE('0');
+    $message->setMessageArchiveD('0');
     //var_dump($message);
     $message->envoyerMessage($bdd,$message);
     header('location:' . BASE_URL . 'views/mes_messages.php');

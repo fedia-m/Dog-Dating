@@ -31,10 +31,20 @@ require("menu.php");
                                         <?php
                                         // si pas proprio du chien juste bouton retour mais bouton contact proprio
                                         if ($_SESSION['utilisateur']->getId() != $_SESSION['monChien']->getIdAdherent()){
+                                            if ($_GET['m'] == "false"){
                                             ?>
                                             <a href="<?php echo BASE_URL?>views/recherche.php">
                                                 <i class="fa fa-arrow-circle-left" aria-hidden="true"> Retour</i>
                                             </a>
+                                                <?php
+                                            } else {
+                                                ?>
+                                                <a href="<?php echo BASE_URL?>views/mes_messages.php">
+                                                    <i class="fa fa-arrow-circle-left" aria-hidden="true"> Retour</i>
+                                                </a>
+                                                <?php
+                                            }
+                                                ?>
                                             <?php
                                         } else {
                                             ?>

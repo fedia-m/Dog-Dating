@@ -20,6 +20,8 @@ $messageEnvoyes = [];
 $messageRecus = [];
 $infoChiens = [];
 $infoChiensR = [];
+$infoProprioD = [];
+$infoProprioE = [];
 
 $idDest = $_SESSION['utilisateur']->getId();
 $idExp = $_SESSION['utilisateur']->getId();
@@ -43,31 +45,55 @@ foreach ($sql as $row) {
     $messageRecu->objetSet($tabObject);
     array_push($messageRecus,$messageRecu);
 
-    $idChien = $messageRecu->getIdChien();
+    $idChien = $messageRecu->getId_Chien();
 
-    $sql = $bdd->prepare('SELECT * FROM chiens WHERE id_Chien = :idChien');
-    $sql->execute(array('idChien' => $idChien));
-    foreach ($sql as $row) {
+    $sql2 = $bdd->prepare('SELECT * FROM chiens WHERE idChien = :idChien');
+    $sql2->execute(array('idChien' => $idChien));
+
+    foreach ($sql2 as $row2) {
         $tabObject4 = array(
-            'id' => $row['idChien'],
-            'nom' => $row['nomChien'],
-            'sexe' => $row['sexeChien'],
-            'naissance' => $row['dateNaissanceChien'],
-            'lof' => $row['lofChien'],
-            'numeroPuce' => $row['numeroPuce'],
-            'photo' => $row['photoChien'],
-            'description' => $row['descriptionChien'],
-            'dateAjout' => $row['dateAjout'],
-            'disponible' => $row['disponible'],
-            'idAdherent' => $row['id_Adherent'],
-            'idRace' => $row['id_Race'],
+            'id' => $row2['idChien'],
+            'nom' => $row2['nomChien'],
+            'sexe' => $row2['sexeChien'],
+            'naissance' => $row2['dateNaissanceChien'],
+            'lof' => $row2['lofChien'],
+            'numeroPuce' => $row2['numeroPuce'],
+            'photo' => $row2['photoChien'],
+            'description' => $row2['descriptionChien'],
+            'dateAjout' => $row2['dateAjout'],
+            'disponible' => $row2['disponible'],
+            'idAdherent' => $row2['id_Adherent'],
+            'idRace' => $row2['id_Race'],
         );
         $infoChienR = new Chien();
         $infoChienR->objetSet($tabObject4);
         array_push($infoChiensR, $infoChienR);
     }
-}
 
+    $idProprio = $messageRecu->getId_Expediteur();
+
+    $sql2 = $bdd->prepare('SELECT * FROM adherents WHERE idAdherent = :idProprio');
+    $sql2->execute(array('idProprio' => $idProprio));
+
+    foreach ($sql2 as $row) {
+        $tabObject6 = array(
+            'id' => $row['idAdherent'],
+            'nom' => $row['nomAdherent'],
+            'prenom' => $row['prenomAdherent'],
+            'pseudo' => $row['pseudoAdherent'],
+            'mdp' => $row['mdpAdherent'],
+            'mail' => $row['mailAdherent'],
+            'adresse' => $row['adresseAdherent'],
+            'sexe' => $row['sexeAdherent'],
+            'avatar' => $row['avatarAdherent'],
+            'role' => $row['roleAdherent'],
+            'idVille' => $row['id_Ville'],
+        );
+        $infoProprio = new Adherent();
+        $infoProprio->objetSet($tabObject6);
+        array_push($infoProprioE, $infoProprio);
+    }
+}
 
 //tous les messsages expéditeur
 $sql = $bdd->prepare('SELECT * FROM messages WHERE id_Expediteur = :idExp');
@@ -88,9 +114,9 @@ foreach ($sql as $row) {
     $messageEnvoye->objetSet($tabObject2);
     array_push($messageEnvoyes, $messageEnvoye);
 
-    $idChien = $messageEnvoye->getIdChien();
+    $idChien = $messageEnvoye->getId_Chien();
 
-    $sql = $bdd->prepare('SELECT * FROM chiens WHERE id_Chien = :idChien');
+    $sql = $bdd->prepare('SELECT * FROM chiens WHERE idChien = :idChien');
     $sql->execute(array('idChien' => $idChien));
 
     foreach ($sql as $row) {
@@ -113,4 +139,29 @@ foreach ($sql as $row) {
         array_push($infoChiens,$infoChien);
     }
 
+    $idProprio = $messageEnvoye->getId_Destinataire();
+
+    $sql2 = $bdd->prepare('SELECT * FROM adherents WHERE idAdherent = :idProprio');
+    $sql2->execute(array('idProprio' => $idProprio));
+
+    foreach ($sql2 as $row) {
+        $tabObject6 = array(
+            'id' => $row['idAdherent'],
+            'nom' => $row['nomAdherent'],
+            'prenom' => $row['prenomAdherent'],
+            'pseudo' => $row['pseudoAdherent'],
+            'mdp' => $row['mdpAdherent'],
+            'mail' => $row['mailAdherent'],
+            'adresse' => $row['adresseAdherent'],
+            'sexe' => $row['sexeAdherent'],
+            'avatar' => $row['avatarAdherent'],
+            'role' => $row['roleAdherent'],
+            'idVille' => $row['id_Ville'],
+        );
+        $infoProprio = new Adherent();
+        $infoProprio->objetSet($tabObject6);
+        array_push($infoProprioD, $infoProprio);
+    }
+
 }
+

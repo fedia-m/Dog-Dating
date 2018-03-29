@@ -91,6 +91,10 @@ if (isset($idChien) && $dogProfil ){
     $raceChien->objetSet($tabObject2);
     $_SESSION['raceChien'] = $raceChien;
 
-    header('location:'.BASE_URL.'views/dog_profil.php');
+    if ($_GET['m']== true){
+        header('location:'.BASE_URL.'views/dog_profil.php?m=true');
+    } else {
+        header('location:'.BASE_URL.'views/dog_profil.php?m=false');
+    }
 }
 

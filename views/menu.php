@@ -30,7 +30,7 @@ include 'header.php';
                     <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="<?php echo BASE_URL?>views/page_profil.php" title="Mon profil"><i class="fa fa-user" aria-hidden="true"> Mon profil</i></a></li>
                     <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="<?php echo BASE_URL?>views/recherche.php" title="Recherche un chien"><i class="fa fa-search" aria-hidden="true"> Recherche</i></a></li>
                     <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="<?php echo BASE_URL?>views/contact.php" title="Contact"><i class="fa fa-address-book-o" aria-hidden="true"> Contact</i></a></li>
-                    <li id="messages" class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="<?php echo BASE_URL?>functions/messages.php" title="Mes Messages"><i class="fa fa-envelope" aria-hidden="true"> Mes messages</i></a></li>
+                    <li id="messages" class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="<?php echo BASE_URL?>views/mes_messages.php" title="Mes Messages"><i class="fa fa-envelope" aria-hidden="true"> Mes messages</i></a></li>
                     <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="<?php echo BASE_URL?>views/add_dog.php" title="Ajouter un chien"><i class="fa fa-plus" aria-hidden="true"> Ajouter un chien</i></a></li>
                     <?php
                 } ?>

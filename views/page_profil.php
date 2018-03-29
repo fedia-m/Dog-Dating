@@ -88,7 +88,7 @@ $aVille->getNomParId($bdd,$_SESSION['utilisateur']->getIdVille());
                 ?>
 
                     <div class="card w-100">
-                        <a href="<?php echo BASE_URL?>functions/chiens.php?idChien=<?php echo $row->getId()?>&dogProfil=true">
+                        <a href="<?php echo BASE_URL?>functions/chiens.php?idChien=<?php echo $row->getId()?>&dogProfil=true&m=false">
                             <div class="card-body">
                                 <h5 class="card-title"><?php echo $row->getNom() ?></h5>
                                 <p class="card-text"><?php echo $row->getDescription() ?></p>
