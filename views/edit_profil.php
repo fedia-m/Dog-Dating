@@ -1,16 +1,27 @@
 <?php
 require '../config.php';
 require '../classes/adherent.php';
+require '../classes/ville.php';
+require '../classes/chien.php';
 require '../functions/users.php';
+//require '../functions/users.php';
+session_start();
 require("header.php");
 require("menu.php");
+
+
+$oChiens = Chiens::getInstance($bdd);
+$oCollChien = $oChiens->getCollection();
+//L'utilisateur n'as pas de chien pour l'instant, utile pour afficher ses chiens plutard
+var_dump($oChiens);
+
 ?>
 <div class="probootstrap-bar">
     <a href="#" class="probootstrap-toggle js-probootstrap-toggle"><span class="oi oi-menu"></span></a>
 </div>
 <div class="col-xl-8 col-lg-12 mx-auto">
     <div class="card card-body bg-light">
-        <form action="<?php echo BASE_URL?>/functions/users.php" method="post" class="probootstrap-form mb-5">
+        <form action="<?php echo BASE_URL?>controllers/modifier_adherent.php" method="post" class="probootstrap-form mb-5">
             <legend class="text-center"><h1>Edition profil</h1></legend>
             <div class="row">
                 <div class="col-md-6">
@@ -118,8 +129,32 @@ require("menu.php");
                     </div>
                 </div>
                 <div class="col-md-7">
+                    <form name="a">
+                        <fieldset style="width: 500px">
+                            <legend>Liste liées</legend>
+                            <label>Code Postal</label>
+                            <input type="text" name='codePostal' id='codePostal' onchange='go()'/>
+                            <label>Ville</label>
+                            <div id='ville' style='display:inline'>
+                                <select name='ville'>
+                                    <option value='-1'>Saisissez le code postal</option>
+                                </select>
+                            </div>
+                            <?php
+                            echo '<select id="ville">';
+                                if(isset($_POST["codePostal"])){
+                                $sql = $bdd -> prepare("SELECT * FROM sg_ville WHERE codePostal=".$_POST["codePostal"]." ORDER BY ville");
+                                echo '<option value="-1">Choisissez la ville</option>';
+                                foreach ($sql as $row){
+                                echo '<option value="'.$row["idVille"].'">'.$row["ville"].'</option>';
+                                }
+                                }
+                                echo '</select>';?>
+                        </fieldset>
+                    </form>
                     <div class="form-group">
                         <input type="text" class="form-control" id="ville" name="ville" placeholder="<?php echo $maVille->getNom(); ?>">
+                        <input type="hidden" name="idVille" value="<?php echo $maVille->getId(); ?>">
                     </div>
                 </div>
             </div>
