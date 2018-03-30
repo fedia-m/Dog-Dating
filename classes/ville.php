@@ -131,7 +131,10 @@ class Villes
         {
 
             $oVille = new Ville();
-            $oVille->objetSetId($res['idVille'],$res['id_Departement'],$res['nomVille'],$res['cpVille']);
+            $oVille->setId($res['idVille']);
+            $oVille->setIdDepartement($res['id_Departement']);
+            $oVille->setNom($res['nomVille']);
+            $oVille->setCp($res['cpVille']);
             $this->oCollVille[] = $oVille;
         }
 

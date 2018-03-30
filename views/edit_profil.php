@@ -10,10 +10,10 @@ require("header.php");
 require("menu.php");
 
 
-$oChiens = Chiens::getInstance($bdd);
-$oCollChien = $oChiens->getCollection();
+$oVilles = Villes::getInstance($bdd);
+$oCollVille = $oVilles->getCollection();
 //L'utilisateur n'as pas de chien pour l'instant, utile pour afficher ses chiens plutard
-var_dump($oChiens);
+var_dump($oVilles);
 
 ?>
 <div class="probootstrap-bar">
