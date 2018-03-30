@@ -42,6 +42,15 @@ require("menu.php");
                         <button type="submit" name='btnConnexion' class="btn btn-primary btn-lg">Connexion</button>
                     </div>
                 </div>
+                <?php if($_GET['e'] <> ""){
+                ?>
+                <span style="color:red"><i class="fa fa-exclamation-triangle"></i> <?php
+                    if ($_GET['e'] == sha1('2')){
+                        echo "Erreur de vos identifiants!";
+                    };
+                    ?></span>
+                <?php }
+                ?>
             </form>
         </div>
     </div>

@@ -12,3 +12,7 @@ $oAdherent = new Adherent();
 $oAdherent->setPseudo($pseudo);
 $oAdherent->setMdp($password);
 $oAdherent->connect($bdd,$oAdherent);
+if (!isset($_SESSION['utilisateur'])){
+    $erreurMessage = 2;
+    header('location:'.BASE_URL.'views/connexion.php?e='.sha1($erreurMessage));
+}

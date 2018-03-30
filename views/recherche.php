@@ -20,6 +20,9 @@ for ($i=0;$i<count($oCollChien);$i++)
 }
 
 ?>
+    <div class="probootstrap-bar">
+        <a href="#" class="probootstrap-toggle js-probootstrap-toggle"><span class="oi oi-menu"></span></a>
+    </div>
     <div class="main-wrapper">
         <div class="working-process-area">
             <div class="container">

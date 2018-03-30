@@ -59,5 +59,6 @@ if (move_uploaded_file($_FILES['photoChien']['tmp_name'], $uploadfile)) {
 }
 //la photo n'as pas été uploadée
 else{
-    echo "Erreur d'upload.";
+    $erreurMessage = 1;
+    header('location:'.BASE_URL.'views/add_dog.php?e='.sha1($erreurMessage));
 }

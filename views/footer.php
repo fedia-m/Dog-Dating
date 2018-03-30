@@ -23,5 +23,16 @@
             document.location.replace('<?php echo BASE_URL?>views/connexion.php');
         }
     </script>
+
+    <script>
+        function reponseMessage() {
+            if (document.getElementById("reponse").hidden == true){
+                document.getElementById("reponse").hidden = false;
+            } else {
+                document.getElementById("reponse").hidden = true;
+            }
+        }
+    </script>
+
     </body>
 </html>

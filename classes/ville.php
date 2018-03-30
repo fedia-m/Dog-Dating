@@ -1,5 +1,4 @@
 <?php 
-require_once '../connexion_bdd.php';
 
 class Ville
 {
@@ -86,7 +85,7 @@ class Ville
     }
 
     public function getNomParId($bdd,$idVille){
-        $sql = $bdd->prepare('SELECT * FROM villes WHERE idVille = :idVille');
+        /*$sql = $bdd->prepare('SELECT * FROM villes WHERE idVille = :idVille');
         $sql->execute(array('idVille' => $idVille));
         $oVille = new Ville();
         foreach ($sql as $row) {
@@ -95,7 +94,21 @@ class Ville
                 $oVille->setNom($row['nomVille']);
                 $oVille->setCp($row['cpVille']);
             }
-            return $oVille;
+            return $oVille;*/
+        $tabObject = [];
+        $sql = $bdd->prepare('SELECT * FROM villes WHERE idVille = :idVille');
+        $sql->execute(array('idVille' => $idVille));
+        foreach ($sql as $row) {
+            $tabObject = array(
+            'id' => $row['idVille'],
+            'idDepartement' => $row['id_Departement'],
+            'nom' => $row['nomVille'],
+            'cp' => $row['cpVille'],
+            );
+        }
+        $maville = new Ville();
+        $maville->objetSet($tabObject);
+        return $maville;
         }
 
 }

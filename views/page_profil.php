@@ -3,7 +3,7 @@ require '../config.php';
 require '../classes/adherent.php';
 require '../classes/chien.php';
 require '../classes/ville.php';
-//require '../functions/users.php';
+require '../functions/users.php';
 session_start();
 require("header.php");
 require("menu.php");
@@ -20,8 +20,6 @@ for ($i=0;$i<count($oCollChien);$i++)
         $avoirChien = true;
     }
 }
-$aVille = new Ville();
-$aVille->getNomParId($bdd,$_SESSION['utilisateur']->getIdVille());
 ?>
 <div class="probootstrap-bar">
     <a href="#" class="probootstrap-toggle js-probootstrap-toggle"><span class="oi oi-menu"></span></a>
@@ -46,7 +44,7 @@ $aVille->getNomParId($bdd,$_SESSION['utilisateur']->getIdVille());
                         <h1><?= $_SESSION['utilisateur']->getNom() . ' ' . $_SESSION['utilisateur']->getPrenom(); ?></h1>
                         <p>
                             <h2>Mon adresse:</h2>
-                        <p> <?= $_SESSION['utilisateur']->getAdresse()?><br> <?php echo $aVille->getCp().' '.$aVille->getNom()?></p>
+                        <p> <?= $_SESSION['utilisateur']->getAdresse()?><br> <?php echo $maVille->getCp().' '.$maVille->getNom()?></p>
                         <a href="<?php echo BASE_URL?>views/edit_profil.php" title="Modifier son profil"><i class="fa fa-pencil" aria-hidden="true">Modifier profil</i><span class="lnr lnr-arrow-right"></span></a>
                     </div>
                 </div>

@@ -119,13 +119,17 @@ require("menu.php");
                                         <br>
                                         <?php
                                         if ($_SESSION['utilisateur']->getId() != $_SESSION['monChien']->getIdAdherent()){
-                                            ?>
-                                            <a href="<?php echo BASE_URL.'controllers/afficher_chien.php?idChien='.$_SESSION['monChien']->getId()?>" title="Contacter propriétaire">
-                                                <div class="form-group text-center">
-                                                    <input type="button" class="btn btn-primary" id="btnContacter" name="btnContacter" value="Contact">
-                                                </div>
-                                            </a>
-                                            <?php
+                                            if ($_GET['m'] == "false") {
+                                                ?>
+                                                <a href="<?php echo BASE_URL . 'controllers/afficher_chien.php?idChien=' . $_SESSION['monChien']->getId() ?>"
+                                                   title="Contacter propriétaire">
+                                                    <div class="form-group text-center">
+                                                        <input type="button" class="btn btn-primary" id="btnContacter"
+                                                               name="btnContacter" value="Contact">
+                                                    </div>
+                                                </a>
+                                                <?php
+                                            }
                                         }
                                         ?>
 

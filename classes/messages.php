@@ -168,15 +168,15 @@ class Message
     }
 
     public function envoyerMessage($bdd,$oMessage){
-            $id_Expediteur = $oMessage->getIdExpediteur();
-            $id_Destinataire = $oMessage->getIdDestinataire();
-            $id_Chien = $oMessage->getIdChien();
-            $objetMessage = $oMessage->getObjet();
-            $contenuMessage = $oMessage->getContenu();
+            $id_Expediteur = $oMessage->getId_Expediteur();
+            $id_Destinataire = $oMessage->getId_Destinataire();
+            $id_Chien = $oMessage->getId_Chien();
+            $objetMessage = $oMessage->getObjetMessage();
+            $contenuMessage = $oMessage->getContenuMessage();
             $messageArchiveE = $oMessage->getMessageArchiveE();
             $messageArchiveD = $oMessage->getMessageArchiveD();
             //DEBUT INSERTION SQL
-            $sql = $bdd->prepare("INSERT INTO messages (id_Expediteur, id_Destinataire, id_Chien, objetMessage, contenuMessage, archiveExp, archiveDest) VALUES (:idExpediteur, :idDestinataire, :idChien, :objetMessage, :contenuMessage, :messageArchiveE, :messageArchiveD)");
+            $sql = $bdd->prepare("INSERT INTO messages (id_Expediteur, id_Destinataire, id_Chien, objetMessage, contenuMessage, messageArchiveE, messageArchiveD) VALUES (:id_Expediteur, :id_Destinataire, :id_Chien, :objetMessage, :contenuMessage, :messageArchiveE, :messageArchiveD)");
             $sql->bindParam(':id_Expediteur', $id_Expediteur);
             $sql->bindParam(':id_Destinataire', $id_Destinataire);
             $sql->bindParam(':id_Chien', $id_Chien);
@@ -202,7 +202,7 @@ class Messages{
         {
 
             $oMessage = new Message();
-            $oMessage->objetSetId($res['idMessage'],$res['id_Expediteur'],$res['id_Destinataire'],$res['id_Chien'],$res['objet'],$res['contenu'],$res['archiveExp'],$res['archiveDest']);
+            $oMessage->objetSetId($res['idMessage'],$res['id_Expediteur'],$res['id_Destinataire'],$res['id_Chien'],$res['objet'],$res['contenu'],$res['messageArchiveE'],$res['messageArchiveD  ']);
             $this->oCollMessage[] = $oMessage;
         }
 
