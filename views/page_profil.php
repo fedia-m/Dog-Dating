@@ -4,7 +4,7 @@ require '../classes/adherent.php';
 require '../classes/chien.php';
 require '../classes/ville.php';
 require '../functions/users.php';
-session_start();
+//session_start();
 require("header.php");
 require("menu.php");
 
