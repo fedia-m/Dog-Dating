@@ -13,14 +13,15 @@ session_start();
 
 $idAdherent = $_SESSION['utilisateur']->getId();
 
-$nNom = $_POST[''];
-$nPrenom = $_POST[''];
-$nPseudo = $_POST[''];
+$nNom = $_POST['nomUser'];
+$nPrenom = $_POST['prenomUser'];
+$nPseudo = $_POST['pseudo'];
 $nMdp = $_POST['motDePasse'];
-$nMail = $_POST[''];
-$nAdresse = $_POST[''];
+$nMail = $_POST['email'];
+$nAdresse = $_POST['adresse'];
 $nSexe = $_POST['sexe'];
-$nAvatar = $_POST[''];
-$nIdVille = $_POST[''];
+$nAvatar = $_POST['photo'];
+$nCodePostal = $_POST['cp'];
+$nVille = $_POST['ville'];
 
-var_dump($idAdherent);
+var_dump($idAdherent,$nNom,$nPrenom,$nPseudo,'mdp',$nMdp,$nMail,$nAdresse,$nSexe,$nAvatar,$nCodePostal,$nVille);

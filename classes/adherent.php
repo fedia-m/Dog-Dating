@@ -256,7 +256,7 @@ class Adherent
         }
     }
 
-    //Méthode qui permet l'ajout du chien
+    //Méthode qui permet l'ajout d'une personne
     public function inscrireUser($bdd,$oAdherent){
         $nom = $oAdherent->getNom();
         $prenom = $oAdherent->getPrenom();
@@ -277,6 +277,28 @@ class Adherent
         $sql->bindParam(':role', $role);
         $sql->execute();
         header('location:'.BASE_URL.'views/bienvenue.php');
+    }
+
+    //méthode pour modifier une personne
+    public function editUser($bdd,$oAdherent){
+        $nom = $oAdherent->getNom();
+        $prenom = $oAdherent->getPrenom();
+        $pseudo = $oAdherent->getPseudo();
+        $mdp = $oAdherent->getMdp();
+        $mail = $oAdherent->getMail();
+        $sexe = $oAdherent->getSexe();
+        $role = $oAdherent->getRole();
+
+        $sql = $bdd->prepare("INSERT INTO adherents (nomAdherent,prenomAdherent,pseudoAdherent,mdpAdherent,mailAdherent,sexeAdherent,roleAdherent) VALUES (:nom, :prenom, :pseudo, :mdp, :mail, :sexe, :role)");
+        $sql->bindParam(':nom', $nom);
+        $sql->bindParam(':prenom', $prenom);
+        $sql->bindParam(':pseudo', $pseudo);
+        $sql->bindParam(':mdp', $mdp);
+        $sql->bindParam(':mail', $mail);
+        $sql->bindParam(':sexe', $sexe);
+        $sql->bindParam(':role', $role);
+        $sql->execute();
+
     }
 }
 
