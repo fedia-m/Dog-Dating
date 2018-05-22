@@ -107,15 +107,6 @@ $oCollRace = $oRace->getCollection();
                         <div class="form-group">
                             <label for="photoChien">Photo (*)</label>
                             <input id="photoChien" name="photoChien" type="file" class="input-file" required>
-                            <?php if($_GET['e'] <> ""){
-                                ?>
-                                <span style="color:red"><i class="fa fa-exclamation-triangle"></i> <?php
-                                    if ($_GET['e'] == sha1('1') ){
-                                        echo "Erreur d'upload de votre photo!";
-                                    };
-                                    ?></span>
-                            <?php }
-                            ?>
                         </div>
                     </div>
                 </div>
