@@ -9,6 +9,7 @@ session_start();
 $prenom = $_POST['prenomUser'];
 $nom = $_POST['nomUser'];
 $pseudo = $_POST['pseudo'];
+$_SESSION['pseudo'] = $pseudo; //On va l'utiliser dans la page de bienvenu pour que l'utilsateur saissise juste son mdp
 $mdp = sha1(sha1($_POST['motDePasse']));
 $mdp2 = sha1(sha1($_POST['motDePasse2']));
 $mail = $_POST['email'];

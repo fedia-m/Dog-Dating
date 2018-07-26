@@ -3,12 +3,17 @@ require '../config.php';
 session_start();
 require("header.php");
 require("menu.php");
+
+
+if (isset($_SESSION['pseudo'])){
+    $pseudo = $_SESSION['pseudo'];
+} else{
+    $pseudo = '';
+}
+
+
 ?>
-<script type="text/javascript">
-    window.onload = function(){
-        document.getElementById('pseudo').focus();
-    }
-</script>
+
 <div class="probootstrap-bar">
     <a href="#" class="probootstrap-toggle js-probootstrap-toggle"><span class="oi oi-menu"></span></a></a>
 </div>
@@ -29,7 +34,7 @@ require("menu.php");
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="pseudo">Pseudo</label>
-                            <input type="text" class="form-control" id="pseudo" name="pseudo" required="">
+                            <input type="text" class="form-control" id="pseudo" name="pseudo" required="" value="<?php echo $pseudo ?>">
                         </div>
                     </div>
                 </div>
@@ -56,3 +61,14 @@ require("menu.php");
 <?php
 include 'footer.php';
 ?>
+
+<script type="text/javascript">
+    window.onload = function() {
+        var pseudo = '<?php echo $pseudo; ?>';
+        if (pseudo == '') {
+            document.getElementById('pseudo').focus();
+        } else {
+            document.getElementById('motDePasse').focus();
+        }
+    }
+</script>

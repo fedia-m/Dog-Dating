@@ -34,7 +34,7 @@ $oCollRace = $oRace->getCollection();
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="raceChien">Race (*)</label>
-                            <select id="raceChien" name="raceChien" class="form-control">
+                            <select id="raceChien" name="raceChien" class="form-control" style="padding: 0em;">
                                 <?php
 
                                 for ($i = 0; $i < count($oCollRace); $i++) {

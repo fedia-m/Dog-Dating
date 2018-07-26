@@ -19,19 +19,19 @@ include 'header.php';
                 {
                     ?>
                     <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="<?php echo BASE_URL?>" title="Accueil"><i class="fa fa-home" aria-hidden="true"> Accueil</i></a></li>
-                    <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="<?php echo BASE_URL?>views/about.php" title="À propos"><i class="fa fa-question-circle-o" aria-hidden="true"> À propos</i></a></li>
-                    <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="<?php echo BASE_URL?>views/contact.php" title="Contact"><i class="fa fa-address-book-o" aria-hidden="true"> Contact</i></a></li>
+                    <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="<?php echo BASE_URL?>views/about" title="À propos"><i class="fa fa-question-circle-o" aria-hidden="true"> À propos</i></a></li>
+                    <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="<?php echo BASE_URL?>views/contact" title="Contact"><i class="fa fa-address-book-o" aria-hidden="true"> Contact</i></a></li>
                     <?php
                 }
                 else{
                     ?>
                     <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="<?php echo BASE_URL?>" title="Accueil"><i class="fa fa-home" aria-hidden="true"> Accueil</i></a></li>
-                    <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="<?php echo BASE_URL?>views/about.php" title="À propos"><i class="fa fa-question-circle-o" aria-hidden="true"> À propos</i></a></li>
-                    <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="<?php echo BASE_URL?>views/page_profil.php" title="Mon profil"><i class="fa fa-user" aria-hidden="true"> Mon profil</i></a></li>
-                    <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="<?php echo BASE_URL?>views/recherche.php" title="Recherche un chien"><i class="fa fa-search" aria-hidden="true"> Recherche</i></a></li>
-                    <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="<?php echo BASE_URL?>views/contact.php" title="Contact"><i class="fa fa-address-book-o" aria-hidden="true"> Contact</i></a></li>
-                    <li id="messages" class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="<?php echo BASE_URL?>views/mes_messages.php" title="Mes Messages"><i class="fa fa-envelope" aria-hidden="true"> Mes messages</i></a></li>
-                    <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="<?php echo BASE_URL?>views/add_dog.php" title="Ajouter un chien"><i class="fa fa-plus" aria-hidden="true"> Ajouter un chien</i></a></li>
+                    <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="<?php echo BASE_URL?>views/about" title="À propos"><i class="fa fa-question-circle-o" aria-hidden="true"> À propos</i></a></li>
+                    <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="<?php echo BASE_URL?>views/page_profil" title="Mon profil"><i class="fa fa-user" aria-hidden="true"> Mon profil</i></a></li>
+                    <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="<?php echo BASE_URL?>views/recherche" title="Recherche un chien"><i class="fa fa-search" aria-hidden="true"> Recherche</i></a></li>
+                    <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="<?php echo BASE_URL?>views/contact" title="Contact"><i class="fa fa-address-book-o" aria-hidden="true"> Contact</i></a></li>
+                    <li id="messages" class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="<?php echo BASE_URL?>views/mes_messages" title="Mes Messages"><i class="fa fa-envelope" aria-hidden="true"> Mes messages</i></a></li>
+                    <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="<?php echo BASE_URL?>views/add_dog" title="Ajouter un chien"><i class="fa fa-plus" aria-hidden="true"> Ajouter un chien</i></a></li>
                     <?php
                 } ?>
 
@@ -43,14 +43,14 @@ include 'header.php';
                     if(!isset($_SESSION['utilisateur']))
                     {
                         ?>
-                        <li><a href="<?php echo BASE_URL?>views/connexion.php" class="p-0" title="Connexion"><i class="fa fa-sign-in" aria-hidden="true"> Connexion</a></i></li>
-                        <li><a href="<?php echo BASE_URL?>views/inscription.php" class="p-0" title="Inscription"><i class="fa fa-user-plus" aria-hidden="true"> Inscription </a></i></li>
+                        <li><a href="<?php echo BASE_URL?>views/connexion" class="p-0" title="Connexion"><i class="fa fa-sign-in" aria-hidden="true"> Connexion</a></i></li>
+                        <li><a href="<?php echo BASE_URL?>views/inscription" class="p-0" title="Inscription"><i class="fa fa-user-plus" aria-hidden="true"> Inscription </a></i></li>
                         <?php
                     }
                     else{
                         ?>
-                        <li><a href="<?php echo BASE_URL?>views/page_profil.php" class="p-0" title="Mon profil"><i class="fa fa-user" aria-hidden="true"> Mon profil</i></a></li>
-                        <li><a href="<?php echo BASE_URL?>views/deconnexion.php" class="p-0" title="Déconnexion"><i class="fa fa-sign-out" aria-hidden="true">Déconnexion</i></a></li>
+                        <li><a href="<?php echo BASE_URL?>views/page_profil" class="p-0" title="Mon profil"><i class="fa fa-user" aria-hidden="true"> Mon profil</i></a></li>
+                        <li><a href="<?php echo BASE_URL?>views/deconnexion" class="p-0" title="Déconnexion"><i class="fa fa-sign-out" aria-hidden="true">Déconnexion</i></a></li>
                         <?php
                     } ?>
                 </ul>

@@ -50,7 +50,7 @@ for ($i=0;$i<count($oCollChien);$i++)
                 </div>
                 <div class="col-lg-1 col-md-1 col-sm-1">
                     <div class="banner-content">
-                        <a href="<?php echo BASE_URL?>views/mes_messages.php" title="Mes messages"><i class=" fa fa-envelope fa-2x" aria-hidden="true"></i></a>
+                        <a href="<?php echo BASE_URL?>views/mes_messages" title="Mes messages"><i class=" fa fa-envelope fa-2x" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>
