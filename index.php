@@ -1,4 +1,7 @@
 <?php
-require("config.php");
-require("connexion_bdd.php");
-include ("kernel.php");
+require_once 'config.php';
+session_start();
+require_once("views/header.php");
+require_once("views/menu.php");
+require_once("views/accueil.php");
+require_once("views/footer.php");
